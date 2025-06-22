@@ -1,0 +1,130 @@
+{
+  "states": [
+    {
+      "name": "Andhra Pradesh",
+      "code": "AP",
+      "constituencies": [
+        {"name": "Araku", "code": "AP-01", "type": "LOK_SABHA"},
+        {"name": "Srikakulam", "code": "AP-02", "type": "LOK_SABHA"},
+        {"name": "Vizianagaram", "code": "AP-03", "type": "LOK_SABHA"},
+        {"name": "Visakhapatnam", "code": "AP-04", "type": "LOK_SABHA"},
+        {"name": "Anakapalli", "code": "AP-05", "type": "LOK_SABHA"},
+        {"name": "Kakinada", "code": "AP-06", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Arunachal Pradesh",
+      "code": "AR",
+      "constituencies": [
+        {"name": "Arunachal West", "code": "AR-01", "type": "LOK_SABHA"},
+        {"name": "Arunachal East", "code": "AR-02", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Assam",
+      "code": "AS",
+      "constituencies": [
+        {"name": "Karimganj", "code": "AS-01", "type": "LOK_SABHA"},
+        {"name": "Silchar", "code": "AS-02", "type": "LOK_SABHA"},
+        {"name": "Autonomous District", "code": "AS-03", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Bihar",
+      "code": "BR",
+      "constituencies": [
+        {"name": "Valmiki Nagar", "code": "BR-01", "type": "LOK_SABHA"},
+        {"name": "Paschim Champaran", "code": "BR-02", "type": "LOK_SABHA"},
+        {"name": "Purvi Champaran", "code": "BR-03", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Chhattisgarh",
+      "code": "CG",
+      "constituencies": [
+        {"name": "Surguja", "code": "CG-01", "type": "LOK_SABHA"},
+        {"name": "Raigarh", "code": "CG-02", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Goa",
+      "code": "GA",
+      "constituencies": [
+        {"name": "North Goa", "code": "GA-01", "type": "LOK_SABHA"},
+        {"name": "South Goa", "code": "GA-02", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Gujarat",
+      "code": "GJ",
+      "constituencies": [
+        {"name": "Kachchh", "code": "GJ-01", "type": "LOK_SABHA"},
+        {"name": "Banaskantha", "code": "GJ-02", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Haryana",
+      "code": "HR",
+      "constituencies": [
+        {"name": "Ambala", "code": "HR-01", "type": "LOK_SABHA"},
+        {"name": "Kurukshetra", "code": "HR-02", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Himachal Pradesh",
+      "code": "HP",
+      "constituencies": [
+        {"name": "Kangra", "code": "HP-01", "type": "LOK_SABHA"},
+        {"name": "Mandi", "code": "HP-02", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Jharkhand",
+      "code": "JH",
+      "constituencies": [
+        {"name": "Rajmahal", "code": "JH-01", "type": "LOK_SABHA"},
+        {"name": "Dumka", "code": "JH-02", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Karnataka",
+      "code": "KA",
+      "constituencies": [
+        {"name": "Chikkodi", "code": "KA-01", "type": "LOK_SABHA"},
+        {"name": "Belgaum", "code": "KA-02", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Kerala",
+      "code": "KL",
+      "constituencies": [
+        {"name": "Kasaragod", "code": "KL-01", "type": "LOK_SABHA"},
+        {"name": "Kannur", "code": "KL-02", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Madhya Pradesh",
+      "code": "MP",
+      "constituencies": [
+        {"name": "Morena", "code": "MP-01", "type": "LOK_SABHA"},
+        {"name": "Bhind", "code": "MP-02", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Maharashtra",
+      "code": "MH",
+      "constituencies": [
+        {"name": "Nandurbar", "code": "MH-01", "type": "LOK_SABHA"},
+        {"name": "Dhule", "code": "MH-02", "type": "LOK_SABHA"}
+      ]
+    },
+    {
+      "name": "Delhi",
+      "code": "DL",
+      "constituencies": [
+        {"name": "Chandni Chowk", "code": "DL-01", "type": "LOK_SABHA"},
+        {"name": "North East Delhi", "code": "DL-02", "type": "LOK_SABHA"}
+      ]
+    }
+  ]
+}

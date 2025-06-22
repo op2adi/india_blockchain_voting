@@ -1,0 +1,58 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Import Candidates from CSV</h3>
+                </div>
+                <div class="card-body">
+                    <div class="alert alert-info">
+                        <p><strong>Instructions:</strong></p>
+                        <ul>
+                            <li>CSV file should contain columns: <code>name</code>, <code>party</code>, <code>constituency</code> (required)</li>
+                            <li>Optional columns: <code>father_name</code>, <code>date_of_birth</code>, <code>gender</code> (M/F/O), <code>address</code></li>
+                            <li>Party names must match existing parties in the system</li>
+                            <li>Constituency names must match existing constituencies in the system</li>
+                        </ul>
+                    </div>
+
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <div class="form-group mb-3">
+                            <label for="election">Select Election:</label>
+                            <select name="election" id="election" class="form-control" required>
+                                <option value="">-- Select Election --</option>
+                                {% for election in elections %}
+                                    <option value="{{ election.id }}">{{ election.name }} ({{ election.get_election_type_display }})</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <label for="candidates_csv">Choose CSV File:</label>
+                            <input type="file" name="candidates_csv" id="candidates_csv" class="form-control" accept=".csv" required>
+                        </div>
+                        
+                        <div class="form-group mb-3">
+                            <button type="submit" class="btn btn-primary">Import Candidates</button>
+                            <a href="{% url 'admin:elections_candidate_changelist' %}" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </form>
+                    
+                    <div class="mt-4">
+                        <h4>Sample CSV Format</h4>
+                        <pre class="p-3 bg-light">name,party,constituency,father_name,date_of_birth,gender,address
+Rajesh Kumar,BJP,Bangalore Central,Mahesh Kumar,1980-05-15,M,"123 MG Road, Bangalore"
+Priya Singh,Congress,Mumbai South,Vijay Singh,1985-10-22,F,"456 Marine Drive, Mumbai"</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

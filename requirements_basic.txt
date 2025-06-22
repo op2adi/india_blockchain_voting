@@ -1,0 +1,4 @@
+# Basic requirements for initial setup
+Django==4.2.7
+cryptography==41.0.7
+Pillow==10.1.0

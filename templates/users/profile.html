@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Voter Profile{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="text-center">Profile Picture</h4>
+                </div>
+                <div class="card-body text-center">
+                    <div class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center" style="width: 150px; height: 150px; margin: 0 auto;">
+                        <span style="font-size: 64px;">{{ user.first_name.0 }}{{ user.last_name.0 }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Voter Information</h4>
+                </div>
+                <div class="card-body">
+                    <p><strong>Name:</strong> {{ user.get_full_name }}</p>
+                    <p><strong>Email:</strong> {{ user.email }}</p>
+                    <p><strong>Voter ID:</strong> {{ user.voter_id }}</p>
+                    <p><strong>Constituency:</strong> {{ user.constituency }}</p>
+                    <p><strong>State:</strong> {{ user.state }}</p>
+                    <p><strong>Gender:</strong> {{ user.get_gender_display }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,359 @@
+
+{% extends "admin/base_site.html" %}
+{% load static i18n admin_urls %}
+
+{% block extrastyle %}
+<style>
+    .dashboard-container {
+        padding: 20px;
+    }
+    .card {
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+        border: none;
+    }
+    .card-header {
+        border-radius: 10px 10px 0 0;
+        font-weight: 600;
+    }
+    .stats-box {
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        color: white;
+    }
+    .stats-box h2 {
+        font-size: 2.5rem;
+        margin-bottom: 5px;
+    }
+    .stats-box p {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+    .bg-primary-gradient {
+        background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    }
+    .bg-success-gradient {
+        background: linear-gradient(135deg, #28a745 0%, #208738 100%);
+    }
+    .bg-info-gradient {
+        background: linear-gradient(135deg, #17a2b8 0%, #117a8b 100%);
+    }
+    .bg-warning-gradient {
+        background: linear-gradient(135deg, #ffc107 0%, #d39e00 100%);
+    }
+    .table-responsive {
+        border-radius: 10px;
+    }
+    .status-badge {
+        padding: 5px 10px;
+        border-radius: 20px;
+        color: white;
+        font-weight: 500;
+        display: inline-block;
+    }
+    .election-control-panel {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f8f9fa;
+    }
+    .action-btn {
+        margin-top: 10px;
+        border-radius: 5px;
+        padding: 8px 15px;
+    }
+    .quick-action-btn {
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+    .chart-container {
+        position: relative;
+        height: 300px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="dashboard-container">
+    <div class="row">
+        <div class="col-12 mb-4">
+            <h1>{% trans "Blockchain Voting Administration" %}</h1>
+            <p class="lead">Welcome to the Election Commission Dashboard</p>
+        </div>
+    </div>
+    
+    <!-- Stats Overview -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="stats-box bg-primary-gradient">
+                <h2>{{ total_elections }}</h2>
+                <p>Total Elections</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-box bg-success-gradient">
+                <h2>{{ total_voters }}</h2>
+                <p>Registered Voters</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-box bg-info-gradient">
+                <h2>{{ votes_cast }}</h2>
+                <p>Votes Cast</p>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-box bg-warning-gradient">
+                <h2>{{ active_elections }}</h2>
+                <p>Active Elections</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <!-- Elections Management -->
+        <div class="col-md-7">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4>Elections Management</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for election in elections %}
+                                <tr>
+                                    <td>{{ election.name }}</td>
+                                    <td>{{ election.get_election_type_display }}</td>
+                                    <td>
+                                        {% if election.status == 'ANNOUNCED' %}
+                                            <span class="status-badge bg-secondary">Announced</span>
+                                        {% elif election.status == 'NOMINATION_OPEN' %}
+                                            <span class="status-badge bg-info">Nomination Open</span>
+                                        {% elif election.status == 'NOMINATION_CLOSED' %}
+                                            <span class="status-badge bg-dark">Nomination Closed</span>
+                                        {% elif election.status == 'VOTING_OPEN' %}
+                                            <span class="status-badge bg-success">Voting Open</span>
+                                        {% elif election.status == 'VOTING_CLOSED' %}
+                                            <span class="status-badge bg-danger">Voting Closed</span>
+                                        {% elif election.status == 'COUNTING' %}
+                                            <span class="status-badge bg-warning">Counting</span>
+                                        {% elif election.status == 'COMPLETED' %}
+                                            <span class="status-badge bg-primary">Completed</span>
+                                        {% else %}
+                                            <span class="status-badge bg-danger">Cancelled</span>
+                                        {% endif %}
+                                    </td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                                                Actions
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="/admin/elections/election/{{ election.id }}/change/">Edit</a></li>
+                                                
+                                                {% if election.status == 'NOMINATION_CLOSED' %}
+                                                <li><a class="dropdown-item" href="{% url 'admin_elections:start_voting' election.id %}">Start Voting</a></li>
+                                                {% endif %}
+                                                
+                                                {% if election.status == 'VOTING_OPEN' %}
+                                                <li><a class="dropdown-item" href="{% url 'admin_elections:stop_voting' election.id %}">End Voting</a></li>
+                                                {% endif %}
+                                                
+                                                {% if election.status == 'VOTING_CLOSED' %}
+                                                <li><a class="dropdown-item" href="{% url 'admin_elections:start_counting' election.id %}">Start Counting</a></li>
+                                                {% endif %}
+                                                
+                                                <li><hr class="dropdown-divider"></li>
+                                                <li><a class="dropdown-item" href="{% url 'admin_elections:view_results' election.id %}">View Results</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="4" class="text-center">No elections available</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <a href="/admin/elections/election/add/" class="btn btn-success">Create New Election</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Live Voting Data -->
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    <h4>Live Voting Data</h4>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="liveVoteChart"></canvas>
+                    </div>
+                    <div class="text-center mt-3">
+                        <p>Real-time voter turnout across active elections</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <!-- Recent Blockchain Transactions -->
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h4>Recent Blockchain Transactions</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Block ID</th>
+                                    <th>Timestamp</th>
+                                    <th>Election</th>
+                                    <th>Constituency</th>
+                                    <th>Transaction Hash</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for tx in recent_transactions %}
+                                <tr>
+                                    <td>{{ tx.block.index }}</td>
+                                    <td>{{ tx.timestamp }}</td>
+                                    <td>{{ tx.election.name }}</td>
+                                    <td>{{ tx.constituency.name }}</td>
+                                    <td><code>{{ tx.transaction_hash|truncatechars:18 }}</code></td>
+                                    <td>
+                                        <span class="badge bg-success">Confirmed</span>
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="6" class="text-center">No transactions recorded yet</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a href="/admin/blockchain/block/" class="btn btn-info">View Blockchain Explorer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <!-- Quick Actions -->
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-dark text-white">
+                    <h4>Quick Actions</h4>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex flex-wrap">
+                        <a href="/admin/users/voter/" class="btn btn-outline-primary quick-action-btn">
+                            <i class="bi bi-people"></i> Manage Voters
+                        </a>
+                        <a href="/admin/elections/candidate/" class="btn btn-outline-success quick-action-btn">
+                            <i class="bi bi-person-badge"></i> Manage Candidates
+                        </a>
+                        <a href="/admin/reports/votingreport/" class="btn btn-outline-info quick-action-btn">
+                            <i class="bi bi-file-earmark-text"></i> View Reports
+                        </a>
+                        <a href="/admin/blockchain/blockchain/" class="btn btn-outline-warning quick-action-btn">
+                            <i class="bi bi-box"></i> Blockchain Status
+                        </a>
+                        <a href="/admin/users/constituency/" class="btn btn-outline-dark quick-action-btn">
+                            <i class="bi bi-geo-alt"></i> Manage Constituencies
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Live Vote Chart
+        const ctx = document.getElementById('liveVoteChart').getContext('2d');
+        const liveVoteChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['BJP', 'Congress', 'AAP', 'Other'],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            display: false
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+        
+        // You could set up polling to update the chart
+        // setInterval(function() {
+        //     fetch('/api/admin/live-votes/')
+        //         .then(response => response.json())
+        //         .then(data => {
+        //             liveVoteChart.data.datasets[0].data = data.votes;
+        //             liveVoteChart.data.labels = data.parties;
+        //             liveVoteChart.update();
+        //         });
+        // }, 10000);
+    });
+</script>
+{% endblock %}

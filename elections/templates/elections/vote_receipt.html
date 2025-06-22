@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Your Vote Receipt{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0"><i class="fas fa-check-circle"></i> Vote Successfully Recorded</h4>
+                </div>
+                <div class="card-body">
+                    <div class="text-center mb-4">
+                        <i class="fas fa-receipt fa-4x text-success mb-3"></i>
+                        <h5>Your vote has been securely recorded on the blockchain</h5>
+                    </div>
+
+                    <div class="alert alert-info">
+                        <p><strong>Note:</strong> For security and privacy, this receipt contains no personal information that could identify you.</p>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h6 class="mb-0">Vote Receipt Information</h6>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Receipt ID:</th>
+                                        <td><code>{{ receipt.receipt_id }}</code></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Transaction Hash:</th>
+                                        <td><code>{{ vote_record.transaction_hash }}</code></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Block Number:</th>
+                                        <td>{{ vote_record.block.index }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Timestamp:</th>
+                                        <td>{{ receipt.issued_at }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Election:</th>
+                                        <td>{{ vote_record.election.name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Constituency:</th>
+                                        <td>{{ vote_record.constituency.name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Verification Hash:</th>
+                                        <td><code>{{ receipt.verification_hash }}</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    {% if receipt.qr_code %}
+                    <div class="text-center mb-4">
+                        <h6>Scan this QR code to verify your vote</h6>
+                        <img src="{{ receipt.qr_code.url }}" alt="Vote Verification QR Code" class="img-fluid" style="max-width: 200px;">
+                    </div>
+                    {% endif %}
+
+                    <div class="d-flex justify-content-center">
+                        <a href="{% url 'elections:view_elections' %}" class="btn btn-primary me-2">
+                            <i class="fas fa-arrow-left"></i> Back to Elections
+                        </a>
+                        <a href="#" onclick="window.print()" class="btn btn-outline-secondary">
+                            <i class="fas fa-print"></i> Print Receipt
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

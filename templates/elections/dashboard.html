@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Election Dashboard{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0">Your Election Dashboard</h2>
+                </div>
+                <div class="card-body">
+                    <p class="lead">Welcome, {{ user.first_name }}. Here are the open elections:</p>
+                    
+                    <ul class="list-group mt-4">
+                        {% if available_elections %}
+                            {% for election in available_elections %}
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <strong>{{ election.name }}</strong>
+                                    <span class="badge bg-info ms-2">{{ election.election_type }}</span>
+                                </div>
+                                <a href="/vote/?election_id={{ election.id }}" class="btn btn-sm btn-primary">Vote Now</a>
+                            </li>
+                            {% endfor %}
+                        {% else %}
+                            <li class="list-group-item text-center py-4">
+                                <div class="text-muted">
+                                    <i class="bi bi-calendar-x" style="font-size: 3rem;"></i>
+                                    <p class="mt-3 lead">No elections are available at this time.</p>
+                                    <p>Please check back later or contact your local election office.</p>
+                                </div>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
