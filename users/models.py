@@ -99,6 +99,11 @@ class Voter(AbstractUser):
     encrypted_face_encoding = models.TextField(blank=True)
     encrypted_fingerprint_data = models.TextField(blank=True)
     
+    # Biometric verification
+    # Voter ID card image and selfie for facial recognition
+    voter_id_card = models.ImageField(upload_to='voter_id_cards/', blank=True, null=True)
+    face_image = models.ImageField(upload_to='voter_faces/', blank=True, null=True)
+    
     # Voting status
     has_voted = models.BooleanField(default=False)
     vote_count = models.IntegerField(default=0)

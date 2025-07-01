@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Vote Verification{% endblock %}
+
+{% block extra_css %}
+<style>
+    .verification-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .verification-header {
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #ddd;
+    }
+    
+    .verification-header h2 {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    
+    .verification-header p {
+        color: #7f8c8d;
+        margin-bottom: 0;
+    }
+    
+    .verification-status {
+        text-align: center;
+        margin: 30px 0;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    
+    .status-verified {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+    
+    .status-failed {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+    
+    .status-warning {
+        background-color: #fff3cd;
+        color: #856404;
+        border: 1px solid #ffeeba;
+    }
+    
+    .verification-details {
+        margin-bottom: 30px;
+    }
+    
+    .verification-details .row {
+        margin-bottom: 10px;
+    }
+    
+    .detail-label {
+        font-weight: 600;
+        color: #34495e;
+    }
+    
+    .detail-value {
+        color: #2c3e50;
+        word-break: break-all;
+    }
+    
+    .blockchain-info {
+        background-color: #e8f4fd;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    
+    .blockchain-info h5 {
+        color: #2980b9;
+        margin-bottom: 15px;
+    }
+    
+    .cryptographic-proof {
+        background-color: #f0f7fa;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    
+    .cryptographic-proof h5 {
+        color: #16a085;
+        margin-bottom: 15px;
+    }
+    
+    .proof-details {
+        font-family: 'Courier New', monospace;
+        font-size: 0.85rem;
+        background-color: #eee;
+        padding: 15px;
+        border-radius: 4px;
+        max-height: 200px;
+        overflow-y: auto;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="verification-container">
+        <div class="verification-header">
+            <h2>Vote Verification</h2>
+            <p>Verify your vote on the blockchain</p>
+        </div>
+        
+        {% if cryptographically_verified %}
+            <div class="verification-status status-verified">
+                <h4><i class="fas fa-check-circle"></i> Vote Successfully Verified</h4>
+                <p>Your vote has been cryptographically verified on the blockchain.</p>
+            </div>
+        {% else %}
+            <div class="verification-status status-warning">
+                <h4><i class="fas fa-exclamation-triangle"></i> Verification Incomplete</h4>
+                <p>{{ verification_details }}</p>
+            </div>
+        {% endif %}
+        
+        <div class="verification-details">
+            <h4>Receipt Information</h4>
+            <div class="row">
+                <div class="col-md-4 detail-label">Receipt ID:</div>
+                <div class="col-md-8 detail-value">{{ receipt.receipt_id }}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 detail-label">Election:</div>
+                <div class="col-md-8 detail-value">{{ election.name }}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 detail-label">Constituency:</div>
+                <div class="col-md-8 detail-value">{{ vote_record.constituency.name }}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 detail-label">Vote Cast On:</div>
+                <div class="col-md-8 detail-value">{{ vote_record.timestamp|date:"F j, Y, g:i a" }}</div>
+            </div>
+        </div>
+        
+        <div class="blockchain-info">
+            <h5><i class="fas fa-cubes"></i> Blockchain Information</h5>
+            <div class="row">
+                <div class="col-md-4 detail-label">Block Number:</div>
+                <div class="col-md-8 detail-value">{{ block.index }}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 detail-label">Block Hash:</div>
+                <div class="col-md-8 detail-value">{{ block.hash }}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 detail-label">Transaction Hash:</div>
+                <div class="col-md-8 detail-value">{{ vote_record.transaction_hash }}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 detail-label">Block Timestamp:</div>
+                <div class="col-md-8 detail-value">{{ block.timestamp|date:"F j, Y, g:i:s a" }}</div>
+            </div>
+        </div>
+        
+        <div class="cryptographic-proof">
+            <h5><i class="fas fa-shield-alt"></i> Cryptographic Proof</h5>
+            {% if receipt.merkle_proof %}
+                <p>This vote has been cryptographically secured using Merkle proofs, ensuring it cannot be tampered with.</p>
+                <div class="row">
+                    <div class="col-md-4 detail-label">Merkle Root:</div>
+                    <div class="col-md-8 detail-value">{{ receipt.merkle_proof.merkle_root|default:"Not available" }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 detail-label">Proof Path Length:</div>
+                    <div class="col-md-8 detail-value">{{ receipt.merkle_proof.proof_path|length }} steps</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-2">
+                        <details>
+                            <summary>View Technical Proof Details</summary>
+                            <div class="proof-details mt-2">
+                                <pre>{{ receipt.merkle_proof|pprint }}</pre>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            {% else %}
+                <p>No cryptographic proof is available for this vote. This may occur for very old votes or if there was an error during proof generation.</p>
+            {% endif %}
+            
+            {% if receipt.node_signature %}
+                <div class="row mt-3">
+                    <div class="col-md-4 detail-label">Node Signature:</div>
+                    <div class="col-md-8 detail-value">
+                        <details>
+                            <summary>View Digital Signature</summary>
+                            <div class="proof-details mt-2">{{ receipt.node_signature }}</div>
+                        </details>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="{% url 'elections:view_receipt' vote_record.vote_id %}" class="btn btn-primary">Back to Receipt</a>
+            <a href="{% url 'elections:view_elections' %}" class="btn btn-secondary">View Elections</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

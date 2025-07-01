@@ -213,6 +213,13 @@ class Candidate(models.Model):
 
 class VoteRecord(models.Model):
     """Individual vote records"""
+    # Vote types
+    VOTE_TYPES = [
+        ('CANDIDATE', 'Vote for Candidate'),
+        ('NOTA', 'None of the Above'),
+        ('ABSTAIN', 'Abstain from Voting'),
+    ]
+    
     # Unique vote identifier
     vote_id = models.UUIDField(default=uuid.uuid4, unique=True)
     
@@ -224,10 +231,10 @@ class VoteRecord(models.Model):
     # Blockchain data
     block = models.ForeignKey('blockchain.Block', on_delete=models.CASCADE, blank=True, null=True)
     transaction_hash = models.CharField(max_length=128, blank=True)
-    
-    # Vote metadata
+      # Vote metadata
     timestamp = models.DateTimeField(auto_now_add=True)
     is_valid = models.BooleanField(default=True)
+    vote_type = models.CharField(max_length=20, choices=VOTE_TYPES, default='CANDIDATE')
     
     # We don't store voter identity for privacy
     # Instead we store an anonymous voter hash that can be verified by the voter
@@ -256,15 +263,23 @@ class VoteReceipt(models.Model):
     # Receipt data
     qr_code = models.ImageField(upload_to='vote_receipts/', blank=True)
     issued_at = models.DateTimeField(auto_now_add=True)
-    
-    # Verification data
     verification_hash = models.CharField(max_length=256)
-    verification_token = models.CharField(max_length=64)
     
+    # Cryptographic proof data
+    merkle_proof = models.JSONField(default=dict)  # Store the Merkle proof path
+    node_signature = models.TextField(blank=True)  # Digital signature from node
+    blockchain_position = models.JSONField(default=dict)  # Block index and position within block
+    
+    # Use a function for the default to ensure a unique token each time
+    def get_default_token():
+        return uuid.uuid4().hex
+        
+    verification_token = models.CharField(max_length=64, default=get_default_token)
+
     class Meta:
         verbose_name = "Vote Receipt"
         verbose_name_plural = "Vote Receipts"
-        
+
     def __str__(self):
         return f"Receipt {self.receipt_id}"
     
@@ -283,8 +298,8 @@ class VoteReceipt(models.Model):
             border=4,
         )
         
-        # Add data to QR code
-        verification_url = f"/verify-vote/{self.verification_token}/"
+        # Add data to QR code - include verification token and hash
+        verification_url = f"/verify-vote/{self.verification_token}/{self.verification_hash[:16]}/"
         qr.add_data(verification_url)
         qr.make(fit=True)
         
@@ -298,6 +313,170 @@ class VoteReceipt(models.Model):
         
         self.qr_code.save(filename, File(buffer), save=False)
         self.save()
+
+    def generate_cryptographic_proof(self):
+        """Generate cryptographic proof that the vote is in the blockchain"""
+        from blockchain.network.consensus import ConsensusManager
+        from cryptography.hazmat.primitives import hashes
+        from cryptography.hazmat.primitives.asymmetric import padding
+        from cryptography.hazmat.backends import default_backend
+        from cryptography.hazmat.primitives.asymmetric import rsa
+        from cryptography.hazmat.primitives import serialization
+        
+        try:
+            # Get the block and transaction hash
+            block = self.vote_record.block
+            transaction_hash = self.vote_record.transaction_hash
+            
+            # Get all transaction hashes in this block
+            if 'transactions' in block.data:
+                transaction_hashes = [tx['hash'] for tx in block.data['transactions']]
+                
+                # Generate Merkle proof
+                merkle_proof = ConsensusManager.generate_merkle_proof(transaction_hashes, transaction_hash)
+                self.merkle_proof = {
+                    'proof_path': merkle_proof,
+                    'transaction_hash': transaction_hash,
+                    'merkle_root': block.merkle_root
+                }
+                
+                # Store blockchain position data
+                self.blockchain_position = {
+                    'block_index': block.index,
+                    'block_hash': block.hash,
+                    'timestamp': block.timestamp.isoformat()
+                }
+                
+                # Sign the proof with node's private key
+                # In production, you would load a properly secured private key
+                # For demo purposes we'll generate one (would normally be loaded from settings)
+                try:
+                    # Try to load private key from settings or use a temporary one
+                    from django.conf import settings
+                    
+                    if hasattr(settings, 'BLOCKCHAIN_PRIVATE_KEY_PEM'):
+                        private_key_pem = settings.BLOCKCHAIN_PRIVATE_KEY_PEM
+                        private_key = serialization.load_pem_private_key(
+                            private_key_pem.encode(),
+                            password=None,
+                            backend=default_backend()
+                        )
+                    else:
+                        # For demo only - in production, keys should be managed securely
+                        private_key = rsa.generate_private_key(
+                            public_exponent=65537,
+                            key_size=2048,
+                            backend=default_backend()
+                        )
+                        
+                    # Sign the receipt data
+                    signature_data = f"{self.receipt_id}|{transaction_hash}|{block.hash}".encode()
+                    signature = private_key.sign(
+                        signature_data,
+                        padding.PSS(
+                            mgf=padding.MGF1(hashes.SHA256()),
+                            salt_length=padding.PSS.MAX_LENGTH
+                        ),
+                        hashes.SHA256()
+                    )
+                    
+                    # Save the signature
+                    self.node_signature = signature.hex()
+                    self.save()
+                    
+                    return True
+                except Exception as e:
+                    import logging
+                    logger = logging.getLogger(__name__)
+                    logger.error(f"Error signing receipt: {str(e)}")
+                    return False
+                    
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.error(f"Error generating cryptographic proof: {str(e)}")
+            return False
+            
+    def verify_cryptographic_proof(self):
+        """
+        Verify the cryptographic proof that the vote is in the blockchain
+        Returns a tuple of (is_valid, details)
+        """
+        from blockchain.network.consensus import ConsensusManager
+        
+        try:
+            # Check if we have proof data
+            if not self.merkle_proof or not self.blockchain_position:
+                return False, "No cryptographic proof available"
+                
+            # Get the block
+            from blockchain.models import Block
+            block = Block.objects.filter(
+                index=self.blockchain_position['block_index'],
+                hash=self.blockchain_position['block_hash']
+            ).first()
+            
+            if not block:
+                return False, "Referenced block not found in blockchain"
+                
+            # Verify Merkle proof
+            proof_valid = ConsensusManager.verify_merkle_proof(
+                self.merkle_proof['transaction_hash'],
+                self.merkle_proof['proof_path'],
+                self.merkle_proof['merkle_root']
+            )
+            
+            if not proof_valid:
+                return False, "Merkle proof validation failed"
+                
+            # Verify node signature if available
+            if self.node_signature:
+                try:
+                    from django.conf import settings
+                    from cryptography.hazmat.primitives import hashes
+                    from cryptography.hazmat.primitives.asymmetric import padding
+                    from cryptography.hazmat.backends import default_backend
+                    from cryptography.hazmat.primitives import serialization
+                    
+                    # Get public key
+                    if hasattr(settings, 'BLOCKCHAIN_PUBLIC_KEY_PEM'):
+                        public_key_pem = settings.BLOCKCHAIN_PUBLIC_KEY_PEM
+                        public_key = serialization.load_pem_public_key(
+                            public_key_pem.encode(),
+                            backend=default_backend()
+                        )
+                        
+                        # Verify the signature
+                        signature_data = f"{self.receipt_id}|{self.merkle_proof['transaction_hash']}|{self.blockchain_position['block_hash']}".encode()
+                        signature = bytes.fromhex(self.node_signature)
+                        
+                        public_key.verify(
+                            signature,
+                            signature_data,
+                            padding.PSS(
+                                mgf=padding.MGF1(hashes.SHA256()),
+                                salt_length=padding.PSS.MAX_LENGTH
+                            ),
+                            hashes.SHA256()
+                        )
+                        
+                        # If no exception raised, signature is valid
+                    else:
+                        return True, "Merkle proof valid but signature verification skipped (no public key)"
+                        
+                except Exception as e:
+                    import logging
+                    logger = logging.getLogger(__name__)
+                    logger.error(f"Signature verification failed: {str(e)}")
+                    return False, f"Signature verification failed: {str(e)}"
+                    
+            return True, "Vote cryptographically verified in blockchain"
+            
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.error(f"Error verifying cryptographic proof: {str(e)}")
+            return False, f"Error during verification: {str(e)}"
 
 
 class ElectionResult(models.Model):

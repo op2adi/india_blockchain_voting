@@ -13,6 +13,18 @@ class VoterRegistrationForm(forms.ModelForm):
     voter_id = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control'}), 
                               validators=[RegexValidator(regex=r'^[A-Z]{3}\d{7}$',
                                          message='Voter ID must be in format: ABC1234567')])
+                                         
+    voter_id_card = forms.ImageField(
+        widget=forms.FileInput(attrs={'class': 'form-control'}),
+        help_text="Upload front side of your Voter ID Card",
+        required=True
+    )
+    
+    face_image = forms.ImageField(
+        widget=forms.FileInput(attrs={'class': 'form-control'}),
+        help_text="Upload a clear photo of your face for verification",
+        required=True
+    )
     
     state = forms.ModelChoiceField(
         queryset=State.objects.all().order_by('name'),
@@ -54,9 +66,9 @@ class VoterRegistrationForm(forms.ModelForm):
 
     class Meta:
         model = Voter
-        fields = ('first_name', 'last_name', 'email', 'voter_id', 'state', 'constituency',  
-                 'date_of_birth', 'gender', 'mobile_number', 'address_line1', 
-                 'address_line2', 'city', 'pincode')
+        fields = ('first_name', 'last_name', 'email', 'voter_id', 'voter_id_card', 'face_image',
+                 'state', 'constituency', 'date_of_birth', 'gender', 'mobile_number', 
+                 'address_line1', 'address_line2', 'city', 'pincode')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -88,12 +100,34 @@ class VoterRegistrationForm(forms.ModelForm):
         user = super().save(commit=False)
         user.set_password(self.cleaned_data["password"])
         
-        # Set default values for required fields
-        user.encrypted_voter_card_number = 'encrypted_placeholder'
+        # Encrypt voter ID card number (in a real implementation, this would be more secure)
+        import hashlib
+        voter_id_raw = self.cleaned_data.get("voter_id")
+        user.encrypted_voter_card_number = hashlib.sha256(voter_id_raw.encode()).hexdigest()
+        
+        # Handle voter ID card and face image
+        voter_id_card = self.cleaned_data.get('voter_id_card')
+        face_image = self.cleaned_data.get('face_image')
         
         if commit:
             user.save()
-            if self.cleaned_data.get('profile_picture'):
-                # Handle profile picture in a separate model if needed
-                pass
+            
+            # Save voter ID card and face image
+            if voter_id_card:
+                user.voter_id_card = voter_id_card
+            
+            if face_image:
+                user.face_image = face_image
+            
+            # Extract and save face encoding if face recognition is available
+            from .face_recognition import is_face_recognition_available, extract_face_encoding
+            
+            if is_face_recognition_available() and face_image:
+                encoding = extract_face_encoding(face_image)
+                if encoding is not None:
+                    user.face_encoding = encoding.tolist()
+                    
+            # Save changes
+            user.save()
+            
         return user

@@ -3,7 +3,10 @@ import json
 from datetime import datetime
 from django.db import models
 from django.contrib.auth import get_user_model
+from django.core.exceptions import PermissionDenied
+from django.conf import settings
 from cryptography.fernet import Fernet
+from blockchain.network.consensus import ConsensusManager
 
 
 class Block(models.Model):
@@ -45,6 +48,12 @@ class Block(models.Model):
     def mine_block(self, difficulty=4):
         """Mine the block with proof of work"""
         target = "0" * difficulty
+        
+        # Generate merkle root if we have transactions
+        if 'transactions' in self.data:
+            transaction_hashes = [tx['hash'] for tx in self.data['transactions']]
+            self.merkle_root = ConsensusManager.generate_merkle_root(transaction_hashes)
+        
         while self.hash[:difficulty] != target:
             self.nonce += 1
             self.hash = self.calculate_hash()
@@ -52,6 +61,14 @@ class Block(models.Model):
     def is_hash_valid(self):
         """Verify that the stored hash matches calculated hash"""
         return self.hash == self.calculate_hash()
+    
+    def generate_merkle_proof(self, transaction_hash):
+        """Generate a Merkle proof for a specific transaction in this block"""
+        if not self.merkle_root or 'transactions' not in self.data:
+            return []
+            
+        transaction_hashes = [tx['hash'] for tx in self.data['transactions']]
+        return ConsensusManager.generate_merkle_proof(transaction_hashes, transaction_hash)
 
 
 class Blockchain(models.Model):
@@ -66,6 +83,12 @@ class Blockchain(models.Model):
     election_id = models.CharField(max_length=100, blank=True)
     is_active = models.BooleanField(default=True)
     
+    # Network information
+    network_id = models.CharField(max_length=50, default="main")  # For network identification
+    peer_count = models.IntegerField(default=0)  # Number of peers that have this chain
+    consensus_hash = models.CharField(max_length=64, blank=True, null=True)  # Used for cross-node validation
+    last_validated_by_peers = models.DateTimeField(null=True, blank=True)  # When peers last validated this chain
+    
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -79,9 +102,30 @@ class Blockchain(models.Model):
         """Get the latest block in the chain"""
         return Block.objects.filter(hash=self.latest_hash).first()
     
-    def add_block(self, data, voter_id=None):
-        """Add a new block to the chain"""
+    def add_block(self, data, voter_id=None, actor_type="voter"):
+        """
+        Add a new block to the chain
+        This method is restricted and can only be called through the proper voting process
+        Admin users cannot directly call this method
+        """
+        if actor_type == "admin":
+            raise PermissionDenied("Admin users are not allowed to manually add blocks to the blockchain")
+            
         latest_block = self.get_latest_block()
+        
+        # Add timestamp and actor type for audit
+        if isinstance(data, dict):
+            data["timestamp"] = datetime.now().isoformat()
+            data["actor_type"] = actor_type
+            data["node_id"] = getattr(settings, 'BLOCKCHAIN_NODE_ID', 'default_node')
+        
+        # Calculate transaction hashes for merkle root if this is a vote block
+        transaction_hashes = []
+        if voter_id and isinstance(data, dict) and data.get("transaction_type") == "vote":
+            # Create a hash for this transaction
+            transaction_hash = hashlib.sha256(f"{voter_id}:{datetime.now().isoformat()}:{json.dumps(data)}".encode()).hexdigest()
+            transaction_hashes.append(transaction_hash)
+            data["transaction_hash"] = transaction_hash
         
         new_block = Block(
             index=self.total_blocks + 1,
@@ -90,7 +134,7 @@ class Blockchain(models.Model):
             timestamp=datetime.now()
         )
         
-        # Mine the block
+        # Mine the block using proof of work
         new_block.mine_block(self.difficulty)
         new_block.save()
         
@@ -108,11 +152,31 @@ class Blockchain(models.Model):
                 is_confirmed=True
             )
         
+        # Log this action for transparency
+        BlockchainAuditLog.objects.create(
+            action="ADD_BLOCK",
+            block=new_block,
+            blockchain=self,
+            actor_type=actor_type,
+            actor_id=voter_id[:8] if voter_id else "system",
+            details={"transaction_type": "vote" if voter_id else "system"},
+            success=True,
+            execution_time=0.0
+        )
+        
+        # Broadcast this block to all peers in the network
+        try:
+            from blockchain.network.api import blockchain_node
+            blockchain_node.broadcast_block(new_block)
+        except ImportError:
+            # Network module not available
+            pass
+        
         return new_block
     
     def is_chain_valid(self):
         """Validate the entire blockchain"""
-        blocks = Block.objects.filter().order_by('index')
+        blocks = Block.objects.filter(blockchain=self).order_by('index')
         
         for i, block in enumerate(blocks):
             # Check if hash is valid
@@ -213,3 +277,14 @@ class GenesisBlock(models.Model):
     
     def __str__(self):
         return f"Genesis Block for {self.blockchain.name}"
+
+class Transaction(models.Model):
+    """Model for a transaction in the blockchain"""
+    blockchain = models.ForeignKey(Blockchain, on_delete=models.CASCADE)
+    sender = models.CharField(max_length=255)
+    recipient = models.CharField(max_length=255)
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    timestamp = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Transaction from {self.sender} to {self.recipient} of {self.amount}"

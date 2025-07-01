@@ -3,7 +3,7 @@ from django.http import HttpResponse
 import csv
 from .models import VotingReport, AuditReport, PerformanceReport
 
-@admin.register(VotingReport)
+# Define admin classes but don't register with default admin site yet
 class VotingReportAdmin(admin.ModelAdmin):
     list_display = ('election', 'constituency', 'report_type', 'created_at')
     list_filter = ('election', 'constituency', 'report_type')
@@ -30,14 +30,12 @@ class VotingReportAdmin(admin.ModelAdmin):
         return response
     export_as_csv.short_description = "Export selected reports to CSV"
 
-@admin.register(AuditReport)
 class AuditReportAdmin(admin.ModelAdmin):
     list_display = ('timestamp', 'action', 'user', 'ip_address')
     list_filter = ('action', 'timestamp')
     search_fields = ('user__voter_id', 'ip_address', 'details')
     readonly_fields = ('timestamp', 'action', 'user', 'ip_address', 'details')
 
-@admin.register(PerformanceReport)
 class PerformanceReportAdmin(admin.ModelAdmin):
     list_display = ('timestamp', 'metric', 'value')
     list_filter = ('metric', 'timestamp')

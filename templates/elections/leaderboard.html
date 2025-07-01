@@ -1,0 +1,391 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Election Leaderboard{% endblock %}
+
+{% block extra_css %}
+<style>
+    .party-card {
+        border-radius: 10px;
+        margin-bottom: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .party-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    .party-logo {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+    }
+    .party-color-bar {
+        height: 8px;
+        border-radius: 4px;
+    }
+    .winner-badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: gold;
+        color: #333;
+        border-radius: 50%;
+        padding: 8px;
+        font-size: 0.8rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .stats-card {
+        border-radius: 10px;
+        margin-bottom: 20px;
+        background-color: #f8f9fa;
+    }
+    #vote-chart {
+        height: 350px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Election Leaderboard</h2>
+    
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="electionSelect">Select Election</label>
+                <select class="form-control" id="electionSelect">
+                    <option value="all">All Elections</option>
+                    {% for election in elections %}
+                    <option value="{{ election.id }}">{{ election.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="stateSelect">Select State</label>
+                <select class="form-control" id="stateSelect">
+                    <option value="all">All States</option>
+                    {% for state in states %}
+                    <option value="{{ state.id }}">{{ state.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="constituencySelect">Select Constituency</label>
+                <select class="form-control" id="constituencySelect" disabled>
+                    <option value="all">All Constituencies</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title mb-0">Party-wise Seats</h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="vote-chart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card stats-card">
+                <div class="card-header bg-info text-white">
+                    <h5 class="card-title mb-0">Election Statistics</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span>Total Votes Cast:</span>
+                        <span class="font-weight-bold" id="total-votes">{{ total_votes }}</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span>Voter Turnout:</span>
+                        <span class="font-weight-bold" id="voter-turnout">{{ voter_turnout }}%</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span>Counted Constituencies:</span>
+                        <span class="font-weight-bold" id="counted-constituencies">{{ counted_constituencies }}/{{ total_constituencies }}</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span>Last Updated:</span>
+                        <span class="font-weight-bold" id="last-updated">{{ last_updated }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="mt-4 mb-3">Party Standings</h3>
+    <div class="row" id="party-standings">
+        {% for party in party_results %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card party-card">
+                {% if party.is_winner %}
+                <div class="winner-badge">
+                    <i class="fas fa-trophy"></i> Leading
+                </div>
+                {% endif %}
+                <div class="card-header p-3" style="background-color: {{ party.color }}">
+                </div>
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        {% if party.logo %}
+                        <img src="{{ party.logo.url }}" alt="{{ party.name }}" class="party-logo mr-3">
+                        {% else %}
+                        <div class="party-logo mr-3 d-flex align-items-center justify-content-center bg-light">
+                            <span>{{ party.abbreviation }}</span>
+                        </div>
+                        {% endif %}
+                        <div>
+                            <h5 class="card-title mb-0">{{ party.name }}</h5>
+                            <p class="text-muted">{{ party.abbreviation }}</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span>Seats Won:</span>
+                        <span class="font-weight-bold">{{ party.seats_won }}</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span>Leading In:</span>
+                        <span class="font-weight-bold">{{ party.leading_in }}</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>Vote Share:</span>
+                        <span class="font-weight-bold">{{ party.vote_share }}%</span>
+                    </div>
+                    <div class="progress mt-3">
+                        <div class="progress-bar" role="progressbar" style="width: {{ party.progress_percentage }}%; background-color: {{ party.color }}" 
+                            aria-valuenow="{{ party.progress_percentage }}" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="mt-5 mb-4">
+        <h3>Constituency-wise Results</h3>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Constituency</th>
+                        <th>State</th>
+                        <th>Winner/Leading</th>
+                        <th>Party</th>
+                        <th>Votes</th>
+                        <th>Margin</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="constituency-results">
+                    {% for result in constituency_results %}
+                    <tr>
+                        <td>{{ result.constituency.name }}</td>
+                        <td>{{ result.constituency.state.name }}</td>
+                        <td>{{ result.candidate.name }}</td>
+                        <td>
+                            <span class="badge badge-pill" style="background-color: {{ result.party.color }}; color: white;">
+                                {{ result.party.abbreviation }}
+                            </span>
+                        </td>
+                        <td>{{ result.votes_count }}</td>
+                        <td>{{ result.margin }}</td>
+                        <td>
+                            {% if result.status == 'FINAL' %}
+                            <span class="badge badge-success">Final</span>
+                            {% else %}
+                            <span class="badge badge-warning">Counting</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    $(document).ready(function() {
+        // Initialize chart with sample data (will be replaced with real data)
+        const voteChartCtx = document.getElementById('vote-chart').getContext('2d');
+        const voteChart = new Chart(voteChartCtx, {
+            type: 'bar',
+            data: {
+                labels: [{% for party in party_results %}'{{ party.abbreviation }}',{% endfor %}],
+                datasets: [{
+                    label: 'Seats',
+                    data: [{% for party in party_results %}{{ party.seats_won }},{% endfor %}],
+                    backgroundColor: [{% for party in party_results %}'{{ party.color }}',{% endfor %}],
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Seats'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Political Parties'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Handle state selection change
+        $('#stateSelect').on('change', function() {
+            const stateId = $(this).val();
+            if(stateId !== 'all') {
+                $('#constituencySelect').prop('disabled', false);
+                // Send AJAX request to get constituencies
+                $.ajax({
+                    url: '/api/constituencies-by-state/',
+                    data: {
+                        'state_id': stateId
+                    },
+                    dataType: 'json',
+                    success: function(data) {
+                        $('#constituencySelect').empty();
+                        $('#constituencySelect').append('<option value="all">All Constituencies</option>');
+                        
+                        data.forEach(function(constituency) {
+                            $('#constituencySelect').append(
+                                `<option value="${constituency.id}">${constituency.name}</option>`
+                            );
+                        });
+                    }
+                });
+            } else {
+                $('#constituencySelect').prop('disabled', true);
+                $('#constituencySelect').html('<option value="all">All Constituencies</option>');
+            }
+        });
+
+        // Handle election, state, constituency selection for filters
+        $('#electionSelect, #stateSelect, #constituencySelect').on('change', function() {
+            const electionId = $('#electionSelect').val();
+            const stateId = $('#stateSelect').val();
+            const constituencyId = $('#constituencySelect').val();
+            
+            // Send AJAX request to get filtered results
+            $.ajax({
+                url: '/elections/leaderboard-data/',
+                data: {
+                    'election_id': electionId,
+                    'state_id': stateId,
+                    'constituency_id': constituencyId
+                },
+                dataType: 'json',
+                success: function(data) {
+                    // Update statistics
+                    $('#total-votes').text(data.total_votes);
+                    $('#voter-turnout').text(data.voter_turnout + '%');
+                    $('#counted-constituencies').text(data.counted_constituencies + '/' + data.total_constituencies);
+                    $('#last-updated').text(data.last_updated);
+                    
+                    // Update chart
+                    voteChart.data.labels = data.party_results.map(party => party.abbreviation);
+                    voteChart.data.datasets[0].data = data.party_results.map(party => party.seats_won);
+                    voteChart.data.datasets[0].backgroundColor = data.party_results.map(party => party.color);
+                    voteChart.update();
+                    
+                    // Update party standings
+                    let partyStandingsHtml = '';
+                    data.party_results.forEach(function(party) {
+                        partyStandingsHtml += `
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card party-card">
+                                ${party.is_winner ? '<div class="winner-badge"><i class="fas fa-trophy"></i> Leading</div>' : ''}
+                                <div class="card-header p-3" style="background-color: ${party.color}"></div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        ${party.logo ? 
+                                            `<img src="${party.logo}" alt="${party.name}" class="party-logo mr-3">` :
+                                            `<div class="party-logo mr-3 d-flex align-items-center justify-content-center bg-light">
+                                                <span>${party.abbreviation}</span>
+                                            </div>`
+                                        }
+                                        <div>
+                                            <h5 class="card-title mb-0">${party.name}</h5>
+                                            <p class="text-muted">${party.abbreviation}</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span>Seats Won:</span>
+                                        <span class="font-weight-bold">${party.seats_won}</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span>Leading In:</span>
+                                        <span class="font-weight-bold">${party.leading_in}</span>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span>Vote Share:</span>
+                                        <span class="font-weight-bold">${party.vote_share}%</span>
+                                    </div>
+                                    <div class="progress mt-3">
+                                        <div class="progress-bar" role="progressbar" style="width: ${party.progress_percentage}%; background-color: ${party.color}" 
+                                            aria-valuenow="${party.progress_percentage}" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+                    });
+                    $('#party-standings').html(partyStandingsHtml);
+                    
+                    // Update constituency results
+                    let constituencyResultsHtml = '';
+                    data.constituency_results.forEach(function(result) {
+                        constituencyResultsHtml += `
+                        <tr>
+                            <td>${result.constituency.name}</td>
+                            <td>${result.constituency.state.name}</td>
+                            <td>${result.candidate.name}</td>
+                            <td>
+                                <span class="badge badge-pill" style="background-color: ${result.party.color}; color: white;">
+                                    ${result.party.abbreviation}
+                                </span>
+                            </td>
+                            <td>${result.votes_count}</td>
+                            <td>${result.margin}</td>
+                            <td>
+                                ${result.status === 'FINAL' ? 
+                                    '<span class="badge badge-success">Final</span>' :
+                                    '<span class="badge badge-warning">Counting</span>'
+                                }
+                            </td>
+                        </tr>`;
+                    });
+                    $('#constituency-results').html(constituencyResultsHtml);
+                }
+            });
+        });
+
+        // Auto-refresh data every 30 seconds
+        setInterval(function() {
+            if($('#electionSelect').val() !== 'all') {
+                $('#electionSelect').trigger('change');
+            }
+        }, 30000);
+    });
+</script>
+{% endblock %}

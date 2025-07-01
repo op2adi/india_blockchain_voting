@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Verify Vote Receipt{% endblock %}
+
+{% block extra_css %}
+<style>
+    .verification-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .verification-header {
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #ddd;
+    }
+    
+    .verification-header h2 {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    
+    .verification-header p {
+        color: #7f8c8d;
+        margin-bottom: 0;
+    }
+    
+    .verification-form {
+        margin-bottom: 30px;
+    }
+    
+    .verification-details {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+    }
+    
+    .detail-row {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    
+    .detail-label {
+        font-weight: 600;
+        color: #34495e;
+        width: 180px;
+    }
+    
+    .detail-value {
+        color: #2c3e50;
+        flex: 1;
+    }
+    
+    .verification-success {
+        background-color: #d4edda;
+        color: #155724;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .verification-failure {
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="verification-container">
+        <div class="verification-header">
+            <h2>Vote Receipt Verification</h2>
+            <p>India Blockchain Voting System</p>
+            <p><small>Verify that your vote was correctly recorded on the blockchain</small></p>
+        </div>
+        
+        <div class="verification-form">
+            <form method="post" action="{% url 'elections:verify_vote' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="verification_token" class="form-label">Verification Token</label>
+                    <input type="text" class="form-control" id="verification_token" name="verification_token" 
+                           placeholder="Enter your verification token" 
+                           value="{{ verification_token|default:'' }}" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Verify Vote</button>
+            </form>
+        </div>
+        
+        <div class="verification-info">
+            <h5>How Verification Works</h5>
+            <p>Our blockchain voting system provides cryptographic proof that your vote was recorded correctly:</p>
+            <ul>
+                <li>Each vote creates a transaction on the blockchain</li>
+                <li>Your receipt contains a unique verification token</li>
+                <li>The verification process checks that your vote transaction is included in a valid block</li>
+                <li>This process never reveals who you voted for, maintaining your privacy</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

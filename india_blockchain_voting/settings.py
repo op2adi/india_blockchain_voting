@@ -67,6 +67,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'users.security_middleware.SecurityHeadersMiddleware',  # Add security headers to prevent back button access after logout
 ]
 
 ROOT_URLCONF = 'india_blockchain_voting.urls'
@@ -140,6 +141,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 8,
+        }
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -147,6 +151,14 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+]
+
+# Use SHA-256 password hashing
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
 ]
 
 
@@ -256,6 +268,15 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 X_FRAME_OPTIONS = 'DENY'
 
+# Email Settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = config('EMAIL_HOST', default='sandbox.smtp.mailtrap.io')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='ebeb29d50a5cbc')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='4f4d651ed5a27d')
+EMAIL_PORT = config('EMAIL_PORT', default='2525')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='info@blockchainvoting.gov.in')
+
 # Session Settings
 SESSION_COOKIE_SECURE = not DEBUG
 SESSION_COOKIE_HTTPONLY = True
@@ -339,3 +360,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Blockchain Network Settings
+BLOCKCHAIN_NODE_ID = os.environ.get('BLOCKCHAIN_NODE_ID', 'node_1')
+BLOCKCHAIN_NODE_URL = os.environ.get('BLOCKCHAIN_NODE_URL', 'http://localhost:8000')
+BLOCKCHAIN_KNOWN_NODES = os.environ.get('BLOCKCHAIN_KNOWN_NODES', '').split(',') if os.environ.get('BLOCKCHAIN_KNOWN_NODES') else []
+BLOCKCHAIN_NODE_IS_MINER = os.environ.get('BLOCKCHAIN_NODE_IS_MINER', 'True') == 'True'
+BLOCKCHAIN_DIFFICULTY = int(os.environ.get('BLOCKCHAIN_DIFFICULTY', '4'))
+BLOCKCHAIN_SYNC_INTERVAL = int(os.environ.get('BLOCKCHAIN_SYNC_INTERVAL', '30'))  # in seconds
+BLOCKCHAIN_MINING_INTERVAL = int(os.environ.get('BLOCKCHAIN_MINING_INTERVAL', '10'))  # in seconds

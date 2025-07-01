@@ -2,8 +2,14 @@
 Face recognition utilities for the blockchain voting system.
 This module provides face recognition functionality with fallback support.
 """
-
 import logging
+import numpy as np
+import base64
+import tempfile
+import os
+from io import BytesIO
+from PIL import Image
+from django.conf import settings
 
 logger = logging.getLogger(__name__)
 
@@ -11,8 +17,8 @@ logger = logging.getLogger(__name__)
 try:
     import face_recognition
     import cv2
-    import numpy as np
     FACE_RECOGNITION_AVAILABLE = True
+    logger.info("Face recognition libraries loaded successfully")
 except ImportError:
     FACE_RECOGNITION_AVAILABLE = False
     logger.warning("Face recognition libraries not available. Face verification will be disabled.")

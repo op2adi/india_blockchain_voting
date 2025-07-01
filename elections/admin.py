@@ -4,9 +4,12 @@ from django.http import HttpResponse
 from django.urls import path
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.utils.html import format_html
 import csv
 from io import TextIOWrapper
 from .models import Party, Candidate, Election, ElectionConstituency
+from .forms import ElectionAdminForm
+from users.models import Constituency, State
 
 @admin.register(Party)
 class PartyAdmin(admin.ModelAdmin):
@@ -27,15 +30,15 @@ class PartyAdmin(admin.ModelAdmin):
 
 @admin.register(Candidate)
 class CandidateAdmin(admin.ModelAdmin):
-    list_display = ('name', 'party', 'election', 'constituency', 'nomination_status', 'is_active')
-    list_filter = ('election', 'party', 'constituency', 'nomination_status', 'is_active')
+    list_display = ('name', 'party', 'election', 'constituency', 'nomination_status')
+    list_filter = ('election', 'party', 'constituency', 'nomination_status')
     search_fields = ('name', 'nomination_id')
     actions = ['ban_candidate', 'unban_candidate', 'import_candidates']
 
-    def is_active(self, obj):
+    def get_active_status(self, obj):
         return obj.nomination_status != 'REJECTED'
-    is_active.boolean = True
-    is_active.short_description = "Active"
+    get_active_status.boolean = True
+    get_active_status.short_description = "Active"
 
     def ban_candidate(self, request, queryset):
         queryset.update(nomination_status='REJECTED')
@@ -129,20 +132,30 @@ class CandidateAdmin(admin.ModelAdmin):
             {'elections': elections}
         )
 
+class ElectionConstituencyInline(admin.TabularInline):
+    model = ElectionConstituency
+    extra = 1
+    classes = ['collapse']
+
 @admin.register(Election)
 class ElectionAdmin(admin.ModelAdmin):
-    list_display = ('name', 'election_type', 'status', 'voting_start_date', 'voting_end_date')
+    form = ElectionAdminForm
+    list_display = ('name', 'election_type', 'get_status_badge', 'voting_start_date', 'voting_end_date')
     list_filter = ('status', 'election_type')
     search_fields = ('name', 'election_id')
     readonly_fields = ('blockchain',)
     actions = ['open_voting', 'close_voting', 'start_counting']
+    inlines = [ElectionConstituencyInline]
+    save_on_top = True
+    change_form_template = 'admin/elections/election_change_form.html'
     
     fieldsets = (
         ('Basic Information', {
             'fields': ('name', 'election_type', 'election_id', 'description')
         }),
         ('Geographic Scope', {
-            'fields': ('state', 'constituencies')
+            'fields': ('state', 'all_constituencies'),
+            'classes': ('wide',)
         }),
         ('Election Timeline', {
             'fields': (
@@ -150,12 +163,66 @@ class ElectionAdmin(admin.ModelAdmin):
                 'nomination_start_date', 'nomination_end_date',
                 'voting_start_date', 'voting_end_date',
                 'result_date'
-            )
+            ),
+            'classes': ('wide',),
         }),
         ('Status & Configuration', {
-            'fields': ('status', 'allow_nota', 'require_photo_id', 'enable_face_verification')
+            'fields': ('status', 'allow_nota', 'require_photo_id', 'enable_face_verification', 'blockchain'),
+            'classes': ('collapse',),
         }),
     )
+    
+    class Media:
+        css = {
+            'all': (
+                'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css',
+                'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css',
+            )
+        }
+        js = ('https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js',)
+        
+    def get_status_badge(self, obj):
+        """Display a colored badge for the election status"""
+        status_classes = {
+            'ANNOUNCED': 'status-announced',
+            'NOMINATION_OPEN': 'status-nomination-open',
+            'NOMINATION_CLOSED': 'status-nomination-closed',
+            'VOTING_OPEN': 'status-voting-open',
+            'VOTING_CLOSED': 'status-voting-closed',
+            'COUNTING': 'status-counting',
+            'COMPLETED': 'status-completed',
+            'CANCELLED': 'status-cancelled',
+        }
+        
+        status_class = status_classes.get(obj.status, '')
+        readable_status = obj.get_status_display()
+        
+        return format_html('<span class="status-badge {}">{}</span>', status_class, readable_status)
+    get_status_badge.short_description = 'Status'
+    get_status_badge.admin_order_field = 'status'
+
+    def save_model(self, request, obj, form, change):
+        """Override save_model to handle the 'all_constituencies' option"""
+        super().save_model(request, obj, form, change)
+        
+        # Process the 'all_constituencies' field
+        if form.cleaned_data.get('all_constituencies'):
+            # Delete any existing constituency relationships
+            ElectionConstituency.objects.filter(election=obj).delete()
+            
+            # Add all constituencies based on state filter or all if no state specified
+            if obj.state:
+                constituencies = Constituency.objects.filter(state=obj.state)
+            else:
+                constituencies = Constituency.objects.all()
+                
+            for constituency in constituencies:
+                ElectionConstituency.objects.create(
+                    election=obj,
+                    constituency=constituency
+                )
+            
+            self.message_user(request, f"Added all {constituencies.count()} constituencies to this election.")
 
     def open_voting(self, request, queryset):
         now = timezone.now()
@@ -217,6 +284,49 @@ class ElectionAdmin(admin.ModelAdmin):
             form.base_fields['result_date'].initial = timezone.now() + timezone.timedelta(days=32)
         
         return form
+        
+    def get_changeform_initial_data(self, request):
+        """
+        Provide initial data for the admin form
+        """
+        return {
+            'announcement_date': timezone.now(),
+            'nomination_start_date': timezone.now() + timezone.timedelta(days=1),
+            'nomination_end_date': timezone.now() + timezone.timedelta(days=15),
+            'voting_start_date': timezone.now() + timezone.timedelta(days=30),
+            'voting_end_date': timezone.now() + timezone.timedelta(days=31),
+            'result_date': timezone.now() + timezone.timedelta(days=32),
+        }
+        
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        
+        # Set default values for new elections
+        if obj is None:
+            form.base_fields['announcement_date'].initial = timezone.now()
+            form.base_fields['nomination_start_date'].initial = timezone.now() + timezone.timedelta(days=1)
+            form.base_fields['nomination_end_date'].initial = timezone.now() + timezone.timedelta(days=15)
+            form.base_fields['voting_start_date'].initial = timezone.now() + timezone.timedelta(days=30)
+            form.base_fields['voting_end_date'].initial = timezone.now() + timezone.timedelta(days=31)
+            form.base_fields['result_date'].initial = timezone.now() + timezone.timedelta(days=32)
+        
+        return form
+        
+    def add_view(self, request, form_url='', extra_context=None):
+        """
+        Override to add extra context for our template
+        """
+        extra_context = extra_context or {}
+        extra_context['available_states'] = State.objects.all().order_by('name')
+        return super().add_view(request, form_url, extra_context=extra_context)
+    
+    def change_view(self, request, object_id, form_url='', extra_context=None):
+        """
+        Override to add extra context for our template
+        """
+        extra_context = extra_context or {}
+        extra_context['available_states'] = State.objects.all().order_by('name')
+        return super().change_view(request, object_id, form_url, extra_context=extra_context)
 
 @admin.register(ElectionConstituency)
 class ElectionConstituencyAdmin(admin.ModelAdmin):
@@ -224,5 +334,42 @@ class ElectionConstituencyAdmin(admin.ModelAdmin):
     list_filter = ('election', 'is_active')
     search_fields = ('constituency__name', 'election__name')
 
-# Import needed for the candidate CSV import
+# Import needed for models
 from users.models import Constituency
+
+# Register additional models
+from .models import VoteRecord, VoteReceipt, ElectionResult, CandidateVoteCount, ElectionAuditLog
+
+@admin.register(VoteRecord)
+class VoteRecordAdmin(admin.ModelAdmin):
+    list_display = ('vote_id', 'election', 'constituency', 'vote_type', 'timestamp', 'is_valid')
+    search_fields = ('vote_id', 'voter_hash')
+    list_filter = ('vote_type', 'is_valid', 'election', 'constituency')
+    readonly_fields = ('vote_id', 'timestamp', 'voter_hash', 'transaction_hash')
+
+@admin.register(VoteReceipt)
+class VoteReceiptAdmin(admin.ModelAdmin):
+    list_display = ('receipt_id', 'issued_at')
+    search_fields = ('receipt_id', 'verification_token')
+    readonly_fields = ('receipt_id', 'issued_at')
+
+@admin.register(ElectionResult)
+class ElectionResultAdmin(admin.ModelAdmin):
+    list_display = ('election', 'constituency', 'status', 'total_votes_cast', 'voter_turnout_percentage')
+    search_fields = ('election__name', 'constituency__name')
+    list_filter = ('status', 'election')
+    readonly_fields = ('result_hash', 'counting_start_time', 'result_declared_time')
+
+@admin.register(CandidateVoteCount)
+class CandidateVoteCountAdmin(admin.ModelAdmin):
+    list_display = ('candidate', 'election_result', 'votes_count', 'vote_percentage', 'rank')
+    search_fields = ('candidate__name',)
+    list_filter = ('rank', 'election_result__election')
+    readonly_fields = ('created_at',)
+
+@admin.register(ElectionAuditLog)
+class ElectionAuditLogAdmin(admin.ModelAdmin):
+    list_display = ('action', 'election', 'timestamp', 'actor_type', 'success')
+    search_fields = ('action', 'actor_id')
+    list_filter = ('action', 'success', 'actor_type')
+    readonly_fields = ('timestamp', 'ip_address', 'user_agent')

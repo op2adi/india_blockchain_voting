@@ -1,291 +1,319 @@
-
 {% extends "admin/base_site.html" %}
 {% load static i18n admin_urls %}
 
 {% block extrastyle %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
     .dashboard-container {
+        max-width: 1400px;
+        margin: 0 auto;
         padding: 20px;
     }
+    
     .card {
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         border: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
     .card-header {
-        border-radius: 10px 10px 0 0;
-        font-weight: 600;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        font-weight: bold;
+        border-top-left-radius: 8px !important;
+        border-top-right-radius: 8px !important;
     }
+
     .stats-box {
-        text-align: center;
-        padding: 15px;
-        border-radius: 10px;
-        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
         color: white;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s;
+        height: 100%;
     }
+    
+    .stats-box:hover {
+        transform: translateY(-5px);
+    }
+
     .stats-box h2 {
         font-size: 2.5rem;
+        font-weight: bold;
         margin-bottom: 5px;
     }
+    
     .stats-box p {
         font-size: 1rem;
+        opacity: 0.8;
         margin-bottom: 0;
     }
+    
     .bg-primary-gradient {
-        background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+        background: linear-gradient(135deg, #3949ab, #283593);
     }
+    
     .bg-success-gradient {
-        background: linear-gradient(135deg, #28a745 0%, #208738 100%);
+        background: linear-gradient(135deg, #4caf50, #388e3c);
     }
+    
     .bg-info-gradient {
-        background: linear-gradient(135deg, #17a2b8 0%, #117a8b 100%);
+        background: linear-gradient(135deg, #00acc1, #00838f);
     }
+    
     .bg-warning-gradient {
-        background: linear-gradient(135deg, #ffc107 0%, #d39e00 100%);
+        background: linear-gradient(135deg, #ff7043, #f4511e);
     }
-    .table-responsive {
-        border-radius: 10px;
-    }
+    
     .status-badge {
+        display: inline-block;
         padding: 5px 10px;
         border-radius: 20px;
         color: white;
-        font-weight: 500;
-        display: inline-block;
+        font-weight: 600;
+        font-size: 12px;
+        text-transform: uppercase;
     }
-    .election-control-panel {
-        padding: 20px;
-        border-radius: 10px;
-        background-color: #f8f9fa;
+    
+    .status-announced { background-color: #78909c; }
+    .status-nomination-open { background-color: #42a5f5; }
+    .status-nomination-closed { background-color: #ff7043; }
+    .status-voting-open { background-color: #4caf50; }
+    .status-voting-closed { background-color: #f44336; }
+    .status-counting { background-color: #ab47bc; }
+    .status-completed { background-color: #00897b; }
+    
+    .quick-action-card {
+        text-align: center;
+        padding: 15px;
+        height: 100%;
+        transition: all 0.3s;
+        border-radius: 8px;
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .action-btn {
-        margin-top: 10px;
-        border-radius: 5px;
-        padding: 8px 15px;
+    
+    .quick-action-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     }
-    .quick-action-btn {
-        margin-right: 10px;
+    
+    .quick-action-card i {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #3949ab;
+    }
+    
+    .quick-action-card h5 {
+        font-size: 1.1rem;
         margin-bottom: 10px;
     }
-    .chart-container {
-        position: relative;
-        height: 300px;
+    
+    .quick-action-card p {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+    
+    .table-wrapper {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    .action-btn {
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-weight: 500;
     }
 </style>
 {% endblock %}
 
 {% block content %}
 <div class="dashboard-container">
-    <div class="row">
-        <div class="col-12 mb-4">
-            <h1>{% trans "Blockchain Voting Administration" %}</h1>
-            <p class="lead">Welcome to the Election Commission Dashboard</p>
-        </div>
-    </div>
-    
-    <!-- Stats Overview -->
-    <div class="row">
-        <div class="col-md-3">
-            <div class="stats-box bg-primary-gradient">
-                <h2>{{ total_elections }}</h2>
-                <p>Total Elections</p>
+    <!-- Welcome Section -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h2>Welcome to India Blockchain Voting System</h2>
+                    <p class="text-muted">Secure, transparent, and decentralized election management platform</p>
+                </div>
             </div>
         </div>
+    </div>
+
+    <!-- Statistics Overview -->
+    <div class="row mb-4">
         <div class="col-md-3">
-            <div class="stats-box bg-success-gradient">
-                <h2>{{ total_voters }}</h2>
+            <div class="stats-box bg-primary-gradient">
+                <i class="fas fa-user-check fa-2x mb-3"></i>
+                <h2>{{ voter_count|default:"0" }}</h2>
                 <p>Registered Voters</p>
             </div>
         </div>
         <div class="col-md-3">
+            <div class="stats-box bg-success-gradient">
+                <i class="fas fa-vote-yea fa-2x mb-3"></i>
+                <h2>{{ vote_count|default:"0" }}</h2>
+                <p>Total Votes Cast</p>
+            </div>
+        </div>
+        <div class="col-md-3">
             <div class="stats-box bg-info-gradient">
-                <h2>{{ votes_cast }}</h2>
-                <p>Votes Cast</p>
+                <i class="fas fa-box-ballot fa-2x mb-3"></i>
+                <h2>{{ election_count|default:"0" }}</h2>
+                <p>Elections</p>
             </div>
         </div>
         <div class="col-md-3">
             <div class="stats-box bg-warning-gradient">
-                <h2>{{ active_elections }}</h2>
-                <p>Active Elections</p>
+                <i class="fas fa-landmark fa-2x mb-3"></i>
+                <h2>{{ party_count|default:"0" }}</h2>
+                <p>Political Parties</p>
             </div>
         </div>
     </div>
-    
-    <div class="row">
-        <!-- Elections Management -->
-        <div class="col-md-7">
+
+    <!-- Quick Actions -->
+    <div class="row mb-4">
+        <div class="col-12">
             <div class="card">
-                <div class="card-header bg-primary text-white">
-                    <h4>Elections Management</h4>
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-bolt"></i> Quick Actions</h5>
                 </div>
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <a href="{% url 'admin:elections_election_add' %}" class="text-decoration-none">
+                                <div class="quick-action-card">
+                                    <i class="fas fa-calendar-plus"></i>
+                                    <h5>Create Election</h5>
+                                    <p>Set up a new election with constituencies</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <a href="{% url 'admin:elections_party_add' %}" class="text-decoration-none">
+                                <div class="quick-action-card">
+                                    <i class="fas fa-flag"></i>
+                                    <h5>Add Political Party</h5>
+                                    <p>Register a new political party</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <a href="{% url 'admin:elections_candidate_add' %}" class="text-decoration-none">
+                                <div class="quick-action-card">
+                                    <i class="fas fa-user-tie"></i>
+                                    <h5>Add Candidate</h5>
+                                    <p>Add a new election candidate</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <a href="{% url 'admin:users_voter_add' %}" class="text-decoration-none">
+                                <div class="quick-action-card">
+                                    <i class="fas fa-user-plus"></i>
+                                    <h5>Register Voter</h5>
+                                    <p>Add a new voter to the system</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Current Elections -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-calendar-check"></i> Active Elections</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-wrapper">
+                        <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
+                                    <th>Election Name</th>
                                     <th>Type</th>
                                     <th>Status</th>
+                                    <th>End Date</th>
                                     <th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for election in elections %}
+                                {% for election in active_elections|default:'' %}
                                 <tr>
-                                    <td>{{ election.name }}</td>
+                                    <td><strong>{{ election.name }}</strong></td>
                                     <td>{{ election.get_election_type_display }}</td>
                                     <td>
-                                        {% if election.status == 'ANNOUNCED' %}
-                                            <span class="status-badge bg-secondary">Announced</span>
-                                        {% elif election.status == 'NOMINATION_OPEN' %}
-                                            <span class="status-badge bg-info">Nomination Open</span>
-                                        {% elif election.status == 'NOMINATION_CLOSED' %}
-                                            <span class="status-badge bg-dark">Nomination Closed</span>
-                                        {% elif election.status == 'VOTING_OPEN' %}
-                                            <span class="status-badge bg-success">Voting Open</span>
-                                        {% elif election.status == 'VOTING_CLOSED' %}
-                                            <span class="status-badge bg-danger">Voting Closed</span>
-                                        {% elif election.status == 'COUNTING' %}
-                                            <span class="status-badge bg-warning">Counting</span>
-                                        {% elif election.status == 'COMPLETED' %}
-                                            <span class="status-badge bg-primary">Completed</span>
-                                        {% else %}
-                                            <span class="status-badge bg-danger">Cancelled</span>
-                                        {% endif %}
+                                        <span class="status-badge status-{{ election.status|lower }}">
+                                            {{ election.get_status_display }}
+                                        </span>
                                     </td>
+                                    <td>{{ election.voting_end_date|date:"M d, Y" }}</td>
                                     <td>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown">
-                                                Actions
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="/admin/elections/election/{{ election.id }}/change/">Edit</a></li>
-                                                
-                                                {% if election.status == 'NOMINATION_CLOSED' %}
-                                                <li><a class="dropdown-item" href="{% url 'admin_elections:start_voting' election.id %}">Start Voting</a></li>
-                                                {% endif %}
-                                                
-                                                {% if election.status == 'VOTING_OPEN' %}
-                                                <li><a class="dropdown-item" href="{% url 'admin_elections:stop_voting' election.id %}">End Voting</a></li>
-                                                {% endif %}
-                                                
-                                                {% if election.status == 'VOTING_CLOSED' %}
-                                                <li><a class="dropdown-item" href="{% url 'admin_elections:start_counting' election.id %}">Start Counting</a></li>
-                                                {% endif %}
-                                                
-                                                <li><hr class="dropdown-divider"></li>
-                                                <li><a class="dropdown-item" href="{% url 'admin_elections:view_results' election.id %}">View Results</a></li>
-                                            </ul>
-                                        </div>
+                                        <a href="{% url 'admin:elections_election_change' election.id %}" class="btn btn-sm btn-primary action-btn">
+                                            <i class="fas fa-edit"></i> Edit
+                                        </a>
                                     </td>
                                 </tr>
                                 {% empty %}
                                 <tr>
-                                    <td colspan="4" class="text-center">No elections available</td>
+                                    <td colspan="5" class="text-center">No active elections</td>
                                 </tr>
                                 {% endfor %}
                             </tbody>
                         </table>
                     </div>
-                    
                     <div class="mt-3">
-                        <a href="/admin/elections/election/add/" class="btn btn-success">Create New Election</a>
+                        <a href="{% url 'admin:elections_election_changelist' %}" class="btn btn-outline-primary">View All Elections</a>
                     </div>
                 </div>
             </div>
         </div>
         
-        <!-- Live Voting Data -->
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="card">
-                <div class="card-header bg-success text-white">
-                    <h4>Live Voting Data</h4>
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="fas fa-chart-pie"></i> System Status</h5>
                 </div>
                 <div class="card-body">
-                    <div class="chart-container">
-                        <canvas id="liveVoteChart"></canvas>
+                    <div class="mb-3">
+                        <h6><i class="fas fa-database"></i> Blockchain Status</h6>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-success" style="width: 100%">Healthy</div>
+                        </div>
                     </div>
-                    <div class="text-center mt-3">
-                        <p>Real-time voter turnout across active elections</p>
+                    
+                    <div class="mb-3">
+                        <h6><i class="fas fa-server"></i> Server Load</h6>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-info" style="width: 35%">35%</div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="row">
-        <!-- Recent Blockchain Transactions -->
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header bg-info text-white">
-                    <h4>Recent Blockchain Transactions</h4>
-                </div>
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>Block ID</th>
-                                    <th>Timestamp</th>
-                                    <th>Election</th>
-                                    <th>Constituency</th>
-                                    <th>Transaction Hash</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% for tx in recent_transactions %}
-                                <tr>
-                                    <td>{{ tx.block.index }}</td>
-                                    <td>{{ tx.timestamp }}</td>
-                                    <td>{{ tx.election.name }}</td>
-                                    <td>{{ tx.constituency.name }}</td>
-                                    <td><code>{{ tx.transaction_hash|truncatechars:18 }}</code></td>
-                                    <td>
-                                        <span class="badge bg-success">Confirmed</span>
-                                    </td>
-                                </tr>
-                                {% empty %}
-                                <tr>
-                                    <td colspan="6" class="text-center">No transactions recorded yet</td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
+                    
+                    <div class="mb-3">
+                        <h6><i class="fas fa-shield-alt"></i> Security Status</h6>
+                        <div class="progress mb-2">
+                            <div class="progress-bar bg-success" style="width: 100%">Secure</div>
+                        </div>
                     </div>
-                    <div class="text-center mt-3">
-                        <a href="/admin/blockchain/block/" class="btn btn-info">View Blockchain Explorer</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="row mt-4">
-        <!-- Quick Actions -->
-        <div class="col-md-12">
-            <div class="card">
-                <div class="card-header bg-dark text-white">
-                    <h4>Quick Actions</h4>
-                </div>
-                <div class="card-body">
-                    <div class="d-flex flex-wrap">
-                        <a href="/admin/users/voter/" class="btn btn-outline-primary quick-action-btn">
-                            <i class="bi bi-people"></i> Manage Voters
-                        </a>
-                        <a href="/admin/elections/candidate/" class="btn btn-outline-success quick-action-btn">
-                            <i class="bi bi-person-badge"></i> Manage Candidates
-                        </a>
-                        <a href="/admin/reports/votingreport/" class="btn btn-outline-info quick-action-btn">
-                            <i class="bi bi-file-earmark-text"></i> View Reports
-                        </a>
-                        <a href="/admin/blockchain/blockchain/" class="btn btn-outline-warning quick-action-btn">
-                            <i class="bi bi-box"></i> Blockchain Status
-                        </a>
-                        <a href="/admin/users/constituency/" class="btn btn-outline-dark quick-action-btn">
-                            <i class="bi bi-geo-alt"></i> Manage Constituencies
-                        </a>
+                    
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-outline-secondary">System Report</a>
                     </div>
                 </div>
             </div>
@@ -295,65 +323,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Live Vote Chart
-        const ctx = document.getElementById('liveVoteChart').getContext('2d');
-        const liveVoteChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['BJP', 'Congress', 'AAP', 'Other'],
-                datasets: [{
-                    label: '# of Votes',
-                    data: [12, 19, 3, 5],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.7)',
-                        'rgba(54, 162, 235, 0.7)',
-                        'rgba(255, 206, 86, 0.7)',
-                        'rgba(75, 192, 192, 0.7)',
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            display: false
-                        }
-                    },
-                    x: {
-                        grid: {
-                            display: false
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false
-                    }
-                }
-            }
-        });
-        
-        // You could set up polling to update the chart
-        // setInterval(function() {
-        //     fetch('/api/admin/live-votes/')
-        //         .then(response => response.json())
-        //         .then(data => {
-        //             liveVoteChart.data.datasets[0].data = data.votes;
-        //             liveVoteChart.data.labels = data.parties;
-        //             liveVoteChart.update();
-        //         });
-        // }, 10000);
-    });
+    // JavaScript for dashboard charts can be added here
 </script>
 {% endblock %}

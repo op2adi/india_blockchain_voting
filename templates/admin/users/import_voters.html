@@ -1,45 +1,85 @@
 {% extends "admin/base_site.html" %}
 {% load i18n static admin_urls %}
 
-{% block extrastyle %}
+{% block extrastyle %}{{ block.super }}
 <style>
     .upload-form {
         max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
+        margin: 20px 0;
     }
-    .form-group {
-        margin-bottom: 1rem;
+    .form-row {
+        overflow: hidden;
+        padding: 8px 12px;
+        margin: 0;
+        border-bottom: 1px solid #eee;
     }
-    .form-control {
+    .field-box {
+        float: left;
+        margin-right: 20px;
+    }
+    .field-box input[type="file"] {
+        margin-top: 10px;
+    }
+    .object-tools {
+        float: right;
+        padding-left: 0;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+    .object-tools li {
         display: block;
-        width: 100%;
-        padding: .375rem .75rem;
-        font-size: 1rem;
-        line-height: 1.5;
-        border: 1px solid #ced4da;
-        border-radius: .25rem;
+        float: left;
+        margin-left: 5px;
+        height: 16px;
+    }
+    .object-tools a.addlink {
+        display: block;
+        float: left;
+        line-height: 16px;
+        padding: 8px 12px;
+        background: #79aec8;
+        color: #fff;
+        font-weight: 400;
+        border-radius: 4px;
+    }
+    .object-tools a.addlink:focus, .object-tools a.addlink:hover {
+        background-color: #417690;
+    }
+    .module {
+        margin-bottom: 30px;
+        background: #fff;
+    }
+    .module h2 {
+        background: #79aec8;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 400;
+        margin: 0;
+        padding: 10px;
+        overflow: hidden;
     }
     .template-info {
         margin-top: 20px;
         padding: 15px;
-        background-color: #f8f9fa;
+        background-color: #f8f8f8;
+        border: 1px solid #eee;
         border-radius: 4px;
     }
-    .template-table {
-        width: 100%;
-        margin-bottom: 1rem;
-        background-color: transparent;
+    table {
         border-collapse: collapse;
+        background: #fff;
+        width: 100%;
     }
-    .template-table th, .template-table td {
-        padding: .75rem;
+    th, td {
+        font-size: 13px;
+        line-height: 16px;
+        border-bottom: 1px solid #eee;
+        padding: 8px;
         vertical-align: top;
-        border-top: 1px solid #dee2e6;
     }
-    .template-table thead th {
-        vertical-align: bottom;
-        border-bottom: 2px solid #dee2e6;
+    th {
+        font-weight: 600;
+        text-align: left;
     }
 </style>
 {% endblock %}
@@ -53,50 +93,96 @@
 {% endblock %}
 
 {% block content %}
-<div class="upload-form">
-    <h1>{% trans "Import Voters from CSV" %}</h1>
+<div id="content-main">
+    <ul class="object-tools">
+        <li>
+            <a href="{% url 'admin:download_voter_template' %}" class="addlink">
+                Download Template
+            </a>
+        </li>
+    </ul>
+    
+    <div class="module">
+        <h2>Import Voters</h2>
+        <div class="form-row">
+            <p>
+                Upload a CSV file containing voter information. The file should have the following columns:
+                Username, Email, First Name, Last Name, Voter ID, Phone, Constituency, State, Date of Birth.
+            </p>
+        </div>
+        
+        <form action="." method="post" enctype="multipart/form-data" class="upload-form">
+            {% csrf_token %}
+            <div class="form-row">
+                <div class="field-box">
+                    <label for="csv_file">Select CSV File:</label>
+                    <input type="file" name="csv_file" id="csv_file" required class="file-input">
                 </div>
-                <div class="card-body">
-                    <div class="alert alert-info">
-                        <p><strong>Instructions:</strong></p>
-                        <ul>
-                            <li>CSV file should contain columns: <code>voter_id</code>, <code>email</code>, <code>first_name</code>, <code>last_name</code>, <code>state</code>, <code>constituency</code> (required)</li>
-                            <li>Optional columns: <code>password</code>, <code>date_of_birth</code>, <code>gender</code> (M/F/O), <code>mobile_number</code>, <code>address_line1</code>, <code>address_line2</code>, <code>city</code>, <code>pincode</code></li>
-                            <li>State names must match existing states in the system</li>
-                            <li>Constituency names must match existing constituencies in the selected state</li>
-                            <li>Voter ID must follow format: <code>ABC1234567</code> (3 letters followed by 7 digits)</li>
-                        </ul>
-                    </div>
-
-                    <form method="post" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        
-                        <div class="form-group mb-3">
-                            <label for="voters_csv">Choose CSV File:</label>
-                            <input type="file" name="voters_csv" id="voters_csv" class="form-control" accept=".csv" required>
-                        </div>
-                        
-                        <div class="form-group mb-3">
-                            <button type="submit" class="btn btn-primary">Import Voters</button>
-                            <a href="{% url 'admin:users_voter_changelist' %}" class="btn btn-secondary">Cancel</a>
-                        </div>
-                    </form>
-                    
-                    <div class="mt-4">
-                        <h4>Sample CSV Format</h4>
-                        <pre class="p-3 bg-light">voter_id,email,first_name,last_name,state,constituency,password,date_of_birth,gender,mobile_number,address_line1,city,pincode
-ABC1234567,voter1@example.com,Rahul,Kumar,Karnataka,Bangalore Central,password123,1990-05-15,M,+911234567890,123 Main St,Bangalore,560001
-DEF7654321,voter2@example.com,Priya,Sharma,Maharashtra,Mumbai South,secure456,1988-10-22,F,+919876543210,456 Park Ave,Mumbai,400001</pre>
-                    </div>
-                    
-                    <div class="mt-4">
-                        <h4>Available States and Constituencies</h4>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="list-group">
-                                    {% for state in states %}
-                                    <div class="list-group-item">
-                                        <h5 class="mb-1">{{ state.name }}</h5>
+            </div>
+            <div class="form-row">
+                <div class="field-box">
+                    <input type="submit" value="Upload and Process" class="default">
+                </div>
+            </div>
+        </form>
+        
+        <div class="template-info">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>CSV file should contain the following required columns:
+                    <ul>
+                        <li><strong>Username</strong> - Unique login name for the voter</li>
+                        <li><strong>Email</strong> - Valid email address</li>
+                        <li><strong>First Name</strong> - Voter's first name</li>
+                        <li><strong>Last Name</strong> - Voter's last name</li>
+                        <li><strong>Voter ID</strong> - Official voter ID number</li>
+                    </ul>
+                </li>
+                <li>Optional columns:
+                    <ul>
+                        <li><strong>Phone</strong> - Contact number</li>
+                        <li><strong>Constituency</strong> - Must match existing constituency name</li>
+                        <li><strong>State</strong> - Must match existing state name</li>
+                        <li><strong>Date of Birth</strong> - In YYYY-MM-DD format</li>
+                    </ul>
+                </li>
+                <li>State and constituency names must match existing records in the system</li>
+                <li>A random temporary password will be generated for each new voter</li>
+            </ul>
+            
+            <h3>Sample Data Format:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Voter ID</th>
+                        <th>Phone</th>
+                        <th>Constituency</th>
+                        <th>State</th>
+                        <th>Date of Birth</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>voter1</td>
+                        <td>voter1@example.com</td>
+                        <td>John</td>
+                        <td>Doe</td>
+                        <td>ABC123456</td>
+                        <td>9876543210</td>
+                        <td>Mumbai North</td>
+                        <td>Maharashtra</td>
+                        <td>1990-01-01</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
                                         <p class="mb-1 text-muted">Code: {{ state.code }}</p>
                                     </div>
                                     {% endfor %}

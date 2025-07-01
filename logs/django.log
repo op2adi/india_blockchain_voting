@@ -527,3 +527,1736 @@ INFO 2025-06-23 04:52:36,777 autoreload 37768 38248 Watching for file changes wi
 INFO 2025-06-23 05:16:58,697 autoreload 5568 4048 Watching for file changes with StatReloader
 INFO 2025-06-23 05:17:15,671 autoreload 5568 4048 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\reports\models.py changed, reloading.
 INFO 2025-06-23 05:17:16,411 autoreload 5492 37152 Watching for file changes with StatReloader
+INFO 2025-06-23 05:37:07,830 autoreload 35916 35540 Watching for file changes with StatReloader
+INFO 2025-06-23 05:39:13,685 autoreload 10776 38240 Watching for file changes with StatReloader
+INFO 2025-06-23 05:39:53,736 autoreload 10776 38240 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\models.py changed, reloading.
+INFO 2025-06-23 05:39:54,754 autoreload 24260 26488 Watching for file changes with StatReloader
+INFO 2025-06-23 05:39:58,361 autoreload 24260 26488 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\models.py changed, reloading.
+INFO 2025-06-23 05:39:59,007 autoreload 9944 11812 Watching for file changes with StatReloader
+INFO 2025-06-23 05:40:00,465 autoreload 9944 11812 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\models.py changed, reloading.
+INFO 2025-06-23 05:40:01,096 autoreload 5492 33556 Watching for file changes with StatReloader
+INFO 2025-06-23 05:40:04,633 autoreload 5492 33556 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\models.py changed, reloading.
+INFO 2025-06-23 05:40:05,215 autoreload 14116 37804 Watching for file changes with StatReloader
+INFO 2025-06-23 05:40:07,680 autoreload 14116 37804 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\models.py changed, reloading.
+INFO 2025-06-23 05:40:08,232 autoreload 6812 22128 Watching for file changes with StatReloader
+INFO 2025-06-23 05:40:10,656 autoreload 6812 22128 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\models.py changed, reloading.
+INFO 2025-06-23 05:40:11,306 autoreload 26932 28000 Watching for file changes with StatReloader
+INFO 2025-06-23 05:40:57,666 autoreload 26932 28000 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\models.py changed, reloading.
+INFO 2025-06-23 05:40:58,440 autoreload 16624 35052 Watching for file changes with StatReloader
+INFO 2025-06-23 05:41:12,014 autoreload 1424 10692 Watching for file changes with StatReloader
+INFO 2025-06-23 05:41:31,028 autoreload 1424 10692 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\reports\models.py changed, reloading.
+INFO 2025-06-23 05:41:31,885 autoreload 14384 4624 Watching for file changes with StatReloader
+INFO 2025-06-23 05:44:47,079 autoreload 18828 36628 Watching for file changes with StatReloader
+INFO 2025-06-23 05:45:50,460 autoreload 18828 36628 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\admin.py changed, reloading.
+INFO 2025-06-23 05:45:51,232 autoreload 38248 37292 Watching for file changes with StatReloader
+INFO 2025-06-23 05:46:07,955 autoreload 38108 32560 Watching for file changes with StatReloader
+INFO 2025-06-23 05:47:42,908 autoreload 38108 32560 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\models.py changed, reloading.
+INFO 2025-06-23 05:47:43,709 autoreload 28112 34092 Watching for file changes with StatReloader
+INFO 2025-06-23 05:47:59,894 autoreload 27636 32476 Watching for file changes with StatReloader
+INFO 2025-06-23 05:48:46,110 autoreload 27636 32476 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\reports\admin.py changed, reloading.
+INFO 2025-06-23 05:48:46,987 autoreload 32008 35524 Watching for file changes with StatReloader
+INFO 2025-06-23 05:51:08,732 autoreload 32008 35524 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\admin.py changed, reloading.
+INFO 2025-06-23 05:51:09,595 autoreload 36872 38260 Watching for file changes with StatReloader
+INFO 2025-06-23 05:51:20,108 autoreload 36872 38260 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\admin.py changed, reloading.
+INFO 2025-06-23 05:51:20,758 autoreload 20372 7008 Watching for file changes with StatReloader
+INFO 2025-06-23 05:51:38,723 autoreload 20372 7008 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\admin.py changed, reloading.
+INFO 2025-06-23 05:51:39,435 autoreload 36048 36648 Watching for file changes with StatReloader
+INFO 2025-06-23 05:51:48,887 autoreload 36048 36648 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\admin.py changed, reloading.
+INFO 2025-06-23 05:51:49,547 autoreload 38112 32984 Watching for file changes with StatReloader
+INFO 2025-06-23 05:52:38,868 autoreload 38112 32984 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\admin.py changed, reloading.
+INFO 2025-06-23 05:52:39,668 autoreload 38260 8568 Watching for file changes with StatReloader
+INFO 2025-06-23 05:52:55,633 autoreload 38260 8568 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\admin.py changed, reloading.
+INFO 2025-06-23 05:52:56,428 autoreload 37708 19180 Watching for file changes with StatReloader
+INFO 2025-06-23 05:53:36,992 autoreload 37708 19180 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-23 05:53:37,759 autoreload 27880 2184 Watching for file changes with StatReloader
+INFO 2025-06-23 06:25:41,648 autoreload 27880 2184 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-23 06:25:43,132 autoreload 34720 3500 Watching for file changes with StatReloader
+INFO 2025-06-23 06:26:00,636 autoreload 34720 3500 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-23 06:26:01,594 autoreload 1584 21372 Watching for file changes with StatReloader
+INFO 2025-06-23 06:26:22,272 autoreload 1584 21372 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-23 06:26:23,225 autoreload 12584 34208 Watching for file changes with StatReloader
+INFO 2025-06-23 06:26:31,557 autoreload 12584 34208 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-23 06:26:32,411 autoreload 33388 20460 Watching for file changes with StatReloader
+INFO 2025-06-23 23:25:53,321 autoreload 14928 10052 Watching for file changes with StatReloader
+INFO 2025-06-23 23:28:04,766 autoreload 16788 13700 Watching for file changes with StatReloader
+INFO 2025-06-23 23:29:48,929 autoreload 16788 13700 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-23 23:29:50,175 autoreload 9188 15836 Watching for file changes with StatReloader
+INFO 2025-06-24 00:00:12,613 autoreload 22228 4092 Watching for file changes with StatReloader
+INFO 2025-06-24 00:00:30,125 autoreload 1328 23256 Watching for file changes with StatReloader
+INFO 2025-06-24 00:00:39,447 basehttp 1328 29100 "GET / HTTP/1.1" 200 2754
+WARNING 2025-06-24 00:00:40,331 log 1328 29100 Not Found: /favicon.ico
+WARNING 2025-06-24 00:00:40,331 basehttp 1328 29100 "GET /favicon.ico HTTP/1.1" 404 7284
+INFO 2025-06-24 00:00:41,655 basehttp 1328 29100 "GET /elections/dashboard/ HTTP/1.1" 302 0
+WARNING 2025-06-24 00:00:41,667 log 1328 29100 Not Found: /accounts/login/
+WARNING 2025-06-24 00:00:41,668 basehttp 1328 29100 "GET /accounts/login/?next=/elections/dashboard/ HTTP/1.1" 404 7323
+INFO 2025-06-24 00:00:44,933 basehttp 1328 29100 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-24 00:00:45,089 basehttp 1328 29100 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4195
+INFO 2025-06-24 00:00:45,255 basehttp 1328 14740 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-06-24 00:00:45,258 basehttp 1328 29100 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-06-24 00:00:45,276 basehttp 1328 14740 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-06-24 00:00:45,278 basehttp 1328 29100 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-06-24 00:00:45,292 basehttp 1328 14740 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-06-24 00:00:45,303 basehttp 1328 29100 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-06-24 00:00:45,334 basehttp 1328 29100 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-06-24 00:00:55,380 basehttp 1328 29100 "GET /api/users/login/ HTTP/1.1" 200 2702
+INFO 2025-06-24 00:00:58,631 basehttp 1328 29100 "GET /api/users/register/ HTTP/1.1" 200 10291
+INFO 2025-06-24 00:01:12,510 basehttp 1328 29100 "GET /api/users/constituencies/?state=1 HTTP/1.1" 200 113
+INFO 2025-06-24 00:01:42,543 basehttp 1328 29100 "POST /api/users/register/ HTTP/1.1" 302 0
+INFO 2025-06-24 00:01:42,548 basehttp 1328 29100 "GET /api/users/login/ HTTP/1.1" 200 2880
+INFO 2025-06-24 00:01:47,646 basehttp 1328 29100 "POST /api/users/login/ HTTP/1.1" 302 0
+INFO 2025-06-24 00:01:47,656 basehttp 1328 29100 "GET /api/users/profile/ HTTP/1.1" 200 2865
+ERROR 2025-06-24 00:01:51,508 log 1328 29100 Internal Server Error: /leaderboard/
+Traceback (most recent call last):
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\views.py", line 279, in leaderboard_view
+    return render(request, 'elections/leaderboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: elections/leaderboard.html
+ERROR 2025-06-24 00:01:51,511 basehttp 1328 29100 "GET /leaderboard/ HTTP/1.1" 500 96596
+INFO 2025-06-24 00:01:58,685 basehttp 1328 29100 "GET /api/users/profile/ HTTP/1.1" 200 2865
+INFO 2025-06-24 00:02:00,211 basehttp 1328 29100 "GET /dashboard/ HTTP/1.1" 200 2681
+INFO 2025-06-24 00:02:02,062 basehttp 1328 29100 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-24 00:02:04,024 basehttp 1328 29100 "GET /api/users/login/ HTTP/1.1" 200 3157
+INFO 2025-06-24 00:02:10,214 basehttp 1328 29100 "GET /dashboard/ HTTP/1.1" 200 2681
+INFO 2025-06-24 00:02:11,256 basehttp 1328 29100 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-24 00:02:12,547 basehttp 1328 29100 "GET /api/users/login/ HTTP/1.1" 200 2986
+INFO 2025-06-24 00:02:14,180 basehttp 1328 29100 "GET /api/users/profile/ HTTP/1.1" 200 2865
+ERROR 2025-06-24 00:02:16,260 log 1328 29100 Internal Server Error: /leaderboard/
+Traceback (most recent call last):
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\views.py", line 279, in leaderboard_view
+    return render(request, 'elections/leaderboard.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: elections/leaderboard.html
+ERROR 2025-06-24 00:02:16,262 basehttp 1328 29100 "GET /leaderboard/ HTTP/1.1" 500 96333
+INFO 2025-06-24 00:02:19,130 basehttp 1328 29100 "GET /view-elections/ HTTP/1.1" 200 1991
+INFO 2025-06-24 00:23:00,346 autoreload 1328 23256 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-24 00:23:01,919 autoreload 27820 22888 Watching for file changes with StatReloader
+INFO 2025-06-24 00:27:58,051 autoreload 27820 22888 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\urls.py changed, reloading.
+INFO 2025-06-24 00:27:59,129 autoreload 20812 22004 Watching for file changes with StatReloader
+INFO 2025-06-24 00:28:44,510 autoreload 20812 22004 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\india_blockchain_voting\urls.py changed, reloading.
+INFO 2025-06-24 00:28:45,358 autoreload 20184 28880 Watching for file changes with StatReloader
+INFO 2025-06-24 00:29:45,385 autoreload 20184 28880 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\views.py changed, reloading.
+INFO 2025-06-24 00:29:46,437 autoreload 4224 364 Watching for file changes with StatReloader
+INFO 2025-06-24 00:30:25,208 autoreload 4224 364 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\views.py changed, reloading.
+INFO 2025-06-24 00:30:26,003 autoreload 21856 28560 Watching for file changes with StatReloader
+INFO 2025-06-24 00:31:03,083 autoreload 21856 28560 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\views.py changed, reloading.
+INFO 2025-06-24 00:31:03,878 autoreload 15732 31516 Watching for file changes with StatReloader
+INFO 2025-06-24 00:31:36,540 autoreload 15732 31516 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\india_blockchain_voting\settings.py changed, reloading.
+INFO 2025-06-24 00:31:37,353 autoreload 3412 31728 Watching for file changes with StatReloader
+INFO 2025-06-24 00:32:29,906 autoreload 3412 31728 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\india_blockchain_voting\settings.py changed, reloading.
+INFO 2025-06-24 00:32:30,711 autoreload 12932 19008 Watching for file changes with StatReloader
+INFO 2025-06-24 00:40:08,541 autoreload 12932 19008 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\views_leaderboard.py changed, reloading.
+INFO 2025-06-24 00:40:09,575 autoreload 6612 7280 Watching for file changes with StatReloader
+INFO 2025-06-24 00:41:18,074 autoreload 6612 7280 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\views_leaderboard.py changed, reloading.
+INFO 2025-06-24 00:41:18,911 autoreload 29728 25832 Watching for file changes with StatReloader
+INFO 2025-06-24 00:41:43,858 autoreload 29728 25832 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\urls.py changed, reloading.
+INFO 2025-06-24 00:41:44,676 autoreload 29960 8364 Watching for file changes with StatReloader
+INFO 2025-06-24 00:42:01,774 autoreload 29960 8364 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\urls.py changed, reloading.
+INFO 2025-06-24 00:42:02,590 autoreload 25324 16420 Watching for file changes with StatReloader
+INFO 2025-06-24 00:46:36,057 autoreload 25324 16420 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\forms.py changed, reloading.
+INFO 2025-06-24 00:46:36,888 autoreload 14612 18896 Watching for file changes with StatReloader
+INFO 2025-06-24 00:46:56,209 autoreload 14612 18896 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\forms.py changed, reloading.
+INFO 2025-06-24 00:46:57,040 autoreload 10324 612 Watching for file changes with StatReloader
+INFO 2025-06-24 00:47:24,735 autoreload 10324 612 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\forms.py changed, reloading.
+INFO 2025-06-24 00:47:25,658 autoreload 30724 30680 Watching for file changes with StatReloader
+INFO 2025-06-24 00:50:09,601 autoreload 30724 30680 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\models.py changed, reloading.
+INFO 2025-06-24 00:50:11,090 autoreload 30144 25044 Watching for file changes with StatReloader
+INFO 2025-06-24 00:50:44,527 autoreload 30144 25044 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\views.py changed, reloading.
+INFO 2025-06-24 00:50:45,607 autoreload 18552 19428 Watching for file changes with StatReloader
+INFO 2025-06-24 01:00:23,960 autoreload 13684 16168 Watching for file changes with StatReloader
+INFO 2025-06-24 01:00:43,897 basehttp 13684 12104 "GET / HTTP/1.1" 200 2754
+WARNING 2025-06-24 01:00:45,332 log 13684 12104 Not Found: /favicon.ico
+WARNING 2025-06-24 01:00:45,333 basehttp 13684 12104 "GET /favicon.ico HTTP/1.1" 404 7863
+ERROR 2025-06-24 01:00:48,485 log 13684 12104 Internal Server Error: /api/users/login/
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: users_voter.voter_id_card
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\views.py", line 77, in login_view
+    return render(request, 'users/login.html')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 311, in get_user
+    user = backend.get_user(user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\backends.py", line 21, in get_user
+    return Voter.objects.get(pk=user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: users_voter.voter_id_card
+ERROR 2025-06-24 01:00:48,517 basehttp 13684 12104 "GET /api/users/login/ HTTP/1.1" 500 280760
+INFO 2025-06-24 01:01:22,878 autoreload 13684 16168 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\models.py changed, reloading.
+INFO 2025-06-24 01:01:24,885 autoreload 6064 30296 Watching for file changes with StatReloader
+INFO 2025-06-24 01:01:32,492 basehttp 6064 21484 "GET / HTTP/1.1" 200 2754
+ERROR 2025-06-24 01:01:33,621 log 6064 21484 Internal Server Error: /api/users/register/
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: users_voter.voter_id_card
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\views.py", line 63, in register_view
+    return render(request, 'users/register.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\defaulttags.py", line 320, in render
+    match = condition.eval(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\defaulttags.py", line 886, in eval
+    return self.value.resolve(context, ignore_failures=True)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 722, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 854, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 311, in get_user
+    user = backend.get_user(user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\backends.py", line 21, in get_user
+    return Voter.objects.get(pk=user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: users_voter.voter_id_card
+ERROR 2025-06-24 01:01:33,652 basehttp 6064 21484 "GET /api/users/register/ HTTP/1.1" 500 290795
+ERROR 2025-06-24 01:01:38,119 log 6064 21484 Internal Server Error: /elections/dashboard/
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: users_voter.voter_id_card
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 56, in _view_wrapper
+    test_pass = test_func(request.user)
+                ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 79, in <lambda>
+    lambda u: u.is_authenticated,
+              ^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 311, in get_user
+    user = backend.get_user(user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\backends.py", line 21, in get_user
+    return Voter.objects.get(pk=user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: users_voter.voter_id_card
+ERROR 2025-06-24 01:01:38,129 basehttp 6064 21484 "GET /elections/dashboard/ HTTP/1.1" 500 199424
+ERROR 2025-06-24 01:01:45,946 log 6064 21484 Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: users_voter.voter_id_card
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\sites.py", line 265, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\sites.py", line 234, in inner
+    if not self.has_permission(request):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\sites.py", line 207, in has_permission
+    return request.user.is_active and request.user.is_staff
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\functional.py", line 251, in inner
+    self._setup()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\functional.py", line 404, in _setup
+    self._wrapped = self._setupfunc()
+                    ^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 40, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+                                            ^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\middleware.py", line 20, in get_user
+    request._cached_user = auth.get_user(request)
+                           ^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 311, in get_user
+    user = backend.get_user(user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\backends.py", line 21, in get_user
+    return Voter.objects.get(pk=user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: users_voter.voter_id_card
+ERROR 2025-06-24 01:01:45,955 basehttp 6064 21484 "GET /admin/ HTTP/1.1" 500 219176
+INFO 2025-06-24 01:22:42,291 autoreload 21400 18692 Watching for file changes with StatReloader
+INFO 2025-06-24 01:22:47,758 basehttp 21400 17488 - Broken pipe from ('127.0.0.1', 8199)
+INFO 2025-06-24 01:22:48,915 basehttp 21400 21368 "GET /api/users/profile/ HTTP/1.1" 302 0
+WARNING 2025-06-24 01:22:48,941 log 21400 21368 Not Found: /accounts/login/
+WARNING 2025-06-24 01:22:48,942 basehttp 21400 21368 "GET /accounts/login/?next=/api/users/profile/ HTTP/1.1" 404 7900
+INFO 2025-06-24 01:22:53,884 basehttp 21400 21368 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-24 01:22:56,600 basehttp 21400 21368 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-24 01:22:56,681 basehttp 21400 21368 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4872
+INFO 2025-06-24 01:22:56,909 basehttp 21400 21368 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-06-24 01:22:56,916 basehttp 21400 21368 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-06-24 01:22:56,924 basehttp 21400 21368 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-06-24 01:22:56,932 basehttp 21400 21368 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-06-24 01:22:56,945 basehttp 21400 21368 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-06-24 01:22:56,951 basehttp 21400 21368 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-06-24 01:22:56,991 basehttp 21400 21368 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-06-24 01:22:56,998 basehttp 21400 21368 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2025-06-24 01:36:59,396 autoreload 29340 9188 Watching for file changes with StatReloader
+INFO 2025-06-24 01:37:05,124 basehttp 29340 18572 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4195
+INFO 2025-06-24 01:37:12,522 basehttp 29340 18572 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-24 01:37:14,532 basehttp 29340 18572 "GET /api/users/login/ HTTP/1.1" 200 2989
+ERROR 2025-06-24 01:37:19,507 log 29340 18572 Internal Server Error: /api/users/login/
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: users_voter.voter_id_card
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\views.py", line 70, in login_view
+    user = authenticate(request, voter_id=voter_id, password=password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\backends.py", line 12, in authenticate
+    user = Voter.objects.get(voter_id=voter_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: users_voter.voter_id_card
+ERROR 2025-06-24 01:37:19,523 basehttp 29340 18572 "POST /api/users/login/ HTTP/1.1" 500 184855
+INFO 2025-06-24 01:37:46,475 autoreload 29340 9188 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\india_blockchain_voting\urls.py changed, reloading.
+INFO 2025-06-24 01:37:48,344 autoreload 24204 23228 Watching for file changes with StatReloader
+ERROR 2025-06-24 01:37:52,837 log 24204 3416 Internal Server Error: /api/users/login/
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: users_voter.voter_id_card
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\views.py", line 70, in login_view
+    user = authenticate(request, voter_id=voter_id, password=password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\views\decorators\debug.py", line 75, in sensitive_variables_wrapper
+    return func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\auth\__init__.py", line 114, in authenticate
+    user = backend.authenticate(request, **credentials)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\backends.py", line 12, in authenticate
+    user = Voter.objects.get(voter_id=voter_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 629, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: users_voter.voter_id_card
+ERROR 2025-06-24 01:37:52,856 basehttp 24204 3416 "POST /api/users/login/ HTTP/1.1" 500 184855
+INFO 2025-06-24 01:37:58,746 basehttp 24204 3416 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-24 01:38:01,009 basehttp 24204 3416 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-24 01:38:01,057 basehttp 24204 3416 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4195
+INFO 2025-06-24 02:20:11,331 autoreload 4788 23104 Watching for file changes with StatReloader
+INFO 2025-06-24 02:57:56,430 autoreload 24144 27860 Watching for file changes with StatReloader
+INFO 2025-06-24 12:39:48,200 autoreload 25976 13432 Watching for file changes with StatReloader
+INFO 2025-06-24 12:39:53,714 basehttp 25976 8764 "GET / HTTP/1.1" 200 2754
+WARNING 2025-06-24 12:39:54,813 log 25976 8764 Not Found: /favicon.ico
+WARNING 2025-06-24 12:39:54,814 basehttp 25976 8764 "GET /favicon.ico HTTP/1.1" 404 7863
+INFO 2025-06-24 12:39:56,525 basehttp 25976 8764 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-24 12:39:56,614 basehttp 25976 8764 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4195
+INFO 2025-06-24 12:39:56,717 basehttp 25976 29400 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-06-24 12:39:56,718 basehttp 25976 8764 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-06-24 12:39:56,724 basehttp 25976 29400 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-06-24 12:39:56,725 basehttp 25976 8764 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-06-24 12:39:56,756 basehttp 25976 29400 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-06-24 12:39:56,756 basehttp 25976 8764 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-06-24 12:39:56,793 basehttp 25976 29400 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-06-24 12:39:59,967 basehttp 25976 29400 "GET /api/users/login/ HTTP/1.1" 200 2989
+INFO 2025-06-24 12:40:04,026 basehttp 25976 29400 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-24 12:40:07,103 basehttp 25976 29400 "GET /api/users/login/ HTTP/1.1" 200 2989
+INFO 2025-06-24 12:40:11,587 basehttp 25976 29400 "POST /api/users/login/ HTTP/1.1" 302 0
+INFO 2025-06-24 12:40:11,614 basehttp 25976 29400 "GET /users/profile/ HTTP/1.1" 200 3174
+INFO 2025-06-24 12:40:13,646 basehttp 25976 29400 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-24 12:40:16,039 basehttp 25976 29400 "GET /api/users/login/ HTTP/1.1" 200 3474
+INFO 2025-06-24 12:40:20,437 basehttp 25976 29400 "GET /api/users/logout/ HTTP/1.1" 302 0
+INFO 2025-06-24 12:40:20,446 basehttp 25976 29400 "GET /users/login/ HTTP/1.1" 200 3142
+INFO 2025-06-24 12:40:27,522 basehttp 25976 29400 "GET /elections/dashboard/ HTTP/1.1" 302 0
+WARNING 2025-06-24 12:40:27,549 log 25976 29400 Not Found: /accounts/login/
+WARNING 2025-06-24 12:40:27,550 basehttp 25976 29400 "GET /accounts/login/?next=/elections/dashboard/ HTTP/1.1" 404 7902
+INFO 2025-06-24 12:40:35,071 basehttp 25976 29400 "GET /elections/view-elections/ HTTP/1.1" 302 0
+WARNING 2025-06-24 12:40:35,094 log 25976 29400 Not Found: /accounts/login/
+WARNING 2025-06-24 12:40:35,094 basehttp 25976 29400 "GET /accounts/login/?next=/elections/view-elections/ HTTP/1.1" 404 7907
+INFO 2025-06-24 12:40:39,716 basehttp 25976 29400 "GET /api/users/logout/ HTTP/1.1" 302 0
+INFO 2025-06-24 12:40:39,726 basehttp 25976 29400 "GET /users/login/ HTTP/1.1" 200 3142
+INFO 2025-06-24 12:40:44,067 basehttp 25976 29400 "POST /users/login/ HTTP/1.1" 302 0
+INFO 2025-06-24 12:40:44,090 basehttp 25976 29400 "GET /users/profile/ HTTP/1.1" 200 3174
+INFO 2025-06-24 12:40:45,478 basehttp 25976 29400 "GET /elections/view-elections/ HTTP/1.1" 200 2300
+INFO 2025-06-24 12:40:47,075 basehttp 25976 29400 "GET /elections/leaderboard/ HTTP/1.1" 200 15562
+INFO 2025-06-27 00:50:27,643 autoreload 17480 20728 Watching for file changes with StatReloader
+INFO 2025-06-27 00:51:05,880 autoreload 26856 19516 Watching for file changes with StatReloader
+INFO 2025-06-27 00:51:32,189 basehttp 26856 27236 "GET / HTTP/1.1" 200 2754
+WARNING 2025-06-27 00:51:33,858 log 26856 27236 Not Found: /favicon.ico
+WARNING 2025-06-27 00:51:33,859 basehttp 26856 27236 "GET /favicon.ico HTTP/1.1" 404 7863
+INFO 2025-06-27 00:51:42,146 basehttp 26856 27236 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-27 00:51:42,416 basehttp 26856 27236 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4195
+INFO 2025-06-27 00:51:42,736 basehttp 26856 2960 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-06-27 00:51:42,736 basehttp 26856 27236 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-06-27 00:51:42,759 basehttp 26856 27236 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-06-27 00:51:42,760 basehttp 26856 2960 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-06-27 00:51:42,789 basehttp 26856 27236 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-06-27 00:51:42,810 basehttp 26856 2960 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-06-27 00:51:42,847 basehttp 26856 27236 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-06-27 00:52:02,319 basehttp 26856 22396 "GET / HTTP/1.1" 200 2754
+WARNING 2025-06-27 00:52:08,605 log 26856 22396 Not Found: /favicon.ico
+WARNING 2025-06-27 00:52:08,607 basehttp 26856 22396 "GET /favicon.ico HTTP/1.1" 404 7863
+INFO 2025-06-27 00:52:10,221 basehttp 26856 22396 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-27 00:52:10,256 basehttp 26856 22396 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4195
+INFO 2025-06-27 00:52:10,409 basehttp 26856 22396 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:10,413 basehttp 26856 23488 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:10,416 basehttp 26856 26292 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:10,418 basehttp 26856 25216 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:10,419 basehttp 26856 5016 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:10,432 basehttp 26856 11672 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:10,903 basehttp 26856 11672 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:13,898 basehttp 26856 11672 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-06-27 00:52:14,081 basehttp 26856 11672 "GET /admin/ HTTP/1.1" 200 24249
+INFO 2025-06-27 00:52:14,422 basehttp 26856 11672 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,203 basehttp 26856 11672 "GET /admin/elections/election/add/ HTTP/1.1" 200 45203
+INFO 2025-06-27 00:52:23,380 basehttp 26856 11672 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,381 basehttp 26856 25216 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,386 basehttp 26856 23488 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,394 basehttp 26856 25216 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,399 basehttp 26856 23488 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,403 basehttp 26856 25216 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,412 basehttp 26856 25216 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,416 basehttp 26856 23488 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,423 basehttp 26856 25216 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,431 basehttp 26856 25216 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,437 basehttp 26856 5016 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-06-27 00:52:23,446 basehttp 26856 22396 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-06-27 00:52:23,453 basehttp 26856 11672 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15628
+INFO 2025-06-27 00:52:23,474 basehttp 26856 26292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 00:52:23,550 basehttp 26856 26292 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,583 basehttp 26856 11672 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,603 basehttp 26856 26292 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-06-27 00:52:23,627 basehttp 26856 26292 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-06-27 00:52:23,760 basehttp 26856 26292 "GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 537
+INFO 2025-06-27 00:52:24,754 basehttp 26856 26292 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-06-27 00:52:24,759 basehttp 26856 11672 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2025-06-27 00:52:58,426 basehttp 26856 11672 "GET /static/admin/img/calendar-icons.svg HTTP/1.1" 200 2455
+INFO 2025-06-27 00:53:43,665 basehttp 26856 11672 "POST /admin/elections/election/add/ HTTP/1.1" 200 45537
+INFO 2025-06-27 00:53:43,850 basehttp 26856 11672 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 00:53:59,761 basehttp 26856 11672 "GET /admin/users/constituency/add/?_to_field=id&_popup=1 HTTP/1.1" 200 11312
+INFO 2025-06-27 00:53:59,992 basehttp 26856 11672 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 00:57:24,075 basehttp 26856 11672 "POST /admin/elections/election/add/ HTTP/1.1" 302 0
+INFO 2025-06-27 00:57:24,336 basehttp 26856 11672 "GET /admin/elections/election/ HTTP/1.1" 200 20692
+INFO 2025-06-27 00:57:24,541 basehttp 26856 11672 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-06-27 00:57:24,550 basehttp 26856 26292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 00:57:24,584 basehttp 26856 26292 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-06-27 00:57:25,553 basehttp 26856 26292 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-06-27 00:57:25,616 basehttp 26856 26292 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-06-27 00:57:25,617 basehttp 26856 11672 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-06-27 00:57:25,618 basehttp 26856 25340 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-06-27 00:57:32,215 basehttp 26856 25340 "GET /admin/elections/election/1/change/ HTTP/1.1" 200 52086
+INFO 2025-06-27 00:57:32,351 basehttp 26856 25340 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 00:57:46,666 basehttp 26856 25340 "POST /admin/elections/election/1/change/ HTTP/1.1" 200 52503
+INFO 2025-06-27 00:57:46,765 basehttp 26856 25340 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 00:57:58,193 basehttp 26856 25340 "POST /admin/elections/election/1/change/ HTTP/1.1" 200 52371
+INFO 2025-06-27 00:57:58,293 basehttp 26856 25340 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 00:58:09,680 basehttp 26856 25340 "POST /admin/elections/election/1/change/ HTTP/1.1" 302 0
+INFO 2025-06-27 00:58:09,732 basehttp 26856 25340 "GET /admin/elections/election/ HTTP/1.1" 200 20694
+INFO 2025-06-27 00:58:09,860 basehttp 26856 25340 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 00:58:15,103 basehttp 26856 25340 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-27 00:58:16,856 basehttp 26856 25340 "GET /api/users/login/ HTTP/1.1" 200 3303
+INFO 2025-06-27 00:58:31,349 basehttp 26856 25340 "POST /api/users/login/ HTTP/1.1" 200 3469
+INFO 2025-06-27 00:58:33,891 basehttp 26856 25340 "GET /api/users/register/ HTTP/1.1" 200 10892
+INFO 2025-06-27 00:58:55,807 basehttp 26856 25340 "POST /api/users/login/ HTTP/1.1" 200 3469
+INFO 2025-06-27 00:59:02,074 basehttp 26856 25340 "GET /api/users/register/ HTTP/1.1" 200 10892
+INFO 2025-06-27 00:59:17,320 basehttp 26856 25340 "POST /api/users/login/ HTTP/1.1" 302 0
+INFO 2025-06-27 00:59:17,352 basehttp 26856 25340 "GET /users/profile/ HTTP/1.1" 200 3174
+INFO 2025-06-27 00:59:19,762 basehttp 26856 25340 "GET /elections/view-elections/ HTTP/1.1" 200 2300
+INFO 2025-06-27 00:59:22,400 basehttp 26856 25340 "GET /elections/dashboard/ HTTP/1.1" 200 2990
+INFO 2025-06-27 00:59:24,220 basehttp 26856 25340 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-27 00:59:26,944 basehttp 26856 25340 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-27 00:59:26,985 basehttp 26856 25340 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4476
+INFO 2025-06-27 00:59:27,362 basehttp 26856 25340 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2025-06-27 00:59:33,383 basehttp 26856 25340 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-06-27 00:59:33,432 basehttp 26856 25340 "GET /admin/ HTTP/1.1" 200 25815
+INFO 2025-06-27 00:59:37,842 basehttp 26856 25340 "GET /admin/blockchain/blockchainauditlog/ HTTP/1.1" 200 17449
+INFO 2025-06-27 00:59:37,991 basehttp 26856 25340 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 00:59:39,461 basehttp 26856 25340 "GET /admin/blockchain/blockchain/ HTTP/1.1" 200 15974
+INFO 2025-06-27 00:59:39,658 basehttp 26856 25340 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 00:59:44,828 basehttp 26856 25340 "GET /admin/elections/election/ HTTP/1.1" 200 20467
+INFO 2025-06-27 00:59:44,953 basehttp 26856 25340 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 00:59:53,560 basehttp 26856 25340 "GET /admin/elections/election/ HTTP/1.1" 200 20467
+INFO 2025-06-27 00:59:53,819 basehttp 26856 25340 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 01:00:00,457 basehttp 26856 21476 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-27 01:00:02,199 basehttp 26856 21476 "GET /api/users/login/ HTTP/1.1" 200 3303
+INFO 2025-06-27 01:00:12,675 basehttp 26856 22988 "POST /api/users/login/ HTTP/1.1" 302 0
+INFO 2025-06-27 01:00:12,708 basehttp 26856 22988 "GET /users/profile/ HTTP/1.1" 200 3174
+INFO 2025-06-27 01:00:21,252 basehttp 26856 25120 "GET /admin/elections/election/1/change/ HTTP/1.1" 302 0
+INFO 2025-06-27 01:00:21,288 basehttp 26856 25120 "GET /admin/login/?next=/admin/elections/election/1/change/ HTTP/1.1" 200 3908
+INFO 2025-06-27 01:00:26,202 basehttp 26856 25120 "POST /admin/login/?next=/admin/elections/election/1/change/ HTTP/1.1" 302 0
+INFO 2025-06-27 01:00:26,499 basehttp 26856 25120 "GET /admin/elections/election/1/change/ HTTP/1.1" 200 52086
+INFO 2025-06-27 01:00:26,661 basehttp 26856 25120 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 01:00:58,702 basehttp 26856 25120 "POST /admin/elections/election/1/change/ HTTP/1.1" 302 0
+INFO 2025-06-27 01:00:58,756 basehttp 26856 25120 "GET /admin/elections/election/ HTTP/1.1" 200 20693
+INFO 2025-06-27 01:00:58,936 basehttp 26856 25120 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 01:01:04,510 basehttp 26856 25120 "GET /elections/dashboard/ HTTP/1.1" 200 2989
+INFO 2025-06-27 01:01:06,946 basehttp 26856 25120 "GET /elections/view-elections/ HTTP/1.1" 200 2300
+INFO 2025-06-27 01:01:09,515 basehttp 26856 25120 "GET /elections/leaderboard/ HTTP/1.1" 200 15562
+INFO 2025-06-27 01:01:10,946 basehttp 26856 25120 "GET /users/profile/ HTTP/1.1" 200 3167
+INFO 2025-06-27 01:01:14,186 basehttp 26856 25120 "GET /users/logout/ HTTP/1.1" 302 0
+INFO 2025-06-27 01:01:14,281 basehttp 26856 25120 "GET /users/login/ HTTP/1.1" 200 3806
+INFO 2025-06-27 01:01:25,947 basehttp 26856 15508 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-27 01:01:28,614 basehttp 26856 15508 "GET /api/users/login/ HTTP/1.1" 200 2989
+INFO 2025-06-27 01:01:38,898 basehttp 26856 15508 "POST /api/users/login/ HTTP/1.1" 302 0
+INFO 2025-06-27 01:01:38,931 basehttp 26856 15508 "GET /users/profile/ HTTP/1.1" 200 3174
+INFO 2025-06-27 01:01:41,316 basehttp 26856 15508 "GET /elections/view-elections/ HTTP/1.1" 200 2300
+INFO 2025-06-27 01:01:43,614 basehttp 26856 15508 "GET /elections/leaderboard/ HTTP/1.1" 200 15562
+INFO 2025-06-27 01:01:49,847 basehttp 26856 15508 "GET /users/profile/ HTTP/1.1" 200 3174
+INFO 2025-06-27 01:01:51,423 basehttp 26856 15508 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-27 01:01:53,751 basehttp 26856 15508 "GET /api/users/login/ HTTP/1.1" 200 4138
+INFO 2025-06-27 01:01:56,457 basehttp 26856 15508 "GET /elections/dashboard/ HTTP/1.1" 200 2990
+INFO 2025-06-27 01:01:58,164 basehttp 26856 15508 "GET /elections/view-elections/ HTTP/1.1" 200 2300
+INFO 2025-06-27 01:02:06,836 autoreload 26856 19516 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-27 01:02:09,549 autoreload 18480 8668 Watching for file changes with StatReloader
+INFO 2025-06-27 01:11:55,975 autoreload 18480 8668 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-27 01:11:57,458 autoreload 12768 27348 Watching for file changes with StatReloader
+INFO 2025-06-27 01:12:26,786 autoreload 12768 27348 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-27 01:12:28,014 autoreload 25020 23852 Watching for file changes with StatReloader
+INFO 2025-06-27 01:15:50,108 autoreload 25020 23852 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-27 01:15:51,774 autoreload 18020 25000 Watching for file changes with StatReloader
+INFO 2025-06-27 01:16:17,319 autoreload 18020 25000 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-27 01:16:20,087 autoreload 24916 13932 Watching for file changes with StatReloader
+INFO 2025-06-27 01:37:55,602 autoreload 1528 11016 Watching for file changes with StatReloader
+INFO 2025-06-27 01:37:57,898 basehttp 1528 12920 "GET /elections/view-elections/ HTTP/1.1" 200 2300
+INFO 2025-06-27 01:38:01,824 basehttp 1528 12920 "GET /elections/dashboard/ HTTP/1.1" 200 2990
+INFO 2025-06-27 01:38:04,104 basehttp 1528 12920 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-27 01:38:07,526 basehttp 1528 12920 "GET /api/users/login/ HTTP/1.1" 200 4677
+INFO 2025-06-27 01:38:10,457 basehttp 1528 12920 "POST /api/users/login/ HTTP/1.1" 302 0
+INFO 2025-06-27 01:38:10,471 basehttp 1528 12920 "GET /users/profile/ HTTP/1.1" 200 3167
+INFO 2025-06-27 01:38:13,112 basehttp 1528 12920 "GET /elections/view-elections/ HTTP/1.1" 200 2300
+INFO 2025-06-27 01:38:14,888 basehttp 1528 12920 "GET /elections/dashboard/ HTTP/1.1" 200 2989
+INFO 2025-06-27 01:38:16,740 basehttp 1528 12920 "GET /users/profile/ HTTP/1.1" 200 3167
+INFO 2025-06-27 01:38:19,689 basehttp 1528 12920 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-27 01:38:21,328 basehttp 1528 12920 "GET /admin/ HTTP/1.1" 200 26338
+INFO 2025-06-27 01:38:21,534 basehttp 1528 12920 "GET /static/admin/js/admin-enhancements.js HTTP/1.1" 200 4311
+INFO 2025-06-27 01:38:38,335 basehttp 1528 12920 "GET /admin/elections/election/ HTTP/1.1" 200 25101
+INFO 2025-06-27 01:38:38,452 basehttp 1528 12920 "GET /static/admin/css/admin-custom.css HTTP/1.1" 200 5233
+INFO 2025-06-27 01:38:38,459 basehttp 1528 22336 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 01:38:40,945 basehttp 1528 22336 "GET /admin/elections/election/1/change/ HTTP/1.1" 200 74074
+INFO 2025-06-27 01:38:41,012 basehttp 1528 22336 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 02:16:33,021 autoreload 15916 25764 Watching for file changes with StatReloader
+INFO 2025-06-27 02:16:37,947 basehttp 15916 14820 "GET /admin/elections/election/1/change/ HTTP/1.1" 200 74074
+INFO 2025-06-27 02:16:38,094 basehttp 15916 14820 "GET /static/admin/css/admin-custom.css HTTP/1.1" 304 0
+INFO 2025-06-27 02:16:38,101 basehttp 15916 23040 "GET /static/admin/js/admin-enhancements.js HTTP/1.1" 304 0
+INFO 2025-06-27 02:16:38,112 basehttp 15916 27600 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 02:16:45,259 basehttp 15916 27600 "GET /admin/ HTTP/1.1" 200 25576
+INFO 2025-06-27 03:37:58,672 autoreload 7992 16264 Watching for file changes with StatReloader
+INFO 2025-06-27 03:38:03,495 basehttp 7992 2928 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-27 03:38:03,560 basehttp 7992 2928 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 7783
+INFO 2025-06-27 03:38:03,786 basehttp 7992 2928 "GET /static/admin/css/admin-custom.css HTTP/1.1" 200 12795
+INFO 2025-06-27 03:38:03,818 basehttp 7992 7368 "GET /static/admin/js/admin-enhancements.js HTTP/1.1" 200 11890
+INFO 2025-06-27 03:38:08,177 basehttp 7992 7368 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-06-27 03:38:08,212 basehttp 7992 7368 "GET /admin/ HTTP/1.1" 200 25576
+INFO 2025-06-27 03:38:22,120 basehttp 7992 7368 "GET /admin/elections/election/ HTTP/1.1" 200 25101
+INFO 2025-06-27 03:38:22,219 basehttp 7992 7368 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 03:38:33,593 basehttp 7992 7368 "GET /admin/elections/election/1/change/ HTTP/1.1" 200 74074
+INFO 2025-06-27 03:38:33,658 basehttp 7992 7368 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 03:38:53,807 basehttp 7992 7368 "GET /admin/elections/election/add/ HTTP/1.1" 200 60911
+INFO 2025-06-27 03:38:53,907 basehttp 7992 7368 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 03:42:50,089 basehttp 7992 7368 "GET /admin/elections/candidate/add/ HTTP/1.1" 200 42724
+INFO 2025-06-27 03:42:50,296 basehttp 7992 7368 "GET /static/admin/css/admin-custom.css HTTP/1.1" 304 0
+INFO 2025-06-27 03:42:50,296 basehttp 7992 4772 "GET /static/admin/js/admin-enhancements.js HTTP/1.1" 304 0
+INFO 2025-06-27 03:42:50,301 basehttp 7992 2928 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 03:43:44,343 basehttp 7992 2928 "POST /admin/elections/candidate/add/ HTTP/1.1" 200 44044
+INFO 2025-06-27 03:43:44,432 basehttp 7992 2928 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 11:41:53,888 autoreload 7992 16264 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\migrations\0002_initial.py changed, reloading.
+INFO 2025-06-27 11:41:55,419 autoreload 12508 19520 Watching for file changes with StatReloader
+INFO 2025-06-27 11:50:50,964 autoreload 12508 19520 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\forms.py changed, reloading.
+INFO 2025-06-27 11:50:53,694 autoreload 8084 31328 Watching for file changes with StatReloader
+INFO 2025-06-27 11:51:31,276 autoreload 8084 31328 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\forms.py changed, reloading.
+INFO 2025-06-27 11:51:33,399 autoreload 2288 15340 Watching for file changes with StatReloader
+INFO 2025-06-27 11:52:00,616 autoreload 2288 15340 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\forms.py changed, reloading.
+INFO 2025-06-27 11:52:03,243 autoreload 24984 21180 Watching for file changes with StatReloader
+INFO 2025-06-27 11:52:26,119 autoreload 24984 21180 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-27 11:52:28,282 autoreload 28416 27876 Watching for file changes with StatReloader
+INFO 2025-06-27 11:52:55,949 autoreload 28416 27876 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\admin.py changed, reloading.
+INFO 2025-06-27 11:52:58,206 autoreload 32064 32176 Watching for file changes with StatReloader
+INFO 2025-06-27 12:06:05,741 autoreload 14672 32912 Watching for file changes with StatReloader
+INFO 2025-06-27 12:06:13,020 basehttp 14672 31692 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-27 12:06:19,068 basehttp 14672 31692 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-27 12:06:19,265 basehttp 14672 31692 - Broken pipe from ('127.0.0.1', 58638)
+INFO 2025-06-27 12:06:19,298 basehttp 14672 29436 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-27 12:06:19,321 basehttp 14672 29436 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6552
+INFO 2025-06-27 12:06:19,539 basehttp 14672 29436 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:19,556 basehttp 14672 27072 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:19,556 basehttp 14672 23016 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:19,560 basehttp 14672 16236 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:19,564 basehttp 14672 32928 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:19,564 basehttp 14672 2992 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:19,782 basehttp 14672 29436 "GET /static/admin/js/admin-enhancements.js HTTP/1.1" 200 11890
+INFO 2025-06-27 12:06:19,883 basehttp 14672 29436 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+WARNING 2025-06-27 12:06:21,141 log 14672 29436 Not Found: /favicon.ico
+WARNING 2025-06-27 12:06:21,142 basehttp 14672 29436 "GET /favicon.ico HTTP/1.1" 404 7863
+INFO 2025-06-27 12:06:23,192 basehttp 14672 29436 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-06-27 12:06:23,263 basehttp 14672 29436 "GET /admin/ HTTP/1.1" 200 25576
+INFO 2025-06-27 12:06:23,622 basehttp 14672 29436 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:33,443 basehttp 14672 29436 "GET /admin/elections/election/ HTTP/1.1" 200 23870
+INFO 2025-06-27 12:06:33,610 basehttp 14672 29436 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:33,615 basehttp 14672 16236 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:33,615 basehttp 14672 27072 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:33,618 basehttp 14672 23016 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:33,631 basehttp 14672 2992 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:33,639 basehttp 14672 16236 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:33,639 basehttp 14672 29436 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:33,642 basehttp 14672 32928 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 12:06:33,643 basehttp 14672 27072 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:33,644 basehttp 14672 23016 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:33,657 basehttp 14672 23016 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:34,186 basehttp 14672 23016 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:34,254 basehttp 14672 27072 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:34,254 basehttp 14672 32928 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:34,254 basehttp 14672 23016 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-06-27 12:06:55,537 basehttp 14672 28388 "GET / HTTP/1.1" 200 2754
+WARNING 2025-06-27 12:06:56,809 log 14672 28388 Not Found: /favicon.ico
+WARNING 2025-06-27 12:06:56,811 basehttp 14672 28388 "GET /favicon.ico HTTP/1.1" 404 7863
+INFO 2025-06-27 12:06:58,150 basehttp 14672 28388 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-27 12:06:58,164 basehttp 14672 28388 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6552
+INFO 2025-06-27 12:06:58,292 basehttp 14672 28388 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-06-27 12:06:58,294 basehttp 14672 13692 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-06-27 12:06:58,306 basehttp 14672 13692 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-06-27 12:06:58,307 basehttp 14672 28388 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-06-27 12:06:58,321 basehttp 14672 28388 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-06-27 12:06:58,321 basehttp 14672 13692 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-06-27 12:06:58,330 basehttp 14672 13692 "GET /static/admin/js/admin-enhancements.js HTTP/1.1" 200 11890
+INFO 2025-06-27 12:06:58,459 basehttp 14672 13692 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-06-27 12:09:37,895 autoreload 14672 32912 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\elections\forms.py changed, reloading.
+INFO 2025-06-27 12:09:40,101 autoreload 30672 32140 Watching for file changes with StatReloader
+INFO 2025-06-27 14:55:33,195 autoreload 27416 30000 Watching for file changes with StatReloader
+INFO 2025-06-27 14:55:45,486 basehttp 27416 30612 "GET / HTTP/1.1" 200 2754
+INFO 2025-06-27 14:55:48,039 basehttp 27416 30612 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-06-27 14:55:48,322 basehttp 27416 30612 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6720
+INFO 2025-06-27 14:55:48,515 basehttp 27416 29648 "GET /static/admin/js/admin-enhancements.js HTTP/1.1" 304 0
+INFO 2025-06-27 14:55:48,645 basehttp 27416 30612 "GET /static/admin/css/admin-clean.css HTTP/1.1" 200 5545
+WARNING 2025-06-27 14:55:49,237 log 27416 30612 Not Found: /favicon.ico
+WARNING 2025-06-27 14:55:49,237 basehttp 27416 30612 "GET /favicon.ico HTTP/1.1" 404 7863
+INFO 2025-06-27 14:55:51,009 basehttp 27416 30612 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-06-27 14:55:51,120 basehttp 27416 30612 "GET /admin/ HTTP/1.1" 200 25576
+INFO 2025-06-27 14:56:09,972 basehttp 27416 14672 "GET /admin/blockchain/blockchainauditlog/ HTTP/1.1" 200 20612
+INFO 2025-06-27 14:56:10,130 basehttp 27416 14672 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 14:56:12,437 basehttp 27416 14672 "GET /admin/elections/electionconstituency/ HTTP/1.1" 200 22696
+INFO 2025-06-27 14:56:12,503 basehttp 27416 22612 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-06-27 14:56:12,505 basehttp 27416 14672 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 14:56:17,387 basehttp 27416 14672 "GET /admin/elections/electionconstituency/2/change/ HTTP/1.1" 200 29624
+INFO 2025-06-27 14:56:17,457 basehttp 27416 14672 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-06-27 14:56:17,461 basehttp 27416 26920 "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-06-27 14:56:17,462 basehttp 27416 29860 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2025-06-27 14:56:17,465 basehttp 27416 12968 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-06-27 14:56:17,466 basehttp 27416 22612 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 14:56:17,545 basehttp 27416 22612 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-06-27 14:56:17,554 basehttp 27416 22612 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-06-27 14:56:17,554 basehttp 27416 12968 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-06-27 14:56:18,020 basehttp 27416 12968 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+INFO 2025-06-27 14:56:30,571 basehttp 27416 12968 "GET /admin/users/constituency/1/change/?_to_field=id&_popup=1 HTTP/1.1" 200 14417
+INFO 2025-06-27 14:56:30,676 basehttp 27416 12968 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 14:56:33,861 basehttp 27416 12968 "GET /admin/users/constituency/1/change/?_to_field=id HTTP/1.1" 200 26805
+INFO 2025-06-27 14:56:33,963 basehttp 27416 12968 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-06-27 14:56:40,520 log 27416 12968 Internal Server Error: /admin/users/constituency/1/delete/
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: elections_voterecord.timestamp
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\options.py", line 2204, in delete_view
+    return self._delete_view(request, object_id, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\options.py", line 2234, in _delete_view
+    ) = self.get_deleted_objects([obj], request)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\options.py", line 2199, in get_deleted_objects
+    return get_deleted_objects(objs, request, self.admin_site)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\utils.py", line 138, in get_deleted_objects
+    collector.collect(objs)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\utils.py", line 205, in collect
+    return super().collect(objs, source_attr=source_attr, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\deletion.py", line 343, in collect
+    if getattr(on_delete, "lazy_sub_objs", False) or sub_objs:
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 398, in __bool__
+    self._fetch_all()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: elections_voterecord.timestamp
+ERROR 2025-06-27 14:56:40,528 basehttp 27416 12968 "GET /admin/users/constituency/1/delete/ HTTP/1.1" 500 225808
+INFO 2025-06-27 14:56:44,047 basehttp 27416 12968 "GET /admin/users/constituency/1/change/?_to_field=id HTTP/1.1" 200 26805
+INFO 2025-06-27 14:56:44,111 basehttp 27416 12968 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 14:56:45,094 basehttp 27416 12968 "GET /admin/elections/electionconstituency/2/change/ HTTP/1.1" 200 29624
+INFO 2025-06-27 14:56:45,153 basehttp 27416 12968 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-06-27 14:58:22,491 autoreload 27416 30000 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\users\admin.py changed, reloading.
+INFO 2025-06-27 14:58:23,551 autoreload 27476 21112 Watching for file changes with StatReloader
+INFO 2025-06-28 01:45:58,043 basehttp 27476 28756 "GET /admin/elections/electionconstituency/2/change/ HTTP/1.1" 302 0
+INFO 2025-06-28 01:45:58,143 basehttp 27476 28756 "GET /admin/login/?next=/admin/elections/electionconstituency/2/change/ HTTP/1.1" 200 6800
+INFO 2025-07-01 03:02:51,539 autoreload 16736 360 Watching for file changes with StatReloader
+INFO 2025-07-01 03:04:08,367 autoreload 21868 3680 Watching for file changes with StatReloader
+INFO 2025-07-01 03:04:14,978 basehttp 21868 17380 "GET / HTTP/1.1" 200 2754
+WARNING 2025-07-01 03:04:18,497 log 21868 17380 Not Found: /favicon.ico
+WARNING 2025-07-01 03:04:18,499 basehttp 21868 17380 "GET /favicon.ico HTTP/1.1" 404 7863
+INFO 2025-07-01 03:04:18,605 basehttp 21868 17380 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-07-01 03:04:18,849 basehttp 21868 17380 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6720
+INFO 2025-07-01 03:04:18,959 basehttp 21868 17380 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:18,965 basehttp 21868 28892 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:18,965 basehttp 21868 19720 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:18,968 basehttp 21868 31888 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:18,969 basehttp 21868 6812 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:18,969 basehttp 21868 28892 "GET /static/admin/js/admin-enhancements.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:18,971 basehttp 21868 21752 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:19,055 basehttp 21868 17380 "GET /static/admin/css/admin-clean.css HTTP/1.1" 200 5545
+INFO 2025-07-01 03:04:19,107 basehttp 21868 17380 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:22,019 basehttp 21868 17380 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-07-01 03:04:22,115 basehttp 21868 17380 "GET /admin/ HTTP/1.1" 200 25576
+INFO 2025-07-01 03:04:22,367 basehttp 21868 17380 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+WARNING 2025-07-01 03:04:29,979 log 21868 17380 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-07-01 03:04:29,979 basehttp 21868 17380 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7974
+INFO 2025-07-01 03:04:45,568 basehttp 21868 17380 "GET /admin/blockchain/blockchainauditlog/ HTTP/1.1" 200 20612
+INFO 2025-07-01 03:04:45,655 basehttp 21868 21752 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:45,656 basehttp 21868 19720 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:45,656 basehttp 21868 6812 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:45,656 basehttp 21868 28892 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:45,656 basehttp 21868 31888 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:45,660 basehttp 21868 21752 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:45,660 basehttp 21868 19720 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:45,662 basehttp 21868 28892 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:45,662 basehttp 21868 6812 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:45,676 basehttp 21868 6812 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:45,688 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:04:46,046 basehttp 21868 17380 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:46,080 basehttp 21868 6812 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:46,080 basehttp 21868 17380 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:47,643 basehttp 21868 17380 "GET /admin/blockchain/blockchain/ HTTP/1.1" 200 19137
+INFO 2025-07-01 03:04:47,713 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:04:49,396 basehttp 21868 17380 "GET /admin/elections/candidate/ HTTP/1.1" 200 23378
+INFO 2025-07-01 03:04:49,483 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:04:51,502 basehttp 21868 17380 "GET /admin/elections/electionconstituency/ HTTP/1.1" 200 22696
+INFO 2025-07-01 03:04:51,569 basehttp 21868 6812 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:51,573 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:04:54,420 basehttp 21868 17380 "GET /admin/elections/election/ HTTP/1.1" 200 24038
+INFO 2025-07-01 03:04:54,504 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:04:54,641 basehttp 21868 17380 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-07-01 03:04:55,654 basehttp 21868 17380 "GET /admin/elections/party/ HTTP/1.1" 200 20318
+INFO 2025-07-01 03:04:55,734 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:04:57,504 basehttp 21868 17380 "GET /admin/elections/election/ HTTP/1.1" 200 24038
+INFO 2025-07-01 03:04:57,573 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-07-01 03:04:59,455 log 21868 17380 Internal Server Error: /admin/elections/election/1/change/
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader_tags.py", line 228, in do_block
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'block' tag with name 'extrahead' appears more than once
+ERROR 2025-07-01 03:04:59,461 basehttp 21868 17380 "GET /admin/elections/election/1/change/ HTTP/1.1" 500 225348
+INFO 2025-07-01 03:05:08,576 basehttp 21868 17380 "GET /admin/elections/election/ HTTP/1.1" 200 24038
+INFO 2025-07-01 03:05:08,643 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:05:30,059 basehttp 21868 17380 "GET /admin/elections/party/ HTTP/1.1" 200 20318
+INFO 2025-07-01 03:05:30,164 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-07-01 03:05:32,558 log 21868 17380 Internal Server Error: /admin/reports/auditreport/
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: reports_auditreport.timestamp
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\options.py", line 2163, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: reports_auditreport.timestamp
+ERROR 2025-07-01 03:05:32,564 basehttp 21868 17380 "GET /admin/reports/auditreport/ HTTP/1.1" 500 191902
+INFO 2025-07-01 03:05:35,088 basehttp 21868 17380 "GET /admin/elections/party/ HTTP/1.1" 200 20318
+INFO 2025-07-01 03:05:35,149 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-07-01 03:05:36,582 log 21868 17380 Internal Server Error: /admin/reports/performancereport/
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: reports_performancereport.timestamp
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\options.py", line 2163, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: reports_performancereport.timestamp
+ERROR 2025-07-01 03:05:36,587 basehttp 21868 17380 "GET /admin/reports/performancereport/ HTTP/1.1" 500 190663
+INFO 2025-07-01 03:05:38,641 basehttp 21868 17380 "GET /admin/elections/party/ HTTP/1.1" 200 20318
+INFO 2025-07-01 03:05:38,713 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-07-01 03:05:40,055 log 21868 17380 Internal Server Error: /admin/reports/votingreport/
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such column: reports_votingreport.created_at
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\options.py", line 2163, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 366, in __len__
+    self._fetch_all()
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 1949, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such column: reports_votingreport.created_at
+ERROR 2025-07-01 03:05:40,060 basehttp 21868 17380 "GET /admin/reports/votingreport/ HTTP/1.1" 500 210378
+INFO 2025-07-01 03:05:41,282 basehttp 21868 17380 "GET /admin/elections/party/ HTTP/1.1" 200 20318
+INFO 2025-07-01 03:05:41,439 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:05:43,038 basehttp 21868 17380 "GET /admin/users/adminuser/ HTTP/1.1" 200 19115
+INFO 2025-07-01 03:05:43,378 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:05:45,683 basehttp 21868 17380 "GET /admin/users/constituency/ HTTP/1.1" 200 38165
+INFO 2025-07-01 03:05:45,788 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:05:48,197 basehttp 21868 17380 "GET /admin/users/state/ HTTP/1.1" 200 24632
+INFO 2025-07-01 03:05:48,270 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:05:50,054 basehttp 21868 17380 "GET /admin/users/voter/ HTTP/1.1" 200 28844
+INFO 2025-07-01 03:05:50,142 basehttp 21868 6812 "GET /static/admin/img/icon-no.svg HTTP/1.1" 304 0
+INFO 2025-07-01 03:05:50,160 basehttp 21868 17380 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:06:00,855 basehttp 21868 17380 "GET /admin/users/voter/2/change/ HTTP/1.1" 200 52447
+INFO 2025-07-01 03:06:00,944 basehttp 21868 21752 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:06:00,944 basehttp 21868 19720 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:06:00,944 basehttp 21868 17380 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-07-01 03:06:00,945 basehttp 21868 28892 "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:06:00,949 basehttp 21868 6812 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:06:01,063 basehttp 21868 6812 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-07-01 03:06:01,073 basehttp 21868 28892 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-07-01 03:06:01,090 basehttp 21868 6812 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-07-01 03:06:01,627 basehttp 21868 6812 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+INFO 2025-07-01 03:06:01,629 basehttp 21868 28892 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+INFO 2025-07-01 03:06:19,283 basehttp 21868 28892 "POST /admin/users/voter/2/change/ HTTP/1.1" 302 0
+INFO 2025-07-01 03:06:19,431 basehttp 21868 28892 "GET /admin/users/voter/2/change/ HTTP/1.1" 200 52703
+INFO 2025-07-01 03:06:19,508 basehttp 21868 28892 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:06:21,591 basehttp 21868 28892 "POST /admin/users/voter/2/change/ HTTP/1.1" 302 0
+INFO 2025-07-01 03:06:21,647 basehttp 21868 28892 "GET /admin/users/voter/ HTTP/1.1" 200 29063
+INFO 2025-07-01 03:06:21,736 basehttp 21868 28892 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:09:30,112 basehttp 21868 28892 "GET /admin/elections/electionconstituency/ HTTP/1.1" 200 22696
+INFO 2025-07-01 03:09:30,238 basehttp 21868 28892 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:09:32,028 basehttp 21868 28892 "GET /admin/elections/candidate/ HTTP/1.1" 200 23378
+INFO 2025-07-01 03:09:32,122 basehttp 21868 28892 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:09:34,589 basehttp 21868 28892 "GET /admin/elections/election/ HTTP/1.1" 200 24038
+INFO 2025-07-01 03:09:34,663 basehttp 21868 28892 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-07-01 03:09:37,104 log 21868 28892 Internal Server Error: /admin/elections/election/1/change/
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\response.py", line 74, in resolve_template
+    return get_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\backends\django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader_tags.py", line 299, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 518, in parse
+    raise self.error(token, e)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 523, in parse
+    self.unclosed_block_tag(parse_until)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\template\base.py", line 590, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 4: 'block'. Looking for one of: endblock.
+ERROR 2025-07-01 03:09:37,107 basehttp 21868 28892 "GET /admin/elections/election/1/change/ HTTP/1.1" 500 192225
+INFO 2025-07-01 03:09:39,655 basehttp 21868 28892 "GET /admin/elections/election/ HTTP/1.1" 200 24038
+INFO 2025-07-01 03:09:39,746 basehttp 21868 28892 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 03:18:16,941 autoreload 21868 3680 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\admin.py changed, reloading.
+INFO 2025-07-01 03:18:17,897 autoreload 11116 22128 Watching for file changes with StatReloader
+INFO 2025-07-01 03:18:40,769 autoreload 11116 22128 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\admin.py changed, reloading.
+INFO 2025-07-01 03:18:41,663 autoreload 31740 32564 Watching for file changes with StatReloader
+INFO 2025-07-01 12:17:36,990 autoreload 31740 32564 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\admin.py changed, reloading.
+INFO 2025-07-01 12:17:39,583 autoreload 35652 33012 Watching for file changes with StatReloader
+INFO 2025-07-01 12:24:31,917 autoreload 35652 33012 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\models.py changed, reloading.
+INFO 2025-07-01 12:24:34,152 autoreload 17264 37308 Watching for file changes with StatReloader
+INFO 2025-07-01 12:25:01,586 autoreload 17264 37308 D:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\blockchain\models.py changed, reloading.
+INFO 2025-07-01 12:25:03,588 autoreload 32200 25216 Watching for file changes with StatReloader
+INFO 2025-07-01 16:32:00,000 autoreload 16108 29588 Watching for file changes with StatReloader
+INFO 2025-07-01 16:45:34,423 autoreload 29564 8428 Watching for file changes with StatReloader
+INFO 2025-07-01 16:45:39,071 basehttp 29564 34460 "GET / HTTP/1.1" 200 2754
+INFO 2025-07-01 16:45:41,960 basehttp 29564 34460 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-07-01 16:45:42,147 basehttp 29564 34460 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6792
+INFO 2025-07-01 16:45:42,239 basehttp 29564 36196 "GET /static/admin/css/admin-clean.css HTTP/1.1" 304 0
+INFO 2025-07-01 16:45:42,239 basehttp 29564 3268 "GET /static/admin/js/admin-enhancements.js HTTP/1.1" 304 0
+INFO 2025-07-01 16:45:42,307 basehttp 29564 34460 "GET /static/admin/css/enhanced-admin.css HTTP/1.1" 200 2434
+INFO 2025-07-01 16:45:44,449 basehttp 29564 34460 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-07-01 16:45:44,509 basehttp 29564 34460 "GET /admin/ HTTP/1.1" 200 25370
+INFO 2025-07-01 16:45:49,438 basehttp 29564 34460 "GET /admin/blockchain/blockchain/ HTTP/1.1" 200 18881
+INFO 2025-07-01 16:45:49,549 basehttp 29564 34460 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 16:45:51,514 basehttp 29564 34460 "GET /admin/blockchain/block/ HTTP/1.1" 200 18810
+INFO 2025-07-01 16:45:52,771 basehttp 29564 34460 "GET /admin/blockchain/genesisblock/ HTTP/1.1" 200 19022
+INFO 2025-07-01 16:45:52,843 basehttp 29564 34460 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+ERROR 2025-07-01 16:45:54,474 log 29564 34460 Internal Server Error: /admin/blockchain/transaction/
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: blockchain_transaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\options.py", line 2024, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\options.py", line 867, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\views\main.py", line 146, in __init__
+    self.get_results(request)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\contrib\admin\views\main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\core\paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\sql\query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\sql\query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1623, in execute_sql
+    cursor.execute(sql, params)
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\temp_for_learn\fck\adi_f_block_chain\india_blockchain_voting\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 360, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: blockchain_transaction
+ERROR 2025-07-01 16:45:54,484 basehttp 29564 34460 "GET /admin/blockchain/transaction/ HTTP/1.1" 500 212457
+INFO 2025-07-01 16:45:57,275 basehttp 29564 34460 "GET /admin/blockchain/genesisblock/ HTTP/1.1" 200 19022
+INFO 2025-07-01 16:45:57,337 basehttp 29564 34460 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-01 16:46:05,402 basehttp 29564 34460 "GET /admin/users/voter/ HTTP/1.1" 200 28710
+INFO 2025-07-01 16:46:05,468 basehttp 29564 34460 "GET /admin/jsi18n/ HTTP/1.1" 200 3342

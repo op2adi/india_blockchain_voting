@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Digital Vote Receipt{% endblock %}
+
+{% block extra_css %}
+<style>
+    .receipt-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .receipt-header {
+        text-align: center;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px dashed #ddd;
+    }
+    
+    .receipt-header h2 {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    
+    .receipt-header p {
+        color: #7f8c8d;
+        margin-bottom: 0;
+    }
+    
+    .receipt-details {
+        margin-bottom: 30px;
+    }
+    
+    .receipt-details .row {
+        margin-bottom: 10px;
+    }
+    
+    .detail-label {
+        font-weight: 600;
+        color: #34495e;
+    }
+    
+    .detail-value {
+        color: #2c3e50;
+    }
+    
+    .receipt-qr {
+        text-align: center;
+        margin: 30px 0;
+    }
+    
+    .receipt-qr img {
+        max-width: 200px;
+        height: auto;
+    }
+    
+    .receipt-footer {
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px dashed #ddd;
+    }
+    
+    .receipt-footer p {
+        color: #7f8c8d;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    
+    .receipt-actions {
+        margin-top: 30px;
+        text-align: center;
+    }
+    
+    .receipt-actions .btn {
+        margin: 0 5px;
+    }
+    
+    .verification-box {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    
+    .verification-box pre {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        overflow-x: auto;
+    }
+    
+    .blockchain-info {
+        background-color: #e8f4fd;
+        padding: 15px;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    
+    @media print {
+        body {
+            background-color: white;
+        }
+        
+        .receipt-container {
+            box-shadow: none;
+            padding: 0;
+        }
+        
+        .receipt-actions {
+            display: none;
+        }
+        
+        .navbar, .footer {
+            display: none;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="receipt-container">
+        <div class="receipt-header">
+            <h2>Digital Vote Receipt</h2>
+            <p>India Blockchain Voting System</p>
+            <p><small>This receipt proves you cast your vote securely</small></p>
+        </div>
+        
+        <div class="receipt-details">
+            <div class="row">
+                <div class="col-md-4 detail-label">Receipt ID:</div>
+                <div class="col-md-8 detail-value">{{ receipt.receipt_id }}</div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 detail-label">Election:</div>
+                <div class="col-md-8 detail-value">{{ vote_record.election.name }}</div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 detail-label">Constituency:</div>
+                <div class="col-md-8 detail-value">{{ vote_record.constituency.name }}, {{ vote_record.constituency.state.name }}</div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 detail-label">Vote Cast:</div>
+                <div class="col-md-8 detail-value">{{ vote_record.timestamp|date:"F j, Y, g:i a" }}</div>
+            </div>
+            
+            {% if vote_record.candidate %}
+            <div class="row">
+                <div class="col-md-4 detail-label">Candidate:</div>
+                <div class="col-md-8 detail-value">
+                    {% if vote_record.candidate %}
+                        {{ vote_record.candidate.name }}
+                        {% if vote_record.candidate.party %}
+                            ({{ vote_record.candidate.party.name }})
+                        {% endif %}
+                    {% else %}
+                        NOTA (None of the Above)
+                    {% endif %}
+                </div>
+            </div>
+            {% endif %}
+            
+            <!-- Blockchain verification information -->
+            <div class="blockchain-info mt-4">
+                <h5 class="mb-3">Blockchain Verification</h5>
+                <div class="row">
+                    <div class="col-md-4 detail-label">Transaction Hash:</div>
+                    <div class="col-md-8 detail-value">{{ vote_record.transaction_hash }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 detail-label">Block Number:</div>
+                    <div class="col-md-8 detail-value">{{ vote_record.block.index }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 detail-label">Block Hash:</div>
+                    <div class="col-md-8 detail-value">{{ vote_record.block.hash }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 detail-label">Timestamp:</div>
+                    <div class="col-md-8 detail-value">{{ vote_record.block.timestamp|date:"F j, Y, g:i a" }}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 detail-label">Verification Token:</div>
+                    <div class="col-md-8 detail-value">{{ receipt.verification_token }}</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="receipt-qr">
+            {% if receipt.qr_code %}
+                <img src="{{ receipt.qr_code.url }}" alt="QR Code for verification">
+                <p class="mt-2"><small>Scan this QR code to verify your vote</small></p>
+            {% endif %}
+        </div>
+        
+        <div class="verification-box">
+            <h5>How to Verify Your Vote</h5>
+            <p>To verify that your vote was correctly recorded on the blockchain:</p>
+            <ol>
+                <li>Visit <strong>https://verify.blockchainvoting.gov.in</strong></li>
+                <li>Enter your verification token: <strong>{{ receipt.verification_token }}</strong></li>
+                <li>Or scan the QR code above</li>
+            </ol>
+            <p class="text-muted small">Your vote details remain private. Verification only confirms your vote was recorded.</p>
+        </div>
+        
+        <div class="receipt-footer">
+            <p>This receipt was digitally signed by the India Blockchain Voting System.</p>
+            <p>Receipt generated: {{ receipt.created_at|date:"F j, Y, g:i a" }}</p>
+        </div>
+        
+        <div class="receipt-actions mt-4">
+            <button class="btn btn-primary" onclick="window.print()"><i class="fas fa-print"></i> Print Receipt</button>
+            <a href="{% url 'elections:view_elections' %}" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back to Elections</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

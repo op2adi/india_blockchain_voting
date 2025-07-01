@@ -304,87 +304,33 @@ class BlockchainStatsView(APIView):
         return Response(stats)
 
 
-class MiningStatsView(APIView):
-    """API endpoint for mining statistics"""
-    permission_classes = [permissions.IsAuthenticated]
-    
-    @swagger_auto_schema(
-        operation_description="Get mining statistics",
-        responses={200: MiningStatsSerializer()}
-    )
-    def get(self, request):
-        # Get mining stats from audit logs
-        mining_logs = BlockchainAuditLog.objects.filter(action='MINE_BLOCK')
-        
-        blocks_mined = mining_logs.count()
-        total_mining_time = sum(log.execution_time for log in mining_logs)
-        average_mining_time = total_mining_time / blocks_mined if blocks_mined > 0 else 0
-        
-        # Get latest block
-        latest_block = Block.objects.latest('timestamp') if Block.objects.exists() else None
-        
-        # Calculate hash rate (simplified)
-        hash_rate = 1 / average_mining_time if average_mining_time > 0 else 0
-        
-        stats = {
-            'blocks_mined': blocks_mined,
-            'total_mining_time': total_mining_time,
-            'average_mining_time': average_mining_time,
-            'current_difficulty': 4,  # Default difficulty
-            'hash_rate': hash_rate,
-            'last_mined_block': BlockSerializer(latest_block).data if latest_block else None
-        }
-        
-        return Response(stats)
-
-
-@api_view(['POST'])
+@api_view(['GET'])
 @permission_classes([permissions.IsAuthenticated])
-def mine_block(request, blockchain_id):
-    """Mine a new block manually (for testing)"""
-    try:
-        blockchain = Blockchain.objects.get(id=blockchain_id)
-    except Blockchain.DoesNotExist:
-        return Response(
-            {'error': 'Blockchain not found'},
-            status=status.HTTP_404_NOT_FOUND
-        )
+def mining_stats(request):
+    """API endpoint for mining statistics"""
+    # Get mining stats from audit logs
+    mining_logs = BlockchainAuditLog.objects.filter(action='MINE_BLOCK')
     
-    # Get pending data (for demo, create dummy data)
-    block_data = {
-        'manual_mining': True,
-        'mined_by': str(request.user.id),
-        'timestamp': timezone.now().isoformat()
+    blocks_mined = mining_logs.count()
+    total_mining_time = sum(log.execution_time for log in mining_logs)
+    average_mining_time = total_mining_time / blocks_mined if blocks_mined > 0 else 0
+    
+    # Get latest block
+    latest_block = Block.objects.latest('timestamp') if Block.objects.exists() else None
+    
+    # Calculate hash rate (simplified)
+    hash_rate = 1 / average_mining_time if average_mining_time > 0 else 0
+    
+    stats = {
+        'blocks_mined': blocks_mined,
+        'total_mining_time': total_mining_time,
+        'average_mining_time': average_mining_time,
+        'current_difficulty': 4,  # Default difficulty
+        'hash_rate': hash_rate,
+        'last_mined_block': BlockSerializer(latest_block).data if latest_block else None
     }
     
-    start_time = time.time()
-    
-    # Mine block
-    block = blockchain.add_block(data=block_data)
-    
-    mining_time = time.time() - start_time
-    
-    # Log audit
-    AuditUtils.log_blockchain_operation(
-        action='MINE_BLOCK',
-        blockchain=blockchain,
-        actor_type='admin',
-        actor_id=str(request.user.id),
-        details={
-            'block_index': block.index,
-            'block_hash': block.hash,
-            'mining_time': mining_time
-        },
-        execution_time=mining_time
-    )
-    
-    logger.info(f"Block mined manually: {block.hash} in {mining_time:.2f}s")
-    
-    return Response({
-        'block': BlockSerializer(block).data,
-        'mining_time': mining_time,
-        'message': 'Block mined successfully'
-    })
+    return Response(stats)
 
 
 @api_view(['GET'])

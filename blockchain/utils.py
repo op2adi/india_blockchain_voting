@@ -377,3 +377,43 @@ class AuditUtils:
             'operations_by_actor': {},  # Can be expanded
             'logs': list(logs.values())
         }
+
+
+class MerkleTree:
+    """Simple Merkle Tree implementation"""
+    def __init__(self, leaves):
+        # leaves: list of hex-hash strings
+        self.leaves = leaves
+        self.levels = [leaves]
+        self._build_tree()
+
+    def _build_tree(self):
+        current = self.leaves
+        while len(current) > 1:
+            next_level = []
+            for i in range(0, len(current), 2):
+                left = current[i]
+                right = current[i+1] if i+1 < len(current) else left
+                combined = left + right
+                parent_hash = HashUtils.sha256_hash(combined)
+                next_level.append(parent_hash)
+            self.levels.append(next_level)
+            current = next_level
+
+    def get_root(self):
+        return self.levels[-1][0] if self.levels else None
+
+    def get_proof(self, leaf):
+        """Return Merkle proof (list of sibling hashes and their position) for a given leaf"""
+        proof = []
+        try:
+            index = self.leaves.index(leaf)
+        except ValueError:
+            return proof
+        for level in self.levels[:-1]:
+            sibling_index = index+1 if index % 2 == 0 else index-1
+            sibling = level[sibling_index] if sibling_index < len(level) else level[index]
+            position = 'right' if index % 2 == 0 else 'left'
+            proof.append({'hash': sibling, 'position': position})
+            index = index // 2
+        return proof

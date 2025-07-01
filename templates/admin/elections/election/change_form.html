@@ -1,0 +1,134 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_urls static %}
+
+{% block extrahead %}{{ block.super }}
+<style>
+    .election-form-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .field-all_constituencies {
+        background-color: #f8f9fa;
+        padding: 15px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        border-left: 4px solid #3949ab;
+    }
+    
+    .checkbox-label {
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .help-text {
+        color: #666;
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+    
+    .election-timeline {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .timeline-item {
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .timeline-item label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    /* Status indicator */
+    .status-indicator {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-weight: bold;
+        color: white;
+    }
+    
+    .status-announced { background-color: #5c6bc0; }
+    .status-nomination-open { background-color: #26a69a; }
+    .status-nomination-closed { background-color: #78909c; }
+    .status-voting-open { background-color: #66bb6a; }
+    .status-voting-closed { background-color: #ec407a; }
+    .status-counting { background-color: #ffa726; }
+    .status-completed { background-color: #8bc34a; }
+    .status-cancelled { background-color: #ef5350; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="election-form-container">
+    {{ block.super }}
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add custom styling and functionality to the election form
+    const allConstituenciesCheck = document.querySelector('#id_all_constituencies');
+    const stateField = document.querySelector('#id_state');
+    
+    if (allConstituenciesCheck && stateField) {
+        // Update help text based on state selection
+        const updateHelp = function() {
+            const helpText = document.querySelector('.field-all_constituencies .help-text');
+            if (helpText) {
+                const stateSelected = stateField.options[stateField.selectedIndex].text;
+                if (stateField.value) {
+                    helpText.textContent = `Check this box to include all constituencies from ${stateSelected}`;
+                } else {
+                    helpText.textContent = 'Check this box to include all constituencies from all states';
+                }
+            }
+        };
+        
+        // Add event listener for state change
+        stateField.addEventListener('change', updateHelp);
+        
+        // Initial update
+        updateHelp();
+    }
+    
+    // Enhance timeline fields layout
+    const timelineFields = document.querySelectorAll('.field-announcement_date, .field-nomination_start_date, .field-nomination_end_date, .field-voting_start_date, .field-voting_end_date, .field-result_date');
+    
+    if (timelineFields.length > 0) {
+        const timelineContainer = document.createElement('div');
+        timelineContainer.className = 'election-timeline';
+        
+        timelineFields.forEach(field => {
+            const parent = field.parentNode;
+            const wrapper = document.createElement('div');
+            wrapper.className = 'timeline-item';
+            wrapper.appendChild(field);
+            timelineContainer.appendChild(wrapper);
+            
+            if (parent && parent.childNodes.length === 0) {
+                parent.appendChild(timelineContainer);
+            }
+        });
+    }
+    
+    // Style status dropdown options
+    const statusField = document.querySelector('#id_status');
+    if (statusField) {
+        const options = statusField.querySelectorAll('option');
+        options.forEach(option => {
+            const value = option.value.toLowerCase();
+            if (value) {
+                option.classList.add(`status-${value}`);
+                option.style.fontWeight = 'bold';
+            }
+        });
+    }
+});
+</script>
+{% endblock %}

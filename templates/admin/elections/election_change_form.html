@@ -1,0 +1,345 @@
+{% extends "admin/change_form.html" %}
+{% load i18n admin_urls static %}
+
+{% block extrahead %}{{ block.super }}
+<style>
+    /* Election form specific styles */
+    .datetime-picker-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .datetime-picker-container label {
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+    
+    .datetime-picker {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .datetime-picker input[type="date"],
+    .datetime-picker input[type="time"] {
+        padding-right: 30px;
+        cursor: pointer;
+        min-width: 150px;
+    }
+    
+    .datetime-picker .calendar-icon,
+    .datetime-picker .clock-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: #666;
+    }
+    
+    .election-type-selector {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+    }
+    
+    .election-type-options {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    
+    .election-type-option {
+        flex: 1;
+        padding: 15px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.2s;
+        min-width: 160px;
+    }
+    
+    .election-type-option:hover {
+        border-color: #79aec8;
+        background-color: #f0f7fa;
+    }
+    
+    .election-type-option.selected {
+        border-color: #417690;
+        background-color: #f0f7fa;
+    }
+    
+    .selector-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 15px;
+        align-items: center;
+    }
+    
+    .selector-button {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 4px;
+        background-color: #79aec8;
+        color: white;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    
+    .selector-button:hover {
+        background-color: #417690;
+    }
+    
+    .selector-button.deselect-all {
+        background-color: #e53935;
+    }
+    
+    .selector-button.deselect-all:hover {
+        background-color: #c62828;
+    }
+    
+    /* Status badge styles */
+    .status-badge {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 20px;
+        color: white;
+        font-weight: bold;
+        font-size: 12px;
+    }
+    
+    .status-announced { background-color: #90a4ae; }
+    .status-nomination-open { background-color: #42a5f5; }
+    .status-nomination-closed { background-color: #ff7043; }
+    .status-voting-open { background-color: #4caf50; }
+    .status-voting-closed { background-color: #f44336; }
+    .status-counting { background-color: #ab47bc; }
+    .status-completed { background-color: #00897b; }
+
+    /* Add css for election-form.css here */
+    /* Additional styles that were in the separate CSS file */
+</style>
+{% endblock %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('India Blockchain Voting Admin') }}{% endblock %}
+
+{% block content %}
+<div id="content-main">
+    <form {% if has_file_field %}enctype="multipart/form-data" {% endif %}action="{{ form_url }}" method="post" id="{{ opts.model_name }}_form" novalidate>
+        {% csrf_token %}
+        {% block form_top %}{% endblock %}
+        
+        {% if is_popup %}<input type="hidden" name="{{ is_popup_var }}" value="1">{% endif %}
+        {% if to_field %}<input type="hidden" name="{{ to_field_var }}" value="{{ to_field }}">{% endif %}
+        
+        {% if errors %}
+            <div class="errornote">
+                {% if errors|length == 1 %}{% trans "Please correct the error below." %}{% else %}{% trans "Please correct the errors below." %}{% endif %}
+                
+                {% for field in adminform.form.fields %}
+                    {% for error in field.errors %}
+                        <p>{{ error }}</p>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in adminform.form.non_field_errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        <!-- Always show the submit buttons at the top -->
+        <div class="submit-row">
+            {% if show_save %}<input type="submit" value="{% trans 'Save' %}" class="default" name="_save">{% endif %}
+            {% if show_save_and_continue %}<input type="submit" value="{% trans 'Save and continue editing' %}" name="_continue">{% endif %}
+            {% if show_save_and_add_another %}<input type="submit" value="{% trans 'Save and add another' %}" name="_addanother">{% endif %}
+            {% if show_delete_link and not add %}
+                <a href="{% url opts|admin_urlname:'delete' original.pk|admin_urlquote %}" class="deletelink">{% trans "Delete" %}</a>
+            {% endif %}
+        </div>
+        
+        <fieldset class="module aligned">
+            {% for fieldset in adminform %}
+                {% include "admin/includes/fieldset.html" %}
+            {% endfor %}
+            
+            <div class="election-type-selector">
+                <h4>Election Type</h4>
+                <p class="help">Select the type of election to determine constituency selection</p>
+                
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="election_type_national" name="election_type" value="national" checked>
+                        <label for="election_type_national">National Election (All States)</label>
+                    </div>
+                    
+                    <div class="radio-option">
+                        <input type="radio" id="election_type_state" name="election_type" value="state">
+                        <label for="election_type_state">State Election (Single State)</label>
+                    </div>
+                    
+                    <div class="radio-option">
+                        <input type="radio" id="election_type_custom" name="election_type" value="custom">
+                        <label for="election_type_custom">Custom Selection (Specific Constituencies)</label>
+                    </div>
+                </div>
+                
+                <div id="state_selector" style="margin-top: 10px; display: none;">
+                    <label for="id_state">Select State:</label>
+                    <select id="id_state" name="state" style="min-width: 300px;">
+                        <option value="">-- Select a State --</option>
+                        {% for state in available_states %}
+                            <option value="{{ state.id }}">{{ state.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            
+            <div class="election-time-settings">
+                <h4>Election Schedule</h4>
+                <p class="help">Set the timeline for this election using date and time pickers</p>
+                
+                <div class="datetime-picker-container">
+                    <label for="id_nomination_start_date">Nomination Starts:</label>
+                    <div class="datetime-picker">
+                        <input type="date" id="id_nomination_start_date" name="nomination_start_date" required>
+                    </div>
+                    <div class="datetime-picker">
+                        <input type="time" id="id_nomination_start_time" name="nomination_start_time" required>
+                    </div>
+                    <button type="button" class="selector-button" id="nomination_start_date_btn">
+                        <i class="fas fa-calendar"></i> Date
+                    </button>
+                    <button type="button" class="selector-button" id="nomination_start_time_btn">
+                        <i class="fas fa-clock"></i> Time
+                    </button>
+                </div>
+                
+                <div class="datetime-picker-container">
+                    <label for="id_nomination_end_date">Nomination Ends:</label>
+                    <div class="datetime-picker">
+                        <input type="date" id="id_nomination_end_date" name="nomination_end_date" required>
+                    </div>
+                    <div class="datetime-picker">
+                        <input type="time" id="id_nomination_end_time" name="nomination_end_time" required>
+                    </div>
+                    <button type="button" class="selector-button" id="nomination_end_date_btn">
+                        <i class="fas fa-calendar"></i> Date
+                    </button>
+                    <button type="button" class="selector-button" id="nomination_end_time_btn">
+                        <i class="fas fa-clock"></i> Time
+                    </button>
+                </div>
+                
+                <div class="datetime-picker-container">
+                    <label for="id_voting_start_date">Voting Starts:</label>
+                    <div class="datetime-picker">
+                        <input type="date" id="id_voting_start_date" name="voting_start_date" required>
+                    </div>
+                    <div class="datetime-picker">
+                        <input type="time" id="id_voting_start_time" name="voting_start_time" required>
+                    </div>
+                    <button type="button" class="selector-button" id="voting_start_date_btn">
+                        <i class="fas fa-calendar"></i> Date
+                    </button>
+                    <button type="button" class="selector-button" id="voting_start_time_btn">
+                        <i class="fas fa-clock"></i> Time
+                    </button>
+                </div>
+                
+                <div class="datetime-picker-container">
+                    <label for="id_voting_end_date">Voting Ends:</label>
+                    <div class="datetime-picker">
+                        <input type="date" id="id_voting_end_date" name="voting_end_date" required>
+                    </div>
+                    <div class="datetime-picker">
+                        <input type="time" id="id_voting_end_time" name="voting_end_time" required>
+                    </div>
+                    <button type="button" class="selector-button" id="voting_end_date_btn">
+                        <i class="fas fa-calendar"></i> Date
+                    </button>
+                    <button type="button" class="selector-button" id="voting_end_time_btn">
+                        <i class="fas fa-clock"></i> Time
+                    </button>
+                </div>
+            </div>
+            
+            {% if adminform.form.fields.all_constituencies %}
+            <div class="constituency-selector" id="constituencySelector">
+                <h4>Constituency Selection</h4>
+                <p class="help">Select constituencies that will participate in this election</p>
+                
+                <div class="form-row">
+                    <div class="selector-buttons">
+                        <button type="button" class="selector-button" id="selectAllBtn">
+                            <i class="fas fa-check-circle"></i> Select All Constituencies
+                        </button>
+                        
+                        <select id="stateFilter">
+                            <option value="">-- Filter by State --</option>
+                            {% for state in available_states %}
+                                <option value="{{ state.id }}">{{ state.name }}</option>
+                            {% endfor %}
+                        </select>
+                        
+                        <button type="button" class="selector-button" id="filterByStateBtn">
+                            <i class="fas fa-filter"></i> Select All in State
+                        </button>
+                        
+                        <button type="button" class="selector-button deselect-all" id="deselectAllBtn">
+                            <i class="fas fa-times-circle"></i> Deselect All
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="form-row field-constituencies">
+                    {{ adminform.form.all_constituencies }}
+                    <label for="{{ adminform.form.all_constituencies.id_for_label }}">
+                        {{ adminform.form.all_constituencies.label }}
+                    </label>
+                    <p class="help">{{ adminform.form.all_constituencies.help_text }}</p>
+                </div>
+            </div>
+            {% endif %}
+            
+            {% block after_field_sets %}{% endblock %}
+            
+            {% for inline_admin_formset in inline_admin_formsets %}
+                {% include inline_admin_formset.opts.template %}
+            {% endfor %}
+            
+            {% block after_related_objects %}{% endblock %}
+            
+            {% block submit_buttons_bottom %}
+            <div class="submit-row">
+                {% if show_delete_link and not add %}
+                    <a href="{% url opts|admin_urlname:'delete' original.pk|admin_urlquote %}" class="deletelink">{% trans "Delete" %}</a>
+                {% endif %}
+                
+                {% if show_save_as_new %}
+                    <input type="submit" name="_saveasnew" value="{% trans 'Save as new' %}">
+                {% endif %}
+                {% if show_save_and_add_another %}
+                    <input type="submit" name="_addanother" value="{% trans 'Save and add another' %}">
+                {% endif %}
+                {% if show_save_and_continue %}
+                    <input type="submit" name="_continue" value="{% if can_change %}{% trans 'Save and continue editing' %}{% else %}{% trans 'Save and view' %}{% endif %}">
+                {% endif %}
+                {% if show_save %}
+                    <input type="submit" name="_save" value="{% trans 'Save' %}" class="default">
+                {% endif %}
+            </div>
+            {% endblock %}
+        </fieldset>
+    </form>
+</div>
+{% endblock %}
+
+{% block admin_change_form_document_ready %}
+{{ block.super }}
+<script src="{% static 'admin/js/election-form.js' %}"></script>
+{% endblock %}

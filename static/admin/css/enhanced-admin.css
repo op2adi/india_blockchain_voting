@@ -1,0 +1,138 @@
+/* Enhanced Admin Interface */
+#header {
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: white;
+    font-weight: 300;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#branding h1 {
+    font-weight: 400;
+}
+
+.module h2, .module caption {
+    background: #2196f3;
+    color: white;
+    font-weight: 500;
+}
+
+div.breadcrumbs {
+    background: #1565c0;
+    padding: 12px 20px;
+}
+
+.object-tools a:hover, .object-tools a:focus {
+    background-color: #1976d2;
+}
+
+.object-tools a.viewsitelink, .object-tools a.addlink {
+    background-color: #2196f3;
+}
+
+a.section:link, a.section:visited {
+    color: #2196f3;
+}
+
+.submit-row input, .button {
+    background: #2196f3;
+    padding: 10px 15px;
+}
+
+.submit-row input:hover, .button:hover {
+    background: #1976d2;
+}
+
+.submit-row input.default {
+    background: #1976d2;
+}
+
+.submit-row input.default:hover {
+    background: #0d47a1;
+}
+
+/* CSV Upload Styling */
+.csv-upload-section {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 4px solid #4caf50;
+}
+
+.csv-upload-section h3 {
+    margin-top: 0;
+    color: #2e7d32;
+}
+
+.csv-upload-section .help-text {
+    margin-bottom: 15px;
+    color: #548c58;
+}
+
+.file-input-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.file-input-wrapper input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.csv-upload-section .submit-button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.csv-upload-section .submit-button:hover {
+    background: #388e3c;
+}
+
+.template-download {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1976d2;
+    text-decoration: none;
+}
+
+.template-download:hover {
+    text-decoration: underline;
+}
+
+/* Improved form fields */
+.form-row {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.form-row:last-child {
+    border-bottom: none;
+}
+
+.form-row input[type=text], 
+.form-row input[type=password],
+.form-row input[type=email],
+.form-row input[type=url],
+.form-row input[type=number],
+.form-row textarea {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-row select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

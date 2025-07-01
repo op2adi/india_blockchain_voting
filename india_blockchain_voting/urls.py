@@ -40,7 +40,7 @@ urlpatterns = [
     path('admin/elections/', include(('elections.admin_urls', 'admin_elections'), namespace='admin_elections')),
     
     # Users API
-    path('api/users/', include('users.urls')),
+    path('api/users/', include(('users.urls', 'users_api'), namespace='users_api')),
     
     # Elections API (different namespace)
     path('api/elections/', include(('elections.urls', 'api_elections'), namespace='api_elections')),
@@ -49,10 +49,14 @@ urlpatterns = [
     path('api/blockchain/', include('blockchain.urls')),
     
     # Reports API
-    path('api/reports/', include('reports.urls')),
-      # Frontend Elections pages
-    path('', include('elections.urls')),
-    path('elections/', include('elections.urls', namespace='elections_prefix')),
+    path('api/reports/', include('reports.urls')),    # Public leaderboard
+    path('leaderboard/', include(('elections.urls', 'leaderboard'), namespace='leaderboard')),
+    
+    # Frontend Elections pages
+    path('', include(('elections.urls', 'elections_main'), namespace='elections_main')),
+    path('elections/', include(('elections.urls', 'elections_prefix'), namespace='elections_prefix')),
+      # User auth and management - this is the primary users namespace
+    path('users/', include('users.urls')),
 ]
 
 # Serve media files in development

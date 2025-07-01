@@ -10,7 +10,7 @@ from django.contrib.auth.hashers import make_password
 import csv
 from io import TextIOWrapper
 import uuid
-from .models import Voter, AdminUser, State, Constituency
+from .models import Voter, AdminUser, State, Constituency  # Ensure new fields are on Voter
 from elections.models import Election
 
 # Create a custom admin site
@@ -66,6 +66,7 @@ class VoterAdmin(admin.ModelAdmin):
         ('Status', {'fields': ('is_verified', 'verification_date')}),
         ('Demographics', {'fields': ('date_of_birth', 'gender', 'constituency', 'state')}),
         ('Contact', {'fields': ('mobile_number', 'address_line1', 'address_line2', 'city', 'pincode')}),
+        ('Biometric Data', {'fields': ('voter_id_card', 'face_image')}),
     )
     actions = ['ban_voters', 'unban_voters', 'verify_voters']
     
@@ -87,6 +88,8 @@ class VoterAdmin(admin.ModelAdmin):
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
+            path('import-voters/', self.admin_site.admin_view(self.import_voters_view), name='import_voters'),
+            path('download-voter-template/', self.admin_site.admin_view(self.download_voter_template), name='download_voter_template'),
             path('import-voters/', self.admin_site.admin_view(self.import_voters_view), name='import-voters'),
         ]
         return custom_urls + urls
@@ -190,6 +193,27 @@ class VoterAdmin(admin.ModelAdmin):
             'admin/users/import_voters.html',
             {'states': states, 'constituencies': constituencies}
         )
+        
+    def download_voter_template(self, request):
+        """
+        Download a CSV template for voter import
+        """
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="voter_import_template.csv"'
+        
+        writer = csv.writer(response)
+        writer.writerow([
+            'Username', 'Email', 'First Name', 'Last Name', 'Voter ID', 
+            'Phone', 'Constituency', 'State', 'Date of Birth (YYYY-MM-DD)'
+        ])
+        
+        # Add a sample row
+        writer.writerow([
+            'voter1', 'voter1@example.com', 'John', 'Doe', 'ABC123456',
+            '9876543210', 'Mumbai North', 'Maharashtra', '1990-01-01'
+        ])
+        
+        return response
 
 class AdminUserAdmin(admin.ModelAdmin):
     list_display = ('id', 'user', 'created_at')
@@ -219,20 +243,7 @@ django_admin_site.register(Candidate, CandidateAdmin)
 django_admin_site.register(Election, ElectionAdmin)
 django_admin_site.register(ElectionConstituency, ElectionConstituencyAdmin)
 
-# Import and register blockchain models
-from blockchain.models import Block, Blockchain
-
-# Register blockchain models
-django_admin_site.register(Block)
-django_admin_site.register(Blockchain)
-
-# Import and register reports models
-from reports.models import VotingReport, AuditReport, PerformanceReport
-
-# Register reports models
-django_admin_site.register(VotingReport)
-django_admin_site.register(AuditReport)
-django_admin_site.register(PerformanceReport)
+# Note: Blockchain and Reports models are registered in their respective admin.py files
 
 # Standard admin site registration (useful for debugging)
 admin.site.register(Voter, VoterAdmin)

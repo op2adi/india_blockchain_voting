@@ -1,0 +1,137 @@
+/* Election form specific styling with standard Django admin look */
+
+/* Date/time picker styles */
+.datetime-picker-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.datetime-picker-container label {
+    width: 180px;
+    font-weight: bold;
+}
+
+.datetime-picker {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.datetime-picker input[type="date"],
+.datetime-picker input[type="time"] {
+    width: 150px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Status badge styles */
+.status-badge {
+    display: inline-block;
+    padding: 3px 7px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.status-announced { background-color: #999; }
+.status-nomination-open { background-color: #417690; }
+.status-nomination-closed { background-color: #bf7130; }
+.status-voting-open { background-color: #0c963f; }
+.status-voting-closed { background-color: #ba2121; }
+.status-counting { background-color: #9b59b6; }
+.status-completed { background-color: #2e856e; }
+
+/* Election type selector */
+.election-type-selector {
+    margin: 15px 0 25px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+}
+
+.selector-button, 
+.button.picker-button {
+    background: #417690;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 13px;
+}
+
+.selector-button:hover, 
+.button.picker-button:hover {
+    background: #205067;
+}
+
+.deselect-all {
+    background-color: #ba2121;
+}
+
+.deselect-all:hover {
+    background-color: #a41515;
+}
+
+/* Section headers */
+.election-time-settings h4, 
+.constituency-selector h4,
+.election-type-selector h4 {
+    color: #417690;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Form sections */
+.election-time-settings,
+.constituency-selector {
+    margin: 15px 0 25px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+}
+
+/* Radio button groups */
+.radio-group {
+    display: flex;
+    gap: 20px;
+    margin: 10px 0;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+}
+
+.radio-option input {
+    margin-right: 5px;
+}
+
+/* Filter state dropdown */
+#stateFilter {
+    height: 35px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    min-width: 200px;
+}
+
+/* Make sure submit buttons are prominent */
+.submit-row {
+    margin: 20px 0;
+    padding: 15px;
+    text-align: right;
+    background: #f8f8f8;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
