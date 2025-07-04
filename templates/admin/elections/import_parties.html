@@ -1,0 +1,16 @@
+{% extends 'admin/base_site.html' %}
+{% block title %}Import Parties from CSV{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Import Parties from CSV</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="parties_csv" class="form-label">CSV File</label>
+            <input type="file" class="form-control" id="parties_csv" name="parties_csv" accept=".csv" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+        <a href="/admin/elections/candidate/download-sample-csv/?type=parties" class="btn btn-link">Download Sample CSV</a>
+    </form>
+</div>
+{% endblock %}

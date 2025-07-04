@@ -11,6 +11,7 @@ class APIView(View):
         return super().dispatch(request, *args, **kwargs)
 
 from .models import Voter, AdminUser, VoterVerification
+from elections.models import Election
 
 # Add the missing view classes referenced in URLs
 class VoterRegistrationView(APIView):
@@ -44,7 +45,15 @@ def verify_location(request):
     return JsonResponse({'message': 'Location verification endpoint not fully implemented yet'})
 
 def voter_dashboard(request):
-    return render(request, 'users/dashboard.html')
+    user = request.user
+    # Get active elections for the user's constituency
+    active_elections = Election.objects.filter(
+        status='VOTING_OPEN',
+        electionconstituency__constituency=getattr(user, 'constituency', None)
+    ).distinct()
+    return render(request, 'users/dashboard.html', {
+        'active_elections': active_elections
+    })
 
 # API Views - Basic implementations
 class CustomTokenObtainPairView(APIView):

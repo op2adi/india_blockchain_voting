@@ -2,86 +2,7 @@
 {% load i18n static admin_urls %}
 
 {% block extrastyle %}{{ block.super }}
-<style>
-    .upload-form {
-        max-width: 800px;
-        margin: 20px 0;
-    }
-    .form-row {
-        overflow: hidden;
-        padding: 8px 12px;
-        margin: 0;
-        border-bottom: 1px solid #eee;
-    }
-    .field-box {
-        float: left;
-        margin-right: 20px;
-    }
-    .field-box input[type="file"] {
-        margin-top: 10px;
-    }
-    .object-tools {
-        float: right;
-        padding-left: 0;
-        margin-top: 0;
-        margin-bottom: 15px;
-    }
-    .object-tools li {
-        display: block;
-        float: left;
-        margin-left: 5px;
-        height: 16px;
-    }
-    .object-tools a.addlink {
-        display: block;
-        float: left;
-        line-height: 16px;
-        padding: 8px 12px;
-        background: #79aec8;
-        color: #fff;
-        font-weight: 400;
-        border-radius: 4px;
-    }
-    .object-tools a.addlink:focus, .object-tools a.addlink:hover {
-        background-color: #417690;
-    }
-    .module {
-        margin-bottom: 30px;
-        background: #fff;
-    }
-    .module h2 {
-        background: #79aec8;
-        color: #fff;
-        font-size: 13px;
-        font-weight: 400;
-        margin: 0;
-        padding: 10px;
-        overflow: hidden;
-    }
-    .template-info {
-        margin-top: 20px;
-        padding: 15px;
-        background-color: #f8f8f8;
-        border: 1px solid #eee;
-        border-radius: 4px;
-    }
-    table {
-        border-collapse: collapse;
-        background: #fff;
-        width: 100%;
-    }
-    th, td {
-        font-size: 13px;
-        line-height: 16px;
-        border-bottom: 1px solid #eee;
-        padding: 8px;
-        vertical-align: top;
-    }
-    th {
-        font-weight: 600;
-        text-align: left;
-    }
-</style>
+<link rel="stylesheet" href="/static/admin/css/enhanced-admin.css">
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -94,115 +15,16 @@
 
 {% block content %}
 <div id="content-main">
-    <ul class="object-tools">
-        <li>
-            <a href="{% url 'admin:download_voter_template' %}" class="addlink">
-                Download Template
-            </a>
-        </li>
-    </ul>
-    
-    <div class="module">
-        <h2>Import Voters</h2>
-        <div class="form-row">
-            <p>
-                Upload a CSV file containing voter information. The file should have the following columns:
-                Username, Email, First Name, Last Name, Voter ID, Phone, Constituency, State, Date of Birth.
-            </p>
-        </div>
-        
-        <form action="." method="post" enctype="multipart/form-data" class="upload-form">
+    <div class="csv-upload-section">
+        <h3>Import Voters from CSV</h3>
+        <p class="help-text">Upload a CSV file with voter details. <a class="template-download" href="/admin/users/voter/download-sample-csv/">Download Sample CSV</a></p>
+        <form method="post" enctype="multipart/form-data" class="upload-form">
             {% csrf_token %}
-            <div class="form-row">
-                <div class="field-box">
-                    <label for="csv_file">Select CSV File:</label>
-                    <input type="file" name="csv_file" id="csv_file" required class="file-input">
-                </div>
+            <div class="file-input-wrapper">
+                <input type="file" name="csv_file" accept=".csv" required />
             </div>
-            <div class="form-row">
-                <div class="field-box">
-                    <input type="submit" value="Upload and Process" class="default">
-                </div>
-            </div>
+            <button type="submit" class="submit-button">Upload</button>
         </form>
-        
-        <div class="template-info">
-            <h3>Instructions:</h3>
-            <ul>
-                <li>CSV file should contain the following required columns:
-                    <ul>
-                        <li><strong>Username</strong> - Unique login name for the voter</li>
-                        <li><strong>Email</strong> - Valid email address</li>
-                        <li><strong>First Name</strong> - Voter's first name</li>
-                        <li><strong>Last Name</strong> - Voter's last name</li>
-                        <li><strong>Voter ID</strong> - Official voter ID number</li>
-                    </ul>
-                </li>
-                <li>Optional columns:
-                    <ul>
-                        <li><strong>Phone</strong> - Contact number</li>
-                        <li><strong>Constituency</strong> - Must match existing constituency name</li>
-                        <li><strong>State</strong> - Must match existing state name</li>
-                        <li><strong>Date of Birth</strong> - In YYYY-MM-DD format</li>
-                    </ul>
-                </li>
-                <li>State and constituency names must match existing records in the system</li>
-                <li>A random temporary password will be generated for each new voter</li>
-            </ul>
-            
-            <h3>Sample Data Format:</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Voter ID</th>
-                        <th>Phone</th>
-                        <th>Constituency</th>
-                        <th>State</th>
-                        <th>Date of Birth</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>voter1</td>
-                        <td>voter1@example.com</td>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>ABC123456</td>
-                        <td>9876543210</td>
-                        <td>Mumbai North</td>
-                        <td>Maharashtra</td>
-                        <td>1990-01-01</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
-{% endblock %}
-                                        <p class="mb-1 text-muted">Code: {{ state.code }}</p>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="list-group">
-                                    {% for constituency in constituencies %}
-                                    <div class="list-group-item">
-                                        <h5 class="mb-1">{{ constituency.name }}</h5>
-                                        <p class="mb-1 text-muted">State: {{ constituency.state.name }} | Type: {{ constituency.get_constituency_type_display }}</p>
-                                    </div>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 {% endblock %}

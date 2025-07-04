@@ -194,7 +194,7 @@ class Candidate(models.Model):
     votes_received = models.IntegerField(default=0)
     vote_percentage = models.FloatField(default=0.0)
     rank = models.IntegerField(blank=True, null=True)
-    is_winner = models.BooleanField(default=False)
+    is_winner = models.BooleanField(default=False, editable=False)
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

@@ -72,3 +72,12 @@ def custom_admin_dashboard(request):
     }
     
     return render(request, 'admin/custom_index.html', context)
+
+@staff_member_required
+def admin_transactions(request):
+    """Admin view for all blockchain vote transactions"""
+    transactions = VoteTransaction.objects.select_related('block').order_by('-timestamp')[:200]
+    context = {
+        'transactions': transactions,
+    }
+    return render(request, 'admin/transactions.html', context)

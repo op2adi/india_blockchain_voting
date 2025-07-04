@@ -210,6 +210,9 @@ class VoteTransaction(models.Model):
     user_agent = models.TextField(blank=True)
     geolocation = models.JSONField(blank=True, null=True)
     
+    # Digital receipt
+    digital_receipt = models.CharField(max_length=128, blank=True, null=True)
+    
     created_at = models.DateTimeField(auto_now_add=True)
     
     class Meta:

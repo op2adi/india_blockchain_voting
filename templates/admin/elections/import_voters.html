@@ -1,0 +1,16 @@
+{% extends 'admin/base_site.html' %}
+{% block title %}Import Voters from CSV{% endblock %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Import Voters from CSV</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="voters_csv" class="form-label">CSV File</label>
+            <input type="file" class="form-control" id="voters_csv" name="voters_csv" accept=".csv" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Upload</button>
+        <a href="/admin/elections/candidate/download-sample-csv/?type=voters" class="btn btn-link">Download Sample CSV</a>
+    </form>
+</div>
+{% endblock %}

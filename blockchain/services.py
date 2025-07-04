@@ -89,12 +89,14 @@ class BlockchainVotingService:
             # Mine the block
             new_block.mine_block(blockchain.difficulty)
             new_block.save()
-            
-            # Update blockchain
-            blockchain.latest_hash = new_block.hash
-            blockchain.total_blocks += 1
-            blockchain.save()
-            
+
+            # Generate digital receipt (hash of transaction + server secret)
+            import hashlib
+            from django.conf import settings
+            server_secret = getattr(settings, 'VOTE_RECEIPT_SECRET', 'default_secret')
+            receipt_source = f"{voter_hash}:{new_block.hash}:{server_secret}"
+            digital_receipt = hashlib.sha256(receipt_source.encode()).hexdigest()
+
             # Create transaction record
             transaction = VoteTransaction.objects.create(
                 block=new_block,
@@ -104,7 +106,8 @@ class BlockchainVotingService:
                 is_confirmed=True,
                 ip_address=ip_address,
                 user_agent=user_agent,
-                geolocation=geolocation
+                geolocation=geolocation,
+                digital_receipt=digital_receipt
             )
             
             # End timing

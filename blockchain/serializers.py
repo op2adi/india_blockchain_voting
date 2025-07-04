@@ -70,13 +70,14 @@ class VoteTransactionSerializer(serializers.ModelSerializer):
     """Serializer for vote transactions"""
     block = BlockSerializer(read_only=True)
     is_confirmed = serializers.BooleanField(read_only=True)
+    digital_receipt = serializers.CharField(read_only=True)
     
     class Meta:
         model = VoteTransaction
         fields = ['id', 'block', 'voter_id', 'transaction_hash', 'timestamp',
                  'encrypted_vote_data', 'constituency_code', 'is_confirmed',
-                 'confirmation_count', 'ip_address', 'user_agent', 'geolocation']
-        read_only_fields = ['transaction_hash', 'timestamp', 'is_confirmed']
+                 'confirmation_count', 'ip_address', 'user_agent', 'geolocation', 'digital_receipt']
+        read_only_fields = ['transaction_hash', 'timestamp', 'is_confirmed', 'digital_receipt']
 
 
 class VoteTransactionCreateSerializer(serializers.ModelSerializer):

@@ -22,6 +22,9 @@ class CustomAdminSite(AdminSite):
     
     def index(self, request, extra_context=None):
         """Custom index that adds dashboard data"""
+        from blockchain.models import Block, Blockchain, VoteTransaction
+        from elections.models import Party
+        
         # Get election statistics
         elections = Election.objects.all().order_by('-created_at')
         active_elections = elections.filter(status='VOTING_OPEN').count()
@@ -30,11 +33,12 @@ class CustomAdminSite(AdminSite):
         # Get voter statistics
         total_voters = Voter.objects.filter(is_active=True).count()
         
-        # Get vote statistics (placeholder - integrate with actual blockchain data)
-        votes_cast = 0
-        
-        # Recent blockchain transactions (placeholder)
-        recent_transactions = []
+        # Get blockchain vote statistics
+        votes_cast = VoteTransaction.objects.count()
+        blockchain_count = Blockchain.objects.count()
+        block_count = Block.objects.count()
+        recent_transactions = VoteTransaction.objects.order_by('-timestamp')[:5]
+        party_count = Party.objects.count() if 'Party' in globals() else 0
         
         # Base context
         context = {
@@ -42,8 +46,11 @@ class CustomAdminSite(AdminSite):
             'total_elections': total_elections,
             'active_elections': active_elections,
             'total_voters': total_voters,
-            'votes_cast': votes_cast,
+            'vote_count': votes_cast,
+            'blockchain_count': blockchain_count,
+            'block_count': block_count,
             'recent_transactions': recent_transactions,
+            'party_count': party_count,
         }
         
         # Update with any extra context
@@ -244,9 +251,3 @@ django_admin_site.register(Election, ElectionAdmin)
 django_admin_site.register(ElectionConstituency, ElectionConstituencyAdmin)
 
 # Note: Blockchain and Reports models are registered in their respective admin.py files
-
-# Standard admin site registration (useful for debugging)
-admin.site.register(Voter, VoterAdmin)
-admin.site.register(AdminUser, AdminUserAdmin)
-admin.site.register(State, StateAdmin)
-admin.site.register(Constituency, ConstituencyAdmin)

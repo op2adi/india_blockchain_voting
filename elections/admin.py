@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.utils.html import format_html
 import csv
 from io import TextIOWrapper
-from .models import Party, Candidate, Election, ElectionConstituency
+from .models import Party, Candidate, Election, ElectionConstituency, Voter
 from .forms import ElectionAdminForm
 from users.models import Constituency, State
 
@@ -34,6 +34,7 @@ class CandidateAdmin(admin.ModelAdmin):
     list_filter = ('election', 'party', 'constituency', 'nomination_status')
     search_fields = ('name', 'nomination_id')
     actions = ['ban_candidate', 'unban_candidate', 'import_candidates']
+    exclude = ('votes_received', 'vote_percentage', 'rank', 'is_winner')
 
     def get_active_status(self, obj):
         return obj.nomination_status != 'REJECTED'
@@ -54,6 +55,7 @@ class CandidateAdmin(admin.ModelAdmin):
         urls = super().get_urls()
         custom_urls = [
             path('import-candidates/', self.admin_site.admin_view(self.import_candidates_view), name='import-candidates'),
+            path('download-sample-csv/', self.admin_site.admin_view(self.download_sample_csv), name='download-sample-csv'),
         ]
         return custom_urls + urls
 
@@ -131,6 +133,67 @@ class CandidateAdmin(admin.ModelAdmin):
             'admin/elections/import_candidates.html',
             {'elections': elections}
         )
+
+    def import_parties_view(self, request):
+        if request.method == 'POST' and request.FILES.get('parties_csv'):
+            try:
+                csv_file = request.FILES['parties_csv']
+                csv_file = TextIOWrapper(csv_file.file, encoding='utf-8-sig')
+                reader = csv.DictReader(csv_file)
+                required_fields = ['name', 'abbreviation', 'recognition_status']
+                for field in required_fields:
+                    if field not in reader.fieldnames:
+                        self.message_user(
+                            request,
+                            f"CSV file must contain columns: {', '.join(required_fields)}",
+                            level=messages.ERROR
+                        )
+                        return redirect("..")
+                parties_added = 0
+                for row in reader:
+                    Party.objects.get_or_create(
+                        name=row['name'],
+                        abbreviation=row['abbreviation'],
+                        recognition_status=row['recognition_status'],
+                        defaults={'is_active': True}
+                    )
+                    parties_added += 1
+                self.message_user(request, f"Successfully added {parties_added} parties.")
+                return redirect("..")
+            except Exception as e:
+                self.message_user(request, f"Error importing parties: {str(e)}", level=messages.ERROR)
+                return redirect("..")
+        return render(request, 'admin/elections/import_parties.html', {})
+
+    def download_sample_csv(self, request):
+        sample_type = request.GET.get('type', 'candidates')
+        if sample_type == 'parties':
+            header = ['name', 'abbreviation', 'recognition_status']
+            rows = [
+                ['Demo Party', 'DP', 'National'],
+                ['Sample Party', 'SP', 'State'],
+            ]
+            filename = 'sample_parties.csv'
+        elif sample_type == 'voters':
+            header = ['voter_id', 'name', 'constituency']
+            rows = [
+                ['VOTER001', 'Amit Kumar', 'Bangalore Central'],
+                ['VOTER002', 'Sunita Sharma', 'Mumbai South'],
+            ]
+            filename = 'sample_voters.csv'
+        else:
+            header = ['name', 'party', 'constituency', 'father_name', 'date_of_birth', 'gender', 'address']
+            rows = [
+                ['John Doe', 'Demo Party', 'Constituency 1', 'Father Name', '1980-01-01', 'M', 'Address 1'],
+                ['Jane Smith', 'Sample Party', 'Constituency 2', 'Father Name', '1985-05-05', 'F', 'Address 2'],
+            ]
+            filename = 'sample_candidates.csv'
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = f'attachment; filename={filename}'
+        writer = csv.writer(response)
+        writer.writerow(header)
+        writer.writerows(rows)
+        return response
 
 class ElectionConstituencyInline(admin.TabularInline):
     model = ElectionConstituency
@@ -373,3 +436,10 @@ class ElectionAuditLogAdmin(admin.ModelAdmin):
     search_fields = ('action', 'actor_id')
     list_filter = ('action', 'success', 'actor_type')
     readonly_fields = ('timestamp', 'ip_address', 'user_agent')
+
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        # Set party as a dropdown, not default, and image as optional
+        form.base_fields['party'].required = True
+        form.base_fields['image'].required = False
+        return form
