@@ -2498,3 +2498,48 @@ INFO 2025-07-05 04:54:27,604 basehttp 32068 14888 "GET /admin/jsi18n/ HTTP/1.1" 
 INFO 2025-07-05 04:54:28,091 basehttp 32068 14888 "GET /admin/ HTTP/1.1" 200 27629
 INFO 2025-07-05 04:54:29,706 basehttp 32068 14888 "GET /admin/users/voter/import-voters/ HTTP/1.1" 200 6796
 INFO 2025-07-05 04:54:37,536 basehttp 32068 14888 "GET /admin/ HTTP/1.1" 200 27629
+INFO 2025-07-13 09:30:53,251 autoreload 28164 28300 Watching for file changes with StatReloader
+INFO 2025-07-13 09:32:15,124 autoreload 16180 19660 Watching for file changes with StatReloader
+INFO 2025-07-13 10:04:41,897 basehttp 16180 18040 "GET / HTTP/1.1" 200 2754
+WARNING 2025-07-13 10:04:48,594 log 16180 20760 Not Found: /favicon.ico
+WARNING 2025-07-13 10:04:48,603 basehttp 16180 20760 "GET /favicon.ico HTTP/1.1" 404 9079
+INFO 2025-07-13 10:05:33,330 basehttp 16180 20760 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-07-13 10:05:33,576 basehttp 16180 20760 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6792
+INFO 2025-07-13 10:05:34,257 basehttp 16180 21048 "GET /static/admin/css/admin-clean.css HTTP/1.1" 200 5545
+INFO 2025-07-13 10:05:34,288 basehttp 16180 21048 "GET /static/admin/css/responsive.css HTTP/1.1" 200 16565
+INFO 2025-07-13 10:05:34,329 basehttp 16180 21048 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-07-13 10:05:34,336 basehttp 16180 7232 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-07-13 10:05:34,339 basehttp 16180 21048 "GET /static/admin/js/admin-enhancements.js HTTP/1.1" 200 11890
+INFO 2025-07-13 10:05:34,340 basehttp 16180 20760 "GET /static/admin/css/base.css HTTP/1.1" 200 22120
+INFO 2025-07-13 10:05:34,376 basehttp 16180 20344 "GET /static/admin/css/enhanced-admin.css HTTP/1.1" 200 2434
+INFO 2025-07-13 10:05:34,380 basehttp 16180 17900 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2808
+INFO 2025-07-13 10:05:34,402 basehttp 16180 28212 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-07-13 10:05:34,445 basehttp 16180 28212 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-07-13 10:05:41,122 basehttp 16180 28212 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-07-13 10:05:41,255 basehttp 16180 28212 "GET /admin/ HTTP/1.1" 200 27629
+INFO 2025-07-13 10:05:41,471 basehttp 16180 28212 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+WARNING 2025-07-13 10:10:12,783 log 16180 28212 Not Found: /admin/transactions/
+WARNING 2025-07-13 10:10:12,784 basehttp 16180 28212 "GET /admin/transactions/ HTTP/1.1" 404 9400
+INFO 2025-07-13 10:10:16,341 basehttp 16180 28212 "GET /admin/ HTTP/1.1" 200 27629
+INFO 2025-07-13 10:10:18,792 basehttp 16180 28212 "GET /admin/elections/party/ HTTP/1.1" 200 20184
+INFO 2025-07-13 10:10:18,985 basehttp 16180 28212 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2025-07-13 10:10:18,988 basehttp 16180 20760 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-07-13 10:10:19,004 basehttp 16180 21048 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-07-13 10:10:19,019 basehttp 16180 7232 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9777
+INFO 2025-07-13 10:10:19,034 basehttp 16180 17900 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2025-07-13 10:10:19,052 basehttp 16180 21048 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-07-13 10:10:19,063 basehttp 16180 20760 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-07-13 10:10:19,073 basehttp 16180 17900 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-07-13 10:10:19,075 basehttp 16180 28212 "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2025-07-13 10:10:19,093 basehttp 16180 20344 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-07-13 10:10:19,191 basehttp 16180 20344 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-07-13 10:10:19,235 basehttp 16180 7232 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-07-13 10:10:19,302 basehttp 16180 20344 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-07-13 10:10:19,304 basehttp 16180 7232 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-07-13 10:10:39,102 basehttp 16180 7232 "POST /admin/logout/ HTTP/1.1" 200 6188
+INFO 2025-07-13 10:10:42,639 basehttp 16180 7232 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-07-13 10:10:42,667 basehttp 16180 7232 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6792
+INFO 2025-07-13 10:10:49,003 basehttp 16180 7232 "GET / HTTP/1.1" 200 2754
+INFO 2025-07-13 10:10:54,163 basehttp 16180 7232 "GET /api/users/login/ HTTP/1.1" 200 2989
+INFO 2025-07-13 10:10:56,863 basehttp 16180 7232 "POST /api/users/login/ HTTP/1.1" 302 0
+INFO 2025-07-13 10:10:56,904 basehttp 16180 7232 "GET /users/profile/ HTTP/1.1" 200 3167

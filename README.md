@@ -118,6 +118,20 @@ python manage.py runserver
 5. Receive a digital receipt
 6. View election results when published
 
+## Images
+![Start Page](image.png)
+![Admin Dashboard](image-1.png)
+# As we see in Admin Dashboard too that it is restriceted to access Blocks and Blockchain as it must not be tampered thats why
+![Part Addition ](image-2.png)
+![Voters login Dashboard](image-3.png)
+
+## Note
+This is still under development by [Aditya Upadhyay](https://github.com/op2adi)
+It is not complete yet
+
+
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the IIITD License.
+And Reference Paper 
+[IEEE Explore link](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8457919)
